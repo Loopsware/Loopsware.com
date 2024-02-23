@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import Availability from '../components/Availability.astro';
 import ServiceBoxes from '../components/ServiceBoxes.astro';
+import ShowcaseCard from '../components/ShowcaseCard.astro';
 ---
 
 <Layout title="Loophau5 Software">
@@ -46,6 +47,13 @@ import ServiceBoxes from '../components/ServiceBoxes.astro';
 					We have experience crafting <br />
 					mobile digital experiences from scratch. 
 				</p>   
+			</div>
+			<div class="grid grid-cols-2 grid-rows-2 px-16">
+				<div class="flex flex-col">
+					<ShowcaseCard title="Medizona" />
+					<ShowcaseCard title="Medizona" />
+				</div>
+				<ShowcaseCard title="Poetical" />		
 			</div>
 		</div>
 	</main>
