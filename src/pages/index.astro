@@ -1,20 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
+import Availability from '../components/Availability.astro';
+import ServiceBoxes from '../components/ServiceBoxes.astro';
 ---
 
 <Layout title="Loophau5 Software">
 	<main>
+		<!-- Main section -->
 		<div class="grid grid-cols-2 h-screen w-full">
-			<div class="flex flex-col justify-center px-10">
-				<h1 class="text-black text-6xl text-justify font-bold p-2">We build your app <br /> in just few weeks</h1>
+			<div class="flex flex-col justify-center px-16">
+				<Availability title={"Currently available"} status={"available"} />
+				<h1 class="text-black text-6xl text-justify font-bold p-2">We build your app <br /> in just few weeks.</h1>
+				<p class="font-medium text-2xl px-2 py-5">
+					Your <span class="font-bold">React</span> & <span class="font-bold">React Native</span> expert, go from idea <br />
+					to real word app. Our workflows adapts to <br />
+					anything your project needs.
+				</p>
 				<div class="flex w-full mt-8">
 					<Button title='Pricing' href="/" isBlack />
 					<div class="mx-3"></div>
 					<Button title=`Let's Talk` href="/" isBlack={false} />
 				</div>
 			</div>
-			<div class="bg-yellow-200"></div>
+			<div class="flex flex-col justify-center items-center">
+				<img class="w-3/4 h-3/4" src="/public/phone_3d.png" alt="hand and smartphone illustration" />
+			</div>
+		</div>
+		<!-- Services -->
+		<div class="my-10">
+			<div class="p-16">
+				<h2 class="text-5xl font-bold">Services</h2>
+				<p class="text-xl font-medium my-4">
+					How can we assist you?. We can build your app <br />
+					from scratch or give you a hand on existing projects
+				</p>   
+			</div>
+			<ServiceBoxes />
+		</div>
+		<!-- Work -->
+		<div class="my-10">
+			<div class="p-16">
+				<h2 class="text-5xl font-bold">Work</h2>
+				<p class="text-xl font-medium my-4">
+					We have experience crafting <br />
+					mobile digital experiences from scratch. 
+				</p>   
+			</div>
 		</div>
 	</main>
 </Layout>
