@@ -1,11 +1,12 @@
 ---
 interface Props {
     title: string;
+    size: 'small' | 'large';
 }
 
-const { title } = Astro.props;
+const { title, size } = Astro.props;
 ---
 
-<div class="w-11/12 h-52 border-3 border-gray-200 rounded-2xl my-6">
+<div class=`${size === "large" ? 'w-11/12' : 'w-5/12'} h-56 border-3 border-gray-200 hover:border-lime-200 rounded-2xl my-6`>
     <p>{title}</p>
 </div>
