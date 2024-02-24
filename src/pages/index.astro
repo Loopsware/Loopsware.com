@@ -1,5 +1,8 @@
 ---
+//* Layout
 import Layout from '../layouts/Layout.astro';
+import NavBar from '../layouts/NavBar.astro';
+//* UI comps.
 import Button from '../components/Button.astro';
 import Availability from '../components/Availability.astro';
 import ServiceBoxes from '../components/ServiceBoxes.astro';
@@ -9,6 +12,7 @@ import ContactForm from '../components/ContactForm.astro';
 ---
 
 <Layout title="Loophau5 Software">
+	<NavBar />
 	<main>
 		<!-- Main section -->
 		<div class="grid grid-cols-2 h-screen w-full">
@@ -60,7 +64,7 @@ import ContactForm from '../components/ContactForm.astro';
 				</div>
 				<div class="flex flex-col items-center">
 					<ShowcaseCard title="Poetical" size="large" />	
-					<div class="flex justify-center items-center w-11/12 h-60 border-3 border-gray-300 bg-gray-200 rounded-2xl my-6 cursor-pointer hover:underline">
+					<div class="flex justify-center items-center w-11/12 h-60 border-3 border-gray-300 bg-gray-100 rounded-2xl my-6 cursor-pointer hover:underline">
 						<p class="font-black text-xl hover:underline">Your App? &rarr;</p>
 					</div>	
 				</div>
