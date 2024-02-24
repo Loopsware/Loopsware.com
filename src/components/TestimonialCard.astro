@@ -54,13 +54,13 @@ const { testimony } = Astro.props;
 <div class="flex flex-col border-3 border-gray-200 rounded-2xl p-6 mb-8">
     <div class="flex items-center">
         <img class="w-14 h-14 rounded-full" src=`/public/${testimonials[testimony].avatar}` />
-        <div class="flex flex-col ml-2">
+        <div class="flex flex-col ml-4">
             <p class="font-bold">{testimonials[testimony].title}</p>
             <p class="text-sm text-gray-500 font-medium">{testimonials[testimony].role}</p>
         </div>
     </div>
     <div class="mt-6">
         <p class="text-sm">"{testimonials[testimony].description}"</p>
-        <img class=`h-11 mt-4` src=`/public/${testimonials[testimony].company_logo}` />
+        <img class=`h-11 mt-4` src=`/public/${testimonials[testimony].company_logo}` alt=`${testimonials[testimony].title}` />
     </div>
 </div>
