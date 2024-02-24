@@ -5,26 +5,62 @@ interface Props {
 
 const testimonials: any = {
     0: {
+        avatar: 'fernando_carral.jpeg',
         title: 'Fernando Carral',
         role: 'COO & Co-founder at Medizona',
-        description: 'I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.'
+        description: 'I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.',
+        company_logo: 'medizona_logo.png'
     },
     1: {
+        avatar: 'jose_lopez.jpeg',
+        title: 'Jose Lopez',
+        role: 'Software Engineer at Microsoft',
+        description: ' I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.',
+        company_logo: 'microsoft_logo.png'
+    },
+    2: {
+        avatar: 'ana_paula_santana.jpeg',
         title: 'Ana Paula Santana',
         role: 'CEO & Co-founder at Kluu.mx',
-        description: ' I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.'
+        description: ' I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.',
+        company_logo: 'kluumx_logo.png'
+    },
+    3: {
+        avatar: 'fernando_contreras.jpeg',
+        title: 'Fernando Contreras',
+        role: 'Former Software Engineer at C3.ai',
+        description: ' I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.',
+        company_logo: 'c3ai_logo.png'
+    },
+    4: {
+        avatar: 'caspian_zhao.jpeg',
+        title: 'Caspian Zhao',
+        role: 'Frontend Developer at RSS3',
+        description: ' I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.',
+        company_logo: 'rss3_logo.png'
+    },
+    5: {
+        avatar: 'alfonso_zavala.jpeg',
+        title: 'Alfonso Zavala',
+        role: 'Software Engineer at f5',
+        description: 'Oliver and I worked together in freelance projects and I have to say that he is one of the best frontend developers I have ever worked with. His knowledge and commitment is amazing, as well as his creativity and professionalism. Definitely a great person to work with.',
+        company_logo: 'f5_logo.png'
     }
 };
 
 const { testimony } = Astro.props;
 ---
 
-<div class="flex flex-col  border-3 border-gray-200 rounded-2xl p-8 mb-8">
-    <div class="flex flex-col py-4">
-        <p class="text-lg font-bold">{testimonials[testimony].title}</p>
-        <p>{testimonials[testimony].role}</p>
+<div class="flex flex-col border-3 border-gray-200 rounded-2xl p-6 mb-8">
+    <div class="flex items-center">
+        <img class="w-14 h-14 rounded-full" src=`/public/${testimonials[testimony].avatar}` />
+        <div class="flex flex-col ml-2">
+            <p class="font-bold">{testimonials[testimony].title}</p>
+            <p class="text-sm text-gray-500 font-medium">{testimonials[testimony].role}</p>
+        </div>
     </div>
-    <div>
-        <p>{testimonials[testimony].description}</p>
+    <div class="mt-6">
+        <p class="text-sm">"{testimonials[testimony].description}"</p>
+        <img class="w-42 h-12 mt-4" src=`/public/${testimonials[testimony].company_logo}` />
     </div>
 </div>
