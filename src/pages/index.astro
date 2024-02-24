@@ -4,6 +4,8 @@ import Button from '../components/Button.astro';
 import Availability from '../components/Availability.astro';
 import ServiceBoxes from '../components/ServiceBoxes.astro';
 import ShowcaseCard from '../components/ShowcaseCard.astro';
+import TestimonialsCard from '../components/TestimonialCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
 ---
 
 <Layout title="Loophau5 Software">
@@ -48,16 +50,19 @@ import ShowcaseCard from '../components/ShowcaseCard.astro';
 					mobile digital experiences from scratch. 
 				</p>   
 			</div>
-			<div class="grid grid-cols-2 px-16">
-				<div class="flex flex-col" >
+			<div class="grid grid-cols-2 px-8">
+				<div class="flex flex-col items-center">
 					<ShowcaseCard title="Medizona" size="large" />
-					<div class="flex justify-between bg-yellow-300 w-11/12">
-						<ShowcaseCard title="Medizona" size="small" />
-						<ShowcaseCard title="Medizona" size="small" />
+					<div class="flex flex-row justify-around w-full">
+						<ShowcaseCard title="Kluu" size="small" />
+						<ShowcaseCard title="Arriba" size="small" />
 					</div>
 				</div>
-				<div class="flex flex-col">
-					<ShowcaseCard title="Poetical" size="large" />		
+				<div class="flex flex-col items-center">
+					<ShowcaseCard title="Poetical" size="large" />	
+					<div class="flex justify-center items-center w-11/12 h-60 border-3 border-gray-300 bg-gray-200 rounded-2xl my-6 cursor-pointer hover:underline">
+						<p class="font-black text-xl hover:underline">Your App? &rarr;</p>
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -69,6 +74,18 @@ import ShowcaseCard from '../components/ShowcaseCard.astro';
 					What some of the customers, <br /> 
 					collaborators think about
 				</p>   
+			</div>
+			<div class="grid grid-cols-3 grid-rows-2 justify-between px-16">
+				<div>
+					<TestimonialCard testimony='0' />
+					<TestimonialCard testimony='1' />
+					<TestimonialCard testimony='0' />
+				</div>
+				<div>
+					<TestimonialCard testimony='0' />
+					<TestimonialCard testimony='0' />
+					<TestimonialCard testimony='0' />
+				</div>
 			</div>
 		</div>
 	</main>

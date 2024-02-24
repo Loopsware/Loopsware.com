@@ -1,0 +1,25 @@
+---
+interface Props {
+    testimony: string;
+}
+
+const testimonials: any = {
+    0: {
+        title: 'Fernando Carral',
+        role: 'COO & Co-founder at Medizona',
+        description: 'I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.'
+    },
+    1: {
+        title: 'Ana Paula Santana',
+        role: 'CEO & Co-founder at Kluu.mx',
+        description: ' I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.'
+    }
+};
+
+const { testimony } = Astro.props;
+---
+
+<div class="flex flex-col  border-3 border-gray-200 rounded-2xl">
+    <p class="text-lg font-bold px-2">{testimonials[testimony].title}</p>
+    <p>{testimonials[testimony].role}</p>
+</div>
