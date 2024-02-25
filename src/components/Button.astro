@@ -1,11 +1,11 @@
 ---
 interface Props {
 	title: string;
-	isBlack: boolean;
+	isBlack?: boolean;
 	href: string;
 }
 
-const { href, title, isBlack } = Astro.props;
+const { href, title, isBlack = true } = Astro.props;
 ---
 
 <button class=`w-44 h-14 rounded-full ${!isBlack} ${!isBlack ? 'bg-transparent' : 'bg-stone-900'} ${!isBlack ? 'border-3 border-black' : 'border-none'}`>
