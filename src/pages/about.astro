@@ -3,6 +3,8 @@
 import Layout from '../layouts/Layout.astro';
 import NavBar from '../layouts/NavBar.astro';
 import Footer from '../layouts/Footer.astro';
+//* Components
+import FounderCard from '../components/FounderCard.astro';
 ---
 
 
@@ -20,7 +22,7 @@ import Footer from '../layouts/Footer.astro';
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur.<br />
                     Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur.
                 </p>   
-                <div class="grid grid-cols-1 my-8">
+                <div class="flex my-8">
                     <div class="w-8/12">
                         <div class="flex justify-between my-8">
                             <div class="flex flex-col">
@@ -55,7 +57,9 @@ import Footer from '../layouts/Footer.astro';
                             </div>
                         </div>
                     </div>
-                    <div class="w-4/12 bg-red-300"></div>
+                    <div class="w-4/12">
+                        <FounderCard />
+                    </div>
                 </div>
 			</div>
 		</div>
