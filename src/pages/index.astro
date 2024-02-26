@@ -62,7 +62,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 					mobile digital experiences from scratch. 
 				</p>   
 			</div>
-			<div class="grid grid-cols-2 px-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 md:px-8">
 				<div class="flex flex-col items-center">
 					<ShowcaseCard title="Medizona" size="large" />
 					<div class="flex flex-row justify-around w-full">
@@ -82,24 +82,24 @@ import FooterLabel from '../components/FooterLabel.astro';
 			</div>
 		</div>
 		<!-- Testimonials -->
-		<div class="h-screen my-10">
-			<div class="p-16">
+		<div class="md:h-screen my-10">
+			<div class="p-8 md:p-16">
 				<h2 class="text-5xl font-black">Testimonials:</h2>
 				<p class="text-xl font-medium my-4">
 					What some of the customers, <br /> 
 					collaborators think about
 				</p>   
 			</div>
-			<div class="grid grid-cols-3 grid-rows-2 justify-between px-16">
-				<div class="w-11/12">
+			<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 justify-between px-8 md:px-16">
+				<div class="md:w-11/12">
 					<TestimonialCard testimony='0' />
 					<TestimonialCard testimony='1' />
 				</div>
-				<div class="w-11/12">
+				<div class="md:w-11/12">
 					<TestimonialCard testimony='2' />
 					<TestimonialCard testimony='3' />
 				</div>
-				<div  class="w-11/12">
+				<div class="md:w-11/12">
 					<TestimonialCard testimony='4' />
 					<TestimonialCard testimony='5' />
 				</div>
@@ -110,8 +110,8 @@ import FooterLabel from '../components/FooterLabel.astro';
 		</div>
 		<!-- Contact Us -->
 		<div class="my-10">
-			<div class="grid grid-cols-2 p-16">
-				<div>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-8 md:p-16">
+				<div class="flex flex-col md:block">
 					<div class="flex flex-col">
 						<h2 class="text-4xl font-black">
 							Let us know <br />
@@ -124,7 +124,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 					</div>
 					<img class="h-4/6" src="/public/oliver_3d.webp" alt="Man working on a laptop" />
 				</div>
-				<div class="mr-10">
+				<div class="md:mr-10">
 					<ContactForm />
 				</div>
 			</div>
