@@ -5,6 +5,7 @@ import NavBar from '../layouts/NavBar.astro';
 import Footer from '../layouts/Footer.astro';
 //* Components
 import FounderCard from '../components/FounderCard.astro';
+import FooterLabel from '../components/FooterLabel.astro';
 ---
 
 
@@ -22,7 +23,7 @@ import FounderCard from '../components/FounderCard.astro';
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur.<br />
                     Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur.
                 </p>   
-                <div class="flex my-8">
+                <div class="flex mt-8">
                     <div class="w-8/12">
                         <div class="flex justify-between mt-2">
                             <div class="flex flex-col pr-8">
@@ -65,6 +66,9 @@ import FounderCard from '../components/FounderCard.astro';
                         <FounderCard />
                     </div>
                 </div>
+                <div class="w-2/6">
+				    <FooterLabel title="About" />
+			    </div>
 			</div>
 		</div>
         <!-- Tech Stack -->
@@ -114,6 +118,9 @@ import FounderCard from '../components/FounderCard.astro';
                         <img class="w-11/12" src="/public/retrocomputer_3d.webp" alt="Retro computer" />
                     </div>
                 </div>
+                                <div class="w-2/6 my-8">
+				    <FooterLabel title="About" />
+			    </div>
             </div>
         </div>
     </main>
