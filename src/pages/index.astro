@@ -15,13 +15,13 @@ import FooterLabel from '../components/FooterLabel.astro';
 
 <Layout title="Loopsware | React Experts">
 	<NavBar />
-	<main>
+	<main class="bg-teal-400">
 		<!-- Main section -->
-		<div class="grid grid-cols-2 h-screen w-full">
-			<div class="flex flex-col justify-center px-16">
+		<div class="flex flex-col-reverse md:grid md:grid-cols-2 h-screen w-full">
+			<div class="flex flex-col justify-center px-4 md:px-16">
 				<Availability title={"Currently available"} status={"available"} />
-				<h1 class="text-black text-6xl text-justify font-black p-2">We build your app <br /> in just few weeks.</h1>
-				<p class="font-medium text-2xl px-2 py-5">
+				<h1 class="text-black text-4xl md:text-6xl text-justify font-black p-2">We build your app <br /> in just few weeks.</h1>
+				<p class="font-medium text-lg md:text-2xl px-2 py-5">
 					Your <span class="font-bold">React</span> & <span class="font-bold">React Native</span> expert, go from idea <br />
 					to real word app. Our workflows adapts to <br />
 					anything your project needs.
@@ -33,23 +33,23 @@ import FooterLabel from '../components/FooterLabel.astro';
 				</div>
 			</div>
 			<div class="flex flex-col justify-center items-center">
-				<img class="w-3/4 h-3/4" src="/public/phone_3d.png" alt="hand and smartphone illustration" />
+				<img class="h-5/6 w-full md:w-3/4 md:h-3/4" src="/public/phone_3d.png" alt="hand and smartphone illustration" />
 			</div>
-			<div class="mx-16">
+			<div class="hidden md:block md:mx-16">
 				<FooterLabel title="Home" />
 			</div>
 		</div>
 		<!-- Services -->
 		<div class="my-10">
-			<div id="services" class="p-16">
-				<h2 class="text-5xl font-black">Services</h2>
+			<div id="services" class="p-4 md:p-16">
+				<h2 class="text-4xl md:text-5xl font-black">Services</h2>
 				<p class="text-xl font-medium my-4">
 					How can we assist you?. We can build your app <br />
 					from scratch or give you a hand on existing projects
 				</p>   
 			</div>
 			<ServiceBoxes />
-			<div class="w-1/6 my-10">
+			<div class="w-1/6 my-10 mx-16">
 				<FooterLabel title="Home" />
 			</div>
 		</div>
@@ -77,7 +77,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 					</div>	
 				</div>
 			</div>
-			<div class="w-1/6 my-10">
+			<div class="w-1/6 my-10 mx-16">
 				<FooterLabel title="Home" />
 			</div>
 		</div>
@@ -102,6 +102,9 @@ import FooterLabel from '../components/FooterLabel.astro';
 				<div  class="w-11/12">
 					<TestimonialCard testimony='4' />
 					<TestimonialCard testimony='5' />
+				</div>
+				<div class="h-10 w-4/6">
+					<FooterLabel title="Home" />
 				</div>
 			</div>
 		</div>
