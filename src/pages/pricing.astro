@@ -8,7 +8,6 @@ import Button from '../components/Button.astro';
 import FooterLabel from '../components/FooterLabel.astro';
 ---
 
-
 <Layout title="Loopsware | Pricing">
     <NavBar />
     <main>
@@ -16,7 +15,8 @@ import FooterLabel from '../components/FooterLabel.astro';
             <div class="p-16">
                 <h2 class="text-5xl font-black">Pricing</h2>
 				<p class="text-xl font-medium my-4">
-					Checkout the price. Let's work together.
+					Choose the right price for you. <br />
+                    Any questions?, Book a call for free.
 				</p>
                 <div class="flex w-full mt-8">
                     <div class="flex flex-col justify-end w-6/12">
@@ -33,10 +33,24 @@ import FooterLabel from '../components/FooterLabel.astro';
                             <div class="flex justify-center items-center h-28 w-28 bg-lime-200 my-8">
                                 <p class="font-black text-8xl">$3K</p>
                             </div>
-                            <p class="text-lg text-center font-medium">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. <br />
-                                Suspendisse dapibus metus ut mattis efficitur. 
-                            </p>
+                            <p class="font-bold">What's included?</p>
+                            <ul class="flex flex-col mt-4">
+                                <li>
+                                    <p class="text-lg text-center font-medium">
+                                        Go from idea, to launch.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-lg text-center font-medium">
+                                        Android, iOS and Web development.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-lg text-center font-medium">
+                                        Scrum development methodology.
+                                    </p>
+                                </li>
+                            </ul>
                             <p class="text-gray-400 text-lg my-8">
                                 *pricing shows in USD
                             </p>
@@ -52,6 +66,7 @@ import FooterLabel from '../components/FooterLabel.astro';
                             <div class="flex justify-center items-center h-28 w-28 bg-lime-200 my-8">
                                 <p class="font-black text-8xl">$2K</p>
                             </div>
+                            <p class="font-bold">What's included?</p>
                             <p class="text-lg text-center font-medium">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. <br />
                                 Suspendisse dapibus metus ut mattis efficitur. 
@@ -70,8 +85,8 @@ import FooterLabel from '../components/FooterLabel.astro';
                                     React Component
                                 </p>
                                 <img class="w-20 h-20" src="/public/react_3d.png" alt="React 3D logo" />
-                                <p class="text-center font-medium my-2">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit  
+                                <p class="text-center font-medium my-4">
+                                    Just need a specific component? <br /> We can help you with that.
                                 </p>
                                 <button class="h-12 w-2/3 bg-stone-900 rounded-full">
                                     <a href="/" class="text-white px-4 py-2">Book a call</a>
@@ -85,8 +100,8 @@ import FooterLabel from '../components/FooterLabel.astro';
                                     Native Module
                                 </p>
                                 <img class="w-36 h-20" src="/public/modules_3d.png" alt="Kotlin & Swift 3D logos" />
-                                <p class="text-center font-medium my-2">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit  
+                                <p class="text-center font-medium my-3">
+                                    Need a custom native functionality?. We can handle it.
                                 </p>
                                 <button class="h-12 w-2/3 bg-stone-900 rounded-full">
                                     <a href="/" class="text-white px-4 py-2">Book a call</a>
