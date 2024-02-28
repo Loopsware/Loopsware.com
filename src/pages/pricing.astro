@@ -19,7 +19,7 @@ import FooterLabel from '../components/FooterLabel.astro';
                     Any questions?, Book a call for free.
 				</p>
                 <div class="flex w-full mt-8">
-                    <div class="flex flex-col justify-end w-6/12">
+                    <div class="hidden md:flex flex-col justify-end w-6/12">
                         <img class="h-72" src="/public/moneybag_3d.jpeg" alt="money bag" />
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 md:ml-8">
@@ -77,20 +77,26 @@ import FooterLabel from '../components/FooterLabel.astro';
                            <Button href="/" title="Hire me" />
                         </div>
                         <div class="flex flex-col justify-between">
-                            <div class="flex flex-col items-center border-3 border-gray-200 rounded-2xl p-5 mx-4">
-                                <p class="font-black text-2xl text-center">
-                                    Custom
-                                </p>
-                                <p class="font-black text-2xl text-center">
-                                    React Component
-                                </p>
-                                <img class="w-20 h-20" src="/public/react_3d.png" alt="React 3D logo" />
-                                <p class="text-center font-medium my-4">
-                                    Just need a specific component? <br /> We can help you with that.
-                                </p>
-                                <button class="h-12 w-2/3 bg-stone-900 rounded-full">
-                                    <a href="/" class="text-white px-4 py-2">Book a call</a>
-                                </button>
+                            <div class="flex flex-col md:items-center border-3 border-gray-200 rounded-2xl p-5 mx-4">
+                                <div class="flex flex-row-reverse md:flex-col items-center bg-yellow-300">
+                                    <div>
+                                        <p class="font-black text-xl md:text-2xl md:text-center">
+                                            Custom
+                                        </p>
+                                        <p class="font-black text-xl md:text-2xl md:text-center">
+                                            React Component
+                                        </p>
+                                    </div>
+                                    <img class="w-16 h-16 md:w-20 md:h-20" src="/public/react_3d.png" alt="React 3D logo" />
+                                </div>
+                                <div class="flex flex-col md:items-center">
+                                    <p class="text-sm md:text-md md:text-center font-medium my-4">
+                                        Just need a specific component? <br /> We can help you with that.
+                                    </p>
+                                    <button class="h-10 w-2/4 md:h-12 md:w-2/3 bg-stone-900 rounded-full">
+                                        <a href="/" class="text-white px-4 py-2">Book a call</a>
+                                    </button>                                   
+                                </div>
                             </div>
                             <div class="flex flex-col items-center border-3 border-gray-200 rounded-2xl p-5 mt-4 mx-4">
                                 <p class="font-black text-2xl text-center">
@@ -112,7 +118,7 @@ import FooterLabel from '../components/FooterLabel.astro';
                 </div>
             </div>
             <div class="hidden md:block w-2/6 mx-16">
-				<FooterLabel title="About" />
+				<FooterLabel title="Pricing" />
 			</div>
         </div>
     </main>
