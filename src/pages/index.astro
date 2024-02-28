@@ -20,20 +20,20 @@ import FooterLabel from '../components/FooterLabel.astro';
 		<div class="flex flex-col-reverse md:grid md:grid-cols-2 h-screen w-full">
 			<div class="flex flex-col justify-center px-4 md:px-16">
 				<Availability title={"Currently available"} status={"available"} />
-				<h1 class="text-black text-4xl md:text-6xl text-justify font-black p-2">We build your app <br /> in just few weeks.</h1>
+				<h1 class="text-black text-4xl md:text-6xl font-black p-2">We transform your vision into real apps.</h1>
 				<p class="font-medium text-lg md:text-2xl px-2 py-5">
-					Your <span class="font-bold">React</span> & <span class="font-bold">React Native</span> expert, go from idea <br />
-					to real word app. Our workflows adapts to <br />
+					Experts in <span class="font-bold">React</span> & <span class="font-bold">React Native</span>, We're ready <br />
+					to ship your app idea. Our workflows adapts to <br />
 					anything your project needs.
 				</p>
 				<div class="flex flex-col md:flex-row w-full mt-8">
 					<Button title='Pricing' href="/" isBlack />
 					<div class="mx-3 my-2 md:my-0"></div>
-					<Button title=`Let's Talk` href="/" isBlack={false} />
+					<Button title='Book a call' href="/" isBlack={false} />
 				</div>
 			</div>
 			<div class="flex flex-col justify-center items-center">
-				<img class="h-5/6 w-full md:w-3/4 md:h-3/4" src="/public/phone_3d.png" alt="hand and smartphone illustration" />
+				<img class="h-5/6 w-full md:w-3/4 md:h-4/5" src="/public/phone_3d.png" alt="hand and smartphone illustration" />
 			</div>
 			<div class="hidden md:block md:mx-16">
 				<FooterLabel title="Home" />
@@ -71,10 +71,13 @@ import FooterLabel from '../components/FooterLabel.astro';
 					</div>
 				</div>
 				<div class="flex flex-col items-center">
-					<ShowcaseCard title="Poetical" size="large" />	
-					<div class="flex justify-center items-center w-11/12 h-60 border-3 border-gray-300 bg-gray-100 rounded-2xl my-6 cursor-pointer hover:underline">
-						<p class="font-black text-xl hover:underline">Your App? &rarr;</p>
-					</div>	
+					<ShowcaseCard title="BoletoMóvil" size="large" />
+					<div class="grid grid-cols-2 md:flex md:flex-row justify-around w-10/12 md:w-full">
+						<ShowcaseCard title="Poetical" size="small" />
+						<div class="flex justify-center items-center w-5/12 h-60 border-3 border-gray-300 bg-gray-100 rounded-2xl my-6 cursor-pointer hover:underline">
+							<p class="font-black text-xl hover:underline">Your App? &rarr;</p>
+						</div>	
+					</div>
 				</div>
 			</div>
 			<div class="w-1/6 my-10 mx-16">
