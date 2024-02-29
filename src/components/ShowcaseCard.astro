@@ -7,8 +7,8 @@ interface Props {
 const { title, size } = Astro.props;
 ---
 
-<div class=`flex items-end ${size === "large" ? 'w-11/12' : 'md:w-5/12'} h-60 border-3 border-gray-200 hover:border-lime-200 rounded-2xl my-6 cursor-pointer`>
-    <div class=`flex justify-center items-center ${size === 'large' ? 'w-3/12' : 'w-5/12'} h-12 bg-black/50 backdrop-blur-md rounded-full m-4`>
+<div class=`flex items-end ${size === "large" ? 'w-11/12' : 'w-11/12 md:w-5/12'} h-52 md:h-60 border-3 border-gray-200 hover:border-lime-200 rounded-2xl my-2 md:my-6 cursor-pointer`>
+    <div class=`flex justify-center items-center ${size === 'large' ? 'w-4/12 md:w-3/12' : 'w-7/12 md:w-5/12'} h-12 bg-black/50 backdrop-blur-md rounded-full m-4`>
         <p class=`${size === 'large' ? 'text-md' : 'text-sm' } text-white font-bold p-2`>{title}</p>
     </div>
 </div>
