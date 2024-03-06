@@ -43,7 +43,7 @@ const testimonials: any = {
         avatar: 'alfonso_zavala.jpeg',
         title: 'Alfonso Zavala',
         role: 'Software Engineer at f5',
-        description: 'Oliver and I worked together in freelance projects and I have to say that he is one of the best frontend developers I have ever worked with. His knowledge and commitment is amazing, as well as his creativity and professionalism. Definitely a great person to work with.',
+        description: 'Oliver and I worked together in freelance projects and I have to say that he is one of the best developers I have ever worked with. His knowledge and commitment is amazing, as well as his creativity and professionalism. Definitely a great person to work with.',
         company_logo: 'f5_logo.png'
     }
 };
@@ -51,10 +51,10 @@ const testimonials: any = {
 const { testimony } = Astro.props;
 ---
 
-<div class="flex flex-col border-3 border-gray-200 rounded-2xl p-6 mb-8">
+<div class="flex flex-col border-3 border-gray-200 rounded-2xl p-6 mb-8 md:mb-10">
     <div class="flex items-center">
         <img class="w-14 h-14 rounded-full" src=`/public/${testimonials[testimony].avatar}` />
-        <div class="flex flex-col ml-4">
+        <div class="flex flex-col ml-3">
             <p class="font-bold">{testimonials[testimony].title}</p>
             <p class="text-sm text-gray-500 font-medium">{testimonials[testimony].role}</p>
         </div>
