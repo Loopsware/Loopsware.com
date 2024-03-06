@@ -44,7 +44,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 			<div id="services" class="p-4 md:p-16">
 				<h2 class="text-4xl md:text-5xl font-black">Services</h2>
 				<p class="text-xl font-medium my-4">
-					How can we assist you?. We can build your app <br />
+					How can we assist you?. We can build your app <br class="hidden md:block" />
 					from scratch or give you a hand on existing projects
 				</p>   
 			</div>
@@ -118,8 +118,8 @@ import FooterLabel from '../components/FooterLabel.astro';
 			</div>
 		</div>
 		<!-- Contact Us -->
-		<div class="my-10">
-			<div class="grid grid-cols-1 md:grid-cols-2 p-4 md:p-16">
+		<div class="md:my-10">
+			<div class="grid grid-cols-1 md:grid-cols-2 p-4 md:py-16 md:pl-16">
 				<div class="flex flex-col md:block">
 					<div class="flex flex-col">
 						<h2 class="text-4xl font-black">
@@ -133,7 +133,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 					</div>
 					<img class="h-4/6" src="/public/oliver_3d.webp" alt="Man working on a laptop" />
 				</div>
-				<div class="md:mr-10">
+				<div class="md:mr-12">
 					<ContactForm />
 				</div>
 			</div>
