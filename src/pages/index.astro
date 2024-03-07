@@ -55,21 +55,21 @@ import FooterLabel from '../components/FooterLabel.astro';
 		</div>
 		<!-- Work -->
 		<div class="my-10">
-			<div class="p-4 md:p-16">
+			<div class="p-4 md:p-8 lg:p-16">
 				<h2 class="text-5xl font-black">Work</h2>
 				<p class="text-xl font-medium my-4">
 					We have experience crafting <br />
 					mobile digital experiences from scratch. 
 				</p>   
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 md:pl-8 md:pr-12">
+			<div class="grid grid-cols-1 md:grid-cols-2 md:px-4 lg:pl-8 lg:pr-12 lg:px-0">
 				<div class="flex flex-col items-center">
 					<ShowcaseCard title="Medizona" size="large" />
 					<div class="flex flex-row justify-between w-11/12">
-						<div class="w-11/12 md:w-full mr-2 md:mr-6">
+						<div class="w-11/12 lg:w-full mr-2 lg:mr-6">
 							<ShowcaseCard title="Kluu" size="small" />
 						</div>
-						<div class="w-11/12 md:w-full ml-2 md:ml-6">
+						<div class="w-11/12 lg:w-full ml-2 lg:ml-6">
 							<ShowcaseCard title="Arriba" size="small" />
 						</div>
 					</div>
@@ -77,29 +77,29 @@ import FooterLabel from '../components/FooterLabel.astro';
 				<div class="flex flex-col items-center">
 					<ShowcaseCard title="BoletoMóvil" size="large" />
 					<div class="flex flex-row justify-between w-11/12">
-						<div class="w-11/12 md:w-full mr-2 md:mr-6">
+						<div class="w-11/12 lg:w-full mr-2 lg:mr-6">
 							<ShowcaseCard title="Poetical" size="small" />
 						</div>
-						<div class="flex justify-center items-center w-11/12 md:w-full h-52 xl:h-60 border-3 border-gray-300 bg-gray-100 rounded-2xl my-2 md:my-6 cursor-pointer hover:underline ml-2 md:ml-6">
-							<p class="font-black text-lg md:text-xl hover:underline">Your App? &rarr;</p>
+						<div class="flex justify-center items-center w-11/12 lg:w-full h-52 md:h-44 lg:h-60 border-3 border-gray-300 bg-gray-100 rounded-2xl my-2 md:my-4 lg:my-6 cursor-pointer hover:underline ml-2 lg:ml-6">
+							<p class="font-black text-lg lg:text-xl hover:underline">Your App? &rarr;</p>
 						</div>	
 					</div>
 				</div>
 			</div>
-			<div class="hidden md:block w-3/6 my-10 mx-16">
+			<div class="hidden md:block w-3/6 my-10 mx-8 lg:mx-16">
 				<FooterLabel title="Home" />
 			</div>
 		</div>
 		<!-- Testimonials -->
 		<div class="my-10">
-			<div class="p-4 md:p-16">
+			<div class="p-4 md:p-8 lg:p-16">
 				<h2 class="text-5xl font-black">Testimonials:</h2>
 				<p class="text-xl font-medium my-4">
 					What some of the customers, <br /> 
 					collaborators think about
 				</p>   
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2 px-4 md:px-12">
+			<div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2 px-4 lg:px-12">
 				<TestimonialCard testimony='0' />
 				<TestimonialCard testimony='2' />
 				<TestimonialCard testimony='4' />
@@ -107,27 +107,27 @@ import FooterLabel from '../components/FooterLabel.astro';
 				<TestimonialCard testimony='3' />
 				<TestimonialCard testimony='5' />
 			</div>
-			<div class="hidden md:block h-10 w-4/6 p-4 md:p-16">
+			<div class="hidden md:block h-10 w-4/6 p-4 p-8 lg:p-16">
 				<FooterLabel title="Home" />
 			</div>
 		</div>
 		<!-- Contact Us -->
 		<div class="my-20 xl:mt-24 xl:my-10">
-			<div class="grid grid-cols-1 md:grid-cols-2 p-4 md:py-16 md:pl-16">
-				<div class="flex flex-col md:block">
+			<div class="grid grid-cols-1 md:grid-cols-2 p-4 md:py-8 md:pr-8 md:pl-8 lg:py-16 lg:pl-16">
+				<div class="flex flex-col w-full md:w-10/12 lg:w-full md:block">
 					<div class="flex flex-col">
 						<h2 class="text-3xl xl:text-4xl font-black">
 							Let us know <br />
 							about the project
 						</h2>
 						<p class="xl:text-xl font-medium my-4">
-							Ask any question, tell us more about your <br />
+							Ask any question, tell us more about your <br class="block md:hidden lg:block" />
 							next app idea. We respond as soon as possible.
 						</p>
 					</div>
 					<img class="h-4/6 lg:3/6 xl:h-4/6" src="/public/oliver_3d.webp" alt="Man working on a laptop" />
 				</div>
-				<div class="md:mr-12">
+				<div class="lg:mr-12">
 					<ContactForm />
 				</div>
 			</div>
