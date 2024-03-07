@@ -20,53 +20,53 @@ import FooterLabel from '../components/FooterLabel.astro';
 					More about this project and <br /> who is behind it.
 				</p>
                 <p class="text-lg xl:text-xl text-justify font-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur.<br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur.<br class="block md:hidden lg:block" />
                     Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur.
                 </p>   
                 <div class="flex flex-col md:flex-row mt-8 md:mt-16">
                     <div class="w-full md:w-8/12">
                         <div class="flex justify-between mt-2">
-                            <div class="flex flex-col pr-4 md:pr-8">
+                            <div class="flex flex-col pr-4 lg:pr-8">
                                 <img class="h-12 w-16 xl:h-16 xl:w-20" src="/public/lightbulb_3d.png" alt="3D lightbulb" />
                                 <p class="text-lg xl:text-xl font-black">Philosophy</p>
-                                <p class="my-4">
+                                <p class="md:text-sm lg:text-md my-4">
                                     Lorem ipsum dolor sit amet, consec adipiscing elit. Suspendisse dapibus metus ut mattis efficitur.
                                     Lorem ipsum dolor sit amet. 
                                 </p>
                             </div>
-                            <div class="flex flex-col pr-4 md:pr-8">
+                            <div class="flex flex-col pr-4 lg:pr-8">
                                 <img class="h-12 w-20 xl:h-16 xl:w-24" src="/public/handshake_3d.png" alt="3D handshake" />
                                 <p class="text-lg xl:text-xl font-black">Compromise</p>
-                                <p class="my-4">
+                                <p class="md:text-sm lg:text-md my-4">
                                     Lorem ipsum dolor sit amet, consec adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
                                     Lorem ipsum dolor sit amet.
                                 </p>
                             </div>
                         </div>
                         <div class="flex justify-between my-8">
-                            <div class="flex flex-col pr-4 md:pr-8">
+                            <div class="flex flex-col pr-4 lg:pr-8">
                                 <img class="h-12 w-12 xl:h-16 xl:w-16" src="/public/flag_3d.png" alt="3D flag" />
                                 <p class="text-lg xl:text-xl font-black">Mission</p>
-                                <p class="my-4">
+                                <p class="md:text-sm lg:text-md my-4">
                                     Lorem ipsum dolor sit amet, consec adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
                                     Lorem ipsum dolor sit amet.
                                 </p>
                             </div>
-                            <div class="flex flex-col pr-4 md:pr-8">
+                            <div class="flex flex-col pr-4 lg:pr-8">
                                 <img class="h-12 w-12 xl:h-16 xl:w-16" src="/public/react_3d.png" alt="3D react logo" />
                                 <p class="text-lg md:text-xl font-black">Why React?</p>
-                                <p class="my-4">
+                                <p class="md:text-sm lg:text-md my-4">
                                     Lorem ipsum dolor sit amet, consec adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
                                     Lorem ipsum dolor sit amet.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-4/12">
+                    <div class="w-full md:w-6/12 lg:w-4/12">
                         <FounderCard />
                     </div>
                 </div>
-                <div class="hidden md:block w-2/6">
+                <div class="hidden md:block w-4/6">
 				<FooterLabel title="About" />
 			</div>
 			</div>
@@ -114,11 +114,11 @@ import FooterLabel from '../components/FooterLabel.astro';
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-center md:justify-start ">
+                    <div class="flex justify-center lg:justify-start ">
                         <img class="w-10/12 md:w-9/12 xl:w-11/12" src="/public/retrocomputer_3d.webp" alt="Retro computer" />
                     </div>
                 </div>
-                <div class="hidden md:block w-2/6 my-8">
+                <div class="hidden md:block w-4/6 my-8">
 				<FooterLabel title="About" />
 			</div>
             </div>
