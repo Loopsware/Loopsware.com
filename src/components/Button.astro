@@ -8,6 +8,6 @@ interface Props {
 const { href, title, isBlack = true } = Astro.props;
 ---
 
-<button class=`w-full h-16 md:w-32 md:h-11 lg:w-40 lg:h-12 xl:w-44 xl:h-14 rounded-full ${!isBlack} ${!isBlack ? 'bg-transparent' : 'bg-stone-900'} ${!isBlack ? 'border-3 border-black' : 'border-none'}`>
+<button class=`w-full h-14 md:w-32 md:h-11 lg:w-40 lg:h-12 xl:w-44 xl:h-14 rounded-full ${!isBlack} ${!isBlack ? 'bg-transparent' : 'bg-stone-900'} ${!isBlack ? 'border-3 border-black' : 'border-none'}`>
     <a href={href} class=`${!isBlack ? 'text-black' : 'text-white'} text-lg md:text-sm lg:text-lg font-bold` >{title}</a>
 </button>

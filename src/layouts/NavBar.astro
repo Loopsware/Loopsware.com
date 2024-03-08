@@ -2,20 +2,20 @@
   <a href="/">
     <img class="h-7 md:h-7 xl:h-8" src="/public/loopsware_logo.png" alt="loopsware logo" />
   </a>
-  <div class="md:hidden">
+  <div class="md:hidden z-60">
     <button id="menu-button" class="relative">
       <span id="line1" class="block w-8 h-1 bg-black mb-2 transition-transform duration-200 rounded"></span>
       <span id="line2" class="block w-8 h-1 bg-black transition-transform duration-200 rounded"></span>
     </button>
   </div>
-<div id="menu" class="md:flex items-center md:bg-transparent md:relative md:p-0 hidden fixed top-0 left-0 w-full bg-white p-6 transition-transform duration-200">
-  <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">Services</a>
-  <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">Pricing</a>
-  <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">About</a>
-  <button class="md:h-10 xl:h-12 bg-stone-900 rounded-full md:px-6 xl:px-8 ml-5">
-    <a class="text-white font-bold" href="/">Book a call</a>
-  </button>
-</div>
+  <div id="menu" class="h-screen md:h-auto md:flex items-center md:bg-transparent md:relative md:p-0 hidden fixed top-0 left-0 w-full bg-white p-6 transition-transform duration-200 z-50">
+    <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">Services</a>
+    <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">Pricing</a>
+    <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">About</a>
+    <button class="md:h-10 xl:h-12 bg-stone-900 rounded-full md:px-6 xl:px-8 ml-5">
+      <a class="text-white font-bold" href="/">Book a call</a>
+    </button>
+  </div>
 </nav>
 
 <script>
@@ -25,18 +25,14 @@
   var menu = document.getElementById('menu');
 
   button?.addEventListener('click', function() {
-    var isOpen = menu?.classList.contains('top-0');
+    var isOpen = menu?.classList.contains('hidden');
 
     if (isOpen) {
-      menu?.classList.remove('top-0');
       menu?.classList.remove('hidden');
-      menu?.classList.add('top-full');
-      menu?.classList.add('absolute');
-    } else {
-      menu?.classList.remove('top-full');
-      menu?.classList.add('top-0');
-      menu?.classList.add('hidden');
       menu?.classList.remove('absolute');
+    } else {
+      menu?.classList.add('hidden');
+      menu?.classList.add('absolute');
     }
 
     line1?.classList.toggle('rotate-45', !isOpen);
