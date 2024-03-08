@@ -1,42 +1,21 @@
----
-  const blockStyle = () => {
-    const button: any = document.querySelector('#button');
-    const mobileMenu: any = document.querySelector('#menu-button');
-
-    if (
-      button.className ===
-      "flex flex-col justify-center w-full h-full menu-button-line-open"
-    ) {
-      button.className =
-        "flex flex-col justify-center w-full h-full menu-button-line";
-
-      mobileMenu.className =
-        "flex flex-col md:hidden mobile-navbar-menu-closed absolute";
-    } else {
-      mobileMenu.className =
-        "flex flex-col justify-center w-full h-full menu-button-line-open";
-
-      mobileMenu.className =
-        "flex flex-col md:hidden mobile-navbar-menu-open absolute";
-    }
-  };
-
----
-
-
-<nav class="flex w-full justify-between items-center px-4 md:px-8 lg:px-16 pt-8">
-    <a href="/">
-        <img class="md:h-7 xl:h-8" src="/public/loopsware_logo.png" alt="loopsware logo" />
-    </a>
-    <div class="block md:hidden">
-        <button></button>
-    </div>
-    <div id="menu-button" class="md:flex items-center">
-        <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">Services</a>
-        <a class="md:text-md lg:text-lg xl:text-xl mx-5"  href="/pricing">Pricing</a>
-        <a class="md:text-md lg:text-lg xl:text-xl mx-5"  href="/about">About</a>
-        <button class="md:h-10 xl:h-12 bg-stone-900 rounded-full md:px-6 xl:px-8 ml-5">
-            <a class="text-white font-bold" href="/">Book a call</a>
-        </button>
-    </div>
+<nav class="flex items-center justify-between p-6" x-data="{ open: false }">
+  <a href="/">
+    <img class="h-7 md:h-7 xl:h-8" src="/public/loopsware_logo.png" alt="loopsware logo" />
+  </a>
+  <div class="md:hidden">
+    <button @click="open = !open" class="relative">
+      <span :class="{'transform rotate-45 translate-y-2': open, 'transition-transform duration-200': true}" class="block w-8 h-1 bg-gray-500 mb-2"></span>
+      <span :class="{'transform -rotate-45': open, 'transition-transform duration-200': true}" class="block w-8 h-1 bg-gray-500"></span>
+    </button>
+  </div>
+  <div class="md:flex" :class="{ 'hidden': !open }">
+    <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">Services</a>
+    <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">Pricing</a>
+    <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">About</a>
+    <button class="md:h-10 xl:h-12 bg-stone-900 rounded-full md:px-6 xl:px-8 ml-5">
+      <a class="text-white font-bold" href="/">Book a call</a>
+    </button>
+  </div>
 </nav>
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
