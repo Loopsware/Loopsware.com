@@ -1,17 +1,17 @@
-<nav class="flex items-center justify-between w-full bg-white p-6 fixed z-40 md:z-0 md:relative">
+<nav class="flex items-center justify-between w-full bg-white bg-opacity-50 md:bg-opacity-0 p-6 fixed z-40 md:z-0 md:relative backdrop-filter backdrop-blur-md">
   <a href="/">
     <img class="h-7 md:h-7 xl:h-8" src="/public/loopsware_logo.png" alt="loopsware logo" />
   </a>
-  <div class="md:hidden  z-50 right-6">
+  <div class="md:hidden z-50 right-6">
     <button id="menu-button" class="relative z-60">
       <span id="line1" class="block w-8 h-1 bg-black mb-2 transition-transform duration-200 rounded"></span>
       <span id="line2" class="block w-8 h-1 bg-black transition-transform duration-200 rounded"></span>
     </button>
   </div>
-  <div id="menu" class="flex flex-col md:flex-row h-screen md:h-auto md:flex items-center md:bg-transparent md:relative md:p-0 hidden fixed top-0 left-0 w-full bg-white p-6 transition-transform duration-200 z-40">
-    <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">Services</a>
-    <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/pricing">Pricing</a>
-    <a class="md:text-md lg:text-lg xl:text-xl mx-5" href="/about">About</a>
+  <div id="menu" class="flex flex-col md:flex-row h-screen md:h-auto md:flex md:items-center md:bg-transparent md:relative md:p-0 hidden fixed top-0 left-0 w-full bg-white p-6 pt-20 md:mt-0 transition-transform duration-200 z-40">
+    <a class="text-xl md:text-md lg:text-lg xl:text-xl mx-5" href="/#services">Services</a>
+    <a class="text-xl md:text-md lg:text-lg xl:text-xl mx-5" href="/pricing">Pricing</a>
+    <a class="text-xl md:text-md lg:text-lg xl:text-xl mx-5" href="/about">About</a>
     <button class="md:h-10 xl:h-12 bg-stone-900 rounded-full md:px-6 xl:px-8 ml-5">
       <a class="text-white font-bold" href="/">Book a call</a>
     </button>
