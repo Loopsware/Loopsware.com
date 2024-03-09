@@ -1,6 +1,6 @@
-<nav class="flex items-center justify-between w-full bg-white bg-opacity-50 md:bg-opacity-0 p-6 fixed z-40 md:z-0 md:relative backdrop-filter backdrop-blur-md">
+<nav class="flex items-center justify-between w-full bg-white bg-opacity-50 md:bg-opacity-1 p-6 lg:px-16 fixed z-40 md:z-0 md:relative backdrop-filter backdrop-blur-md">
   <a href="/">
-    <img class="h-7 md:h-7 xl:h-8" src="/public/loopsware_logo.png" alt="loopsware logo" />
+    <img class="h-7 md:h-8 xl:h-10 md:w-64" src="/public/loopsware_logo.png" alt="loopsware logo" />
   </a>
   <div class="md:hidden z-50 right-6">
     <button id="menu-button" class="relative z-60">
@@ -8,21 +8,34 @@
       <span id="line2" class="block w-8 h-1 bg-black transition-transform duration-200 rounded"></span>
     </button>
   </div>
-  <div id="menu" class="flex flex-col md:flex-row h-screen md:h-auto md:flex md:items-center md:bg-transparent md:relative md:p-0 hidden fixed top-0 left-0 w-full bg-white p-6 pt-20 md:mt-0 transition-transform duration-200 z-40">
-    <a class="text-2xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href="/#services">Services</a>
-    <a class="text-2xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href="/pricing">Pricing</a>
-    <a class="text-2xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href="/about">About</a>
+  <div id="menu" class="flex flex-col md:flex-row md:w-full h-screen md:h-auto md:flex md:justify-end md:items-center md:bg-white md:relative md:p-0 fixed top-0 left-0 w-full bg-white p-6 pt-20 md:mt-0 transition-transform duration-200 z-40 md:z-0">
+    <a class="text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href="/#services">Services</a>
+    <a class="text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href="/pricing">Pricing</a>
+    <a class="text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href="/about">About</a>
     <button class="w-2/5 md:w-auto h-12 md:h-10 xl:h-12 bg-stone-900 rounded-full md:px-6 xl:px-8 md:ml-5 my-4 md:my-0">
       <a class="text-white font-bold" href="/">Book a call</a>
     </button>
   </div>
 </nav>
 
+<style>
+  .slide-in {
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.slide-out {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+}
+</style>
+
 <script>
-  var button: any = document.getElementById('menu-button');
+  var button:any = document.getElementById('menu-button');
   var line1 = document.getElementById('line1');
   var line2 = document.getElementById('line2');
   var menu = document.getElementById('menu');
+  var navLinks = document.querySelectorAll('#menu a');
 
   button.addEventListener('click', function() {
     var isOpen = !menu?.classList.contains('hidden');
@@ -30,9 +43,17 @@
     if (isOpen) {
       menu?.classList.add('hidden');
       menu?.classList.add('absolute');
+      navLinks.forEach(link => {
+        link.classList.add('slide-out');
+        link.classList.remove('slide-in');
+      });
     } else {
       menu?.classList.remove('hidden');
       menu?.classList.remove('absolute');
+      navLinks.forEach(link => {
+        link.classList.add('slide-in');
+        link.classList.remove('slide-out');
+      });
     }
 
     line1?.classList.toggle('rotate-45', !isOpen);
