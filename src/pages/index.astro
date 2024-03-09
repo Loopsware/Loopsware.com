@@ -139,29 +139,32 @@ import FooterLabel from '../components/FooterLabel.astro';
 							asked questions
 						</h3>
 						<div class="flex flex-col my-6">
-							<div class="flex justify-between my-2">
-								<p class="text-lg text-slate-600">Why don't hire a full-time mobile developer?</p>
-								<p class="text-xl text-slate-600">&darr;</p>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p class="text-lg text-slate-600">Why don't hire a full-time mobile developer?</p>
+									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p  class="questionText text-lg mb-4 hidden">
+  									This is the text that will be shown when the down arrow is clicked.
+								</p>
 							</div>
-							<div class="flex justify-between my-2">
-								<p class="text-lg text-slate-600">How React Native benefits my business?</p>
-								<p class="text-xl text-slate-600">&darr;</p>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p class="text-lg text-slate-600">How React Native benefits my business?</p>
+									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p class="questionText text-lg mb-4 hidden" >
+  									This is the text that will be shown when the down arrow is clicked.
+								</p>
 							</div>
-							<div class="flex justify-between my-2">
-								<p class="text-lg text-slate-600">Which technology you use?</p>
-								<p class="text-xl text-slate-600">&darr;</p>
-							</div>
-							<div class="flex justify-between my-2">
-								<p class="text-lg text-slate-600">How the suscription model works?</p>
-								<p class="text-xl text-slate-600">&darr;</p>
-							</div>
-							<div class="flex justify-between my-2">
-								<p class="text-lg text-slate-600">Which technology you use?</p>
-								<p class="text-xl text-slate-600">&darr;</p>
-							</div>
-							<div class="flex justify-between my-2">
-								<p class="text-lg text-slate-600">How the suscription model works?</p>
-								<p class="text-xl text-slate-600">&darr;</p>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p class="text-lg text-slate-600">Which technology you use?</p>
+									<p class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p class="questionText text-lg mb-4 hidden">
+  									This is the text that will be shown when the down arrow is clicked.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -186,3 +189,16 @@ import FooterLabel from '../components/FooterLabel.astro';
 	</main>
 	<Footer />
 </Layout>
+
+<script>
+  document.querySelectorAll('.downArrow').forEach(function(downArrow) {
+    downArrow.addEventListener('click', function() {
+      var textElement = this.parentElement.nextElementSibling;
+      if (textElement.classList.contains('hidden')) {
+        textElement.classList.remove('hidden');
+      } else {
+        textElement.classList.add('hidden');
+      }
+    });
+  });
+</script>
