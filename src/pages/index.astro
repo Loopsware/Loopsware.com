@@ -144,7 +144,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 									<p class="text-lg text-slate-600">Why don't hire a full-time mobile developer?</p>
 									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
 								</div>
-								<p  class="questionText text-lg mb-4 hidden">
+								<p  class="questionText text-lg my-2 hidden">
   									This is the text that will be shown when the down arrow is clicked.
 								</p>
 							</div>
@@ -153,7 +153,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 									<p class="text-lg text-slate-600">How React Native benefits my business?</p>
 									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
 								</div>
-								<p class="questionText text-lg mb-4 hidden" >
+								<p class="questionText text-lg my-2 hidden" >
   									This is the text that will be shown when the down arrow is clicked.
 								</p>
 							</div>
@@ -162,7 +162,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 									<p class="text-lg text-slate-600">Which technology you use?</p>
 									<p class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
 								</div>
-								<p class="questionText text-lg mb-4 hidden">
+								<p class="questionText text-lg my-2 hidden">
   									This is the text that will be shown when the down arrow is clicked.
 								</p>
 							</div>
@@ -190,14 +190,33 @@ import FooterLabel from '../components/FooterLabel.astro';
 	<Footer />
 </Layout>
 
+<style>
+	@keyframes slideDownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.show-text {
+  animation: slideDownFadeIn 0.3s ease-out forwards;
+}
+</style>
+
 <script>
   document.querySelectorAll('.downArrow').forEach(function(downArrow) {
     downArrow.addEventListener('click', function() {
       var textElement = this.parentElement.nextElementSibling;
       if (textElement.classList.contains('hidden')) {
         textElement.classList.remove('hidden');
+        textElement.classList.add('show-text');
       } else {
         textElement.classList.add('hidden');
+        textElement.classList.remove('show-text');
       }
     });
   });
