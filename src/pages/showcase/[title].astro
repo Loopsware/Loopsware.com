@@ -1,0 +1,89 @@
+---
+//* Layout
+import Layout from '../../layouts/Layout.astro';
+import NavBar from '../../layouts/NavBar.astro';
+import Footer from '../../layouts/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {title: 'medizona'}},
+    {params: {title: 'kluu'}},
+    {params: {title: 'arriba'}},
+    {params: {title: 'boletomovil'}},
+    {params: {title: 'poetical'}},
+  ];
+}
+
+const { title } = Astro.params;
+---
+
+<Layout title={`Loopsware | ${title}`}>
+    <NavBar />
+    <div class="flex px-4 md:px-8 lg:px-16 my-10">
+    <main class="flex flex-col w-9/12">
+        <div class="flex flex-col">
+          <div class="w-full border-4 border-gray-200 rounded-2xl">
+            <img src="../../../public/app_sample_banner.png" alt="app_banner" />
+          </div>
+          <div class="my-8">
+            <h2 class="text-4xl font-bold">Sample project title</h2>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
+              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
+              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
+              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
+            </p>
+          </div>
+        </div>
+    </main>
+    <aside class="w-3/12 pl-8">
+      <p class="text-4xl font-bold">{title}</p>
+      <div class="flex flex-col my-4">
+        <p class="text-xl font-bold">Services</p>
+        <ul>
+          <li>
+            <p class="text-lg">Planning</p>
+          </li>
+          <li>
+            <p class="text-lg">UI design</p>
+          </li>
+          <li>
+            <p class="text-lg">Development</p>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col my-4">
+        <p class="text-xl font-bold">Platforms</p>
+        <ul>
+          <li>
+            <p class="text-lg">iOS</p>
+          </li>
+          <li>
+            <p class="text-lg">Android</p>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col my-4">
+        <p class="text-xl font-bold">Technologies</p>
+        <ul>
+          <li>
+            <p class="text-lg">React Native</p>
+          </li>
+          <li>
+            <p class="text-lg">Expo</p>
+          </li>
+          <li>
+            <p class="text-lg">Supabase</p>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col">
+        <img class="w-24" src="../../../public/donwload_appstore.png" alt="app store banner" />
+        <img class="w-24" src="../../../public/download_googleplay.png" alt="google play store banner" />
+      </div>
+    </aside>
+    </div>
+    <Footer />
+</Layout>
