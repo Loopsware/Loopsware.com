@@ -37,8 +37,11 @@ const { title } = Astro.params;
             </p>
           </div>
         </div>
+        <div>
+          <h2>Images Section</h2>
+        </div>
     </main>
-    <aside class="w-3/12 pl-8">
+    <aside class="h-1/2 w-3/12 pl-8">
       <p class="text-4xl font-bold">{title}</p>
       <div class="flex flex-col my-4">
         <p class="text-xl font-bold">Services</p>
@@ -80,8 +83,12 @@ const { title } = Astro.params;
         </ul>
       </div>
       <div class="flex flex-col">
-        <img class="w-32 my-2" src="../../../public/donwload_appstore.png" alt="app store banner" />
-        <img class="w-32 my-1" src="../../../public/google_play_banner.webp" alt="google play store banner" />
+        <a href="#" class="my-2">
+          <img class="w-32" src="../../../public/donwload_appstore.png" alt="app store banner" />
+        </a>
+        <a href="#">
+          <img class="w-32 my-1" src="../../../public/google_play_banner.webp" alt="google play store banner" />
+        </a>
       </div>
     </aside>
     </div>
