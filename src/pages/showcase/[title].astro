@@ -77,12 +77,13 @@ const { title } = Astro.params;
               Suspendisse dapibus metus ut mattis efficitur.
           </p>
         </div>
-        <a href="/#work" class="text-lg text-blue-400 font-semibold" >
+        <a href="/#work" class="text-lg text-blue-500 font-semibold" >
           &larr; Go Back
         </a>
     </main>
-    <aside class="w-3/12 pl-8">
-      <p class="text-4xl font-bold">{title}</p>
+    <aside class="flex flex-col  w-3/12 pl-8">
+      <div>
+              <p class="text-4xl font-bold">{title}</p>
       <div class="flex flex-col my-4">
         <p class="text-xl font-bold">Services</p>
         <ul>
@@ -130,26 +131,47 @@ const { title } = Astro.params;
           <img class="w-32 my-1" src="../../../public/google_play_banner.webp" alt="google play store banner" />
         </a>
       </div>
-      <div class="border-3 border-gray-200 rounded-2xl px-4 pb-2 mt-16">
-						<div class="flex justify-between items-center">
+      </div>
+      <div id="fixedElement" class="hidden lg:block border-3 border-gray-200 rounded-2xl px-4 pb-2 mt-16">
+				<div class="flex justify-between items-center">
 							<div class="flex mb-6">
 								<div class="h-5 bg-lime-200">
 									<h3 class="text-2xl font-black text-center translate-x-1 translate-y-1">Ready to start?</h3>
 								</div>
 							</div>
-							<img class="w-20 h-20 translate-x-12 -translate-y-4" src="../../public/faq_icon.png" alt="FAQ icon" />
+							<img class="w-20 h-20 translate-x-10 -translate-y-4" src="../../public/energy_drink_icon.webp" alt="energy drink icon" />
 						</div>
 						<p class="text-md text-center mb-4">
 							Ask any question, tell us more about your 
 							next app idea. 
 						</p>
 						<div class="flex justify-center">
-        					<button class="h-12 lg:h-14 w-3/4 bg-stone-900 rounded-full my-2">
-            					<a href="/" class="text-white font-bold px-4 py-2">Book a call (it's free)</a>
-        					</button>
+        			<button class="h-12 lg:h-14 w-3/4 bg-stone-900 rounded-full my-2">
+            		<a href="/" class="text-white font-bold px-4 py-2">Book a call (it's free)</a>
+        			</button>
     					</div>
 					</div>
     </aside>
     </div>
     <Footer />
 </Layout>
+
+<style>
+  .fixed {
+  position: fixed;
+  top: 0;
+  width: 50%; /* You might need to adjust this */
+}
+</style>
+
+<script>
+  window.addEventListener('scroll', function() {
+    var element = document.querySelector('#fixedElement');
+    var rect = element?.getBoundingClientRect();
+    if (rect.top <= 0) {
+      element?.classList.add('fixed');
+    } else {
+      element?.classList.remove('fixed');
+    }
+  });
+</script>
