@@ -37,7 +37,62 @@ const { title } = Astro.params;
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-2 grid-rows-2 gap-8 my-8">
+    </main>
+    <aside class="flex flex-col  w-3/12 pl-8">
+      <div>
+              <p class="text-4xl font-bold">{title}</p>
+      <div class="flex flex-col my-4">
+        <p class="text-xl font-bold">Services</p>
+        <ul>
+          <li>
+            <p class="text-lg">Planning</p>
+          </li>
+          <li>
+            <p class="text-lg">UI design</p>
+          </li>
+          <li>
+            <p class="text-lg">Development</p>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col my-4">
+        <p class="text-xl font-bold">Platforms</p>
+        <ul>
+          <li>
+            <p class="text-lg">iOS</p>
+          </li>
+          <li>
+            <p class="text-lg">Android</p>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col my-4">
+        <p class="text-xl font-bold">Technologies</p>
+        <ul>
+          <li>
+            <p class="text-lg">React Native</p>
+          </li>
+          <li>
+            <p class="text-lg">Expo</p>
+          </li>
+          <li>
+            <p class="text-lg">Supabase</p>
+          </li>
+        </ul>
+      </div>
+      <div class="flex flex-col">
+        <a href="#" class="my-2">
+          <img class="w-32" src="../../../public/donwload_appstore.png" alt="app store banner" />
+        </a>
+        <a href="#">
+          <img class="w-32 my-1" src="../../../public/google_play_banner.webp" alt="google play store banner" />
+        </a>
+      </div>
+      </div>
+    </aside>
+    </div>
+    <div class="lg:w-9/12 px-4 md:px-8 lg:px-16">
+     <div class="grid grid-cols-2 grid-rows-2 gap-8 my-8">
           <div class=`flex items-end w-full h-52 md:h-44 lg:h-60 border-3 border-gray-200 rounded-2xl`>
             <img class="w-full h-56" src="../../../public/app_sample_banner.png" alt="app_banner" />
           </div>
@@ -99,60 +154,7 @@ const { title } = Astro.params;
         </div>
         <a href="/#work" class="text-lg text-blue-500 font-semibold" >
           &larr; Go Back
-        </a>
-    </main>
-    <aside class="flex flex-col  w-3/12 pl-8">
-      <div>
-              <p class="text-4xl font-bold">{title}</p>
-      <div class="flex flex-col my-4">
-        <p class="text-xl font-bold">Services</p>
-        <ul>
-          <li>
-            <p class="text-lg">Planning</p>
-          </li>
-          <li>
-            <p class="text-lg">UI design</p>
-          </li>
-          <li>
-            <p class="text-lg">Development</p>
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-col my-4">
-        <p class="text-xl font-bold">Platforms</p>
-        <ul>
-          <li>
-            <p class="text-lg">iOS</p>
-          </li>
-          <li>
-            <p class="text-lg">Android</p>
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-col my-4">
-        <p class="text-xl font-bold">Technologies</p>
-        <ul>
-          <li>
-            <p class="text-lg">React Native</p>
-          </li>
-          <li>
-            <p class="text-lg">Expo</p>
-          </li>
-          <li>
-            <p class="text-lg">Supabase</p>
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-col">
-        <a href="#" class="my-2">
-          <img class="w-32" src="../../../public/donwload_appstore.png" alt="app store banner" />
-        </a>
-        <a href="#">
-          <img class="w-32 my-1" src="../../../public/google_play_banner.webp" alt="google play store banner" />
-        </a>
-      </div>
-      </div>
-    </aside>
+        </a>      
     </div>
     <Footer />
 </Layout>
