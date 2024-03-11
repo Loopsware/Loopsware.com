@@ -151,6 +151,7 @@ const { title } = Astro.params;
         			</button>
     					</div>
 					</div>
+          <div id="placeholder" style="display: none;"></div>
     </aside>
     </div>
     <Footer />
@@ -160,18 +161,22 @@ const { title } = Astro.params;
   .fixed {
   position: fixed;
   top: 0;
-  width: 50%; /* You might need to adjust this */
+  width: '100px';
 }
 </style>
 
 <script>
   window.addEventListener('scroll', function() {
     var element = document.querySelector('#fixedElement');
-    var rect = element?.getBoundingClientRect();
+    var rect = element.getBoundingClientRect();
+    var placeholder = document.querySelector('#placeholder');
     if (rect.top <= 0) {
-      element?.classList.add('fixed');
+      placeholder.style.display = 'block';
+      placeholder.style.height = `${rect.height}px`;
+      element.classList.add('fixed');
     } else {
-      element?.classList.remove('fixed');
+      placeholder.style.display = 'none';
+      element.classList.remove('fixed');
     }
   });
 </script>
