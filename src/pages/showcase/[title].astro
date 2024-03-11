@@ -76,6 +76,26 @@ const { title } = Astro.params;
               Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
               Suspendisse dapibus metus ut mattis efficitur.
           </p>
+        <div  class="w-5/12 border-3 border-gray-200 rounded-2xl px-8 py-2 mt-16">
+				  <div class="flex justify-between items-center">
+							<div class="flex mb-6">
+								<div class="h-5 bg-lime-200">
+									<h3 class="text-2xl font-black text-center translate-x-1 translate-y-1">Ready to get started?</h3>
+								</div>
+							</div>
+							<img class="w-20 h-20 translate-x-14 -translate-y-8" src="../../public/energy_drink_icon.webp" alt="energy drink icon" />
+						</div>
+						<p class="text-md text-center mb-4">
+							Ask any question, tell us more about your 
+							next app idea. tell us more about your 
+							next app idea. 
+						</p>
+						<div class="flex justify-center">
+        			<button class="h-12 lg:h-14 w-3/5 bg-stone-900 rounded-full my-2">
+            		<a href="/" class="text-white font-bold px-4 py-2">Book a call (it's free)</a>
+        			</button>
+    					</div>
+					</div>
         </div>
         <a href="/#work" class="text-lg text-blue-500 font-semibold" >
           &larr; Go Back
@@ -132,51 +152,7 @@ const { title } = Astro.params;
         </a>
       </div>
       </div>
-      <div id="fixedElement" class="hidden lg:block border-3 border-gray-200 rounded-2xl px-4 pb-2 mt-16">
-				<div class="flex justify-between items-center">
-							<div class="flex mb-6">
-								<div class="h-5 bg-lime-200">
-									<h3 class="text-2xl font-black text-center translate-x-1 translate-y-1">Ready to start?</h3>
-								</div>
-							</div>
-							<img class="w-20 h-20 translate-x-10 -translate-y-4" src="../../public/energy_drink_icon.webp" alt="energy drink icon" />
-						</div>
-						<p class="text-md text-center mb-4">
-							Ask any question, tell us more about your 
-							next app idea. 
-						</p>
-						<div class="flex justify-center">
-        			<button class="h-12 lg:h-14 w-3/4 bg-stone-900 rounded-full my-2">
-            		<a href="/" class="text-white font-bold px-4 py-2">Book a call (it's free)</a>
-        			</button>
-    					</div>
-					</div>
-          <div id="placeholder" style="display: none;"></div>
     </aside>
     </div>
     <Footer />
 </Layout>
-
-<style>
-  .fixed {
-  position: fixed;
-  top: 0;
-  width: '100px';
-}
-</style>
-
-<script>
-  window.addEventListener('scroll', function() {
-    var element = document.querySelector('#fixedElement');
-    var rect = element.getBoundingClientRect();
-    var placeholder = document.querySelector('#placeholder');
-    if (rect.top <= 0) {
-      placeholder.style.display = 'block';
-      placeholder.style.height = `${rect.height}px`;
-      element.classList.add('fixed');
-    } else {
-      placeholder.style.display = 'none';
-      element.classList.remove('fixed');
-    }
-  });
-</script>
