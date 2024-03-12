@@ -30,7 +30,20 @@
 }
 </style>
 
-<script>
+<script type="module">
+  import anime from 'https://cdn.skypack.dev/animejs';
+
+  // New code
+  const navbar = document.querySelector('.navbar');
+
+  anime({
+    targets: navbar,
+    translateY: [-500, 0], // Move the navbar from top to its original position
+    opacity: [0, 1], // Fade the navbar in
+    duration: 1000,
+    easing: 'easeOutExpo' // Use an exponential easing function
+  });
+
   var button:any = document.getElementById('menu-button');
   var line1 = document.getElementById('line1');
   var line2 = document.getElementById('line2');
