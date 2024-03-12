@@ -1,4 +1,4 @@
-<nav class="md:navbar flex items-center justify-between w-full bg-white bg-opacity-50 md:bg-opacity-1 p-6 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
+<nav class="navbar flex items-center justify-between w-full bg-white bg-opacity-50 md:bg-opacity-1 p-6 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
   <a href="/">
     <img class="h-7 md:h-7 md:w-56 xl:h-10 xl:w-72" src="/public/loopsware_logo.png" alt="loopsware logo" />
   </a>
@@ -12,7 +12,7 @@
     <a class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href="/#services">Services</a>
     <a class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href="/pricing">Pricing</a>
     <a class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href="/about">About</a>
-    <button class="w-2/5 md:w-auto h-12 md:h-10 xl:h-12 bg-stone-900 rounded-full md:px-6 xl:px-8 md:ml-5 my-4 md:my-0">
+    <button class="w-2/5 md:w-auto h-12 md:h-10 xl:h-12 bg-stone-900 rounded-full md:px-6 xl:px-8 md:ml-5 my-4 md:my-0 hover:opacity-90 hover:shadow-lg transition-all">
       <a class="text-white font-bold" href="/">Book a call</a>
     </button>
   </div>
@@ -34,21 +34,23 @@
     overflow: hidden;
   }
 
-  .nav-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 70%;
-    background-color: rgb(217 249 157);
-    transition: left 0.3s ease;
-    z-index: -1;
-    transform: translate(-10px, -5px);
-  }
+  @media (min-width: 1024px) {
+    .nav-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 70%;
+      background-color: rgb(217 249 157);
+      transition: left 0.3s ease;
+      z-index: -1;
+      transform: translate(-10px, -5px);
+    }
 
-  .nav-item:hover::before {
-    left: 0;
+    .nav-item:hover::before {
+      left: 0;
+    }
   }
 </style>
 
