@@ -10,7 +10,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 <Layout title="Loopsware | Pricing">
     <NavBar />
     <main>
-        <div class="my-20 md:my-10">
+        <div class="prices-section my-20 md:my-10">
             <div class="p-6 md:p-8 lg:p-16">
                 <div class="flex mb-6">
 					<div class="h-8 bg-lime-200">
@@ -140,3 +140,29 @@ import FooterLabel from '../components/FooterLabel.astro';
     </main>
     <Footer />
 </Layout>
+
+<script type="module">
+    import anime from 'https://cdn.skypack.dev/animejs';
+    
+    const pricingSection = document.querySelector('.prices-section');
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: entry.target,
+                    opacity: [0, 1], // Fade the section in
+                    translateY: [250, 0], // Move the section up
+                    duration: 2000,
+				    delay: entry.target === pricingSection ? 0 : 500,
+                    easing: 'easeOutExpo' // Use an exponential easing function
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        rootMargin: '-5% 0px', // Trigger when the top of the screen is halfway to the section
+    });
+
+    observer.observe(pricingSection);
+</script>

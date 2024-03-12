@@ -1,4 +1,4 @@
-<nav class="flex items-center justify-between w-full bg-white bg-opacity-50 md:bg-opacity-1 p-6 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
+<nav class="navbar flex items-center justify-between w-full bg-white bg-opacity-50 md:bg-opacity-1 p-6 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
   <a href="/">
     <img class="h-7 md:h-7 md:w-56 xl:h-10 xl:w-72" src="/public/loopsware_logo.png" alt="loopsware logo" />
   </a>
@@ -30,19 +30,10 @@
 }
 </style>
 
-<script type="module">
-  import anime from 'https://cdn.skypack.dev/animejs';
+<script src="https://cdn.skypack.dev/animejs"></script>
 
-  // New code
-  const navbar = document.querySelector('.navbar');
-
-  anime({
-    targets: navbar,
-    translateY: [-500, 0], // Move the navbar from top to its original position
-    opacity: [0, 1], // Fade the navbar in
-    duration: 1000,
-    easing: 'easeOutExpo' // Use an exponential easing function
-  });
+<script>
+  import anime from 'animejs/lib/anime.es.js';
 
   var button:any = document.getElementById('menu-button');
   var line1 = document.getElementById('line1');
@@ -72,5 +63,16 @@
     line1?.classList.toggle('rotate-45', !isOpen);
     line1?.classList.toggle('translate-y-3', !isOpen);
     line2?.classList.toggle('-rotate-45', !isOpen);
+  });
+
+  // New code
+  var navbar = document.querySelector('.navbar');
+
+  anime({
+    targets: navbar,
+    translateY: [-300, 0], // Move the navbar from left to its original position
+    opacity: [0, 1], // Fade the navbar in
+    duration: 1200,
+    easing: 'easeOutExpo' // Use an exponential easing function
   });
 </script>
