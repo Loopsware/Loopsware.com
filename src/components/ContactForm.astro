@@ -52,16 +52,27 @@ document.addEventListener('DOMContentLoaded', function() {
                     close: true,
                     gravity: "top", // `top` or `bottom`
                     position: 'center', // `left`, `center` or `right`
-                    backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                    style: {
+                        borderRadius: "50px",
+                        background: "linear-gradient(to right, #00b09b, #96c93d)", // Green gradient
+                    }
                 }).showToast();
             } else {
-                // Handle error
-                console.error('ERROR ->', response.status);
+                    Toastify({
+                        text: "Error sending email!",
+                        duration: 3000,
+                        close: true,
+                        gravity: "top", // `top` or `bottom`
+                        position: 'center', // `left`, `center` or `right`
+                        style: {
+                            borderRadius: "50px",
+                            background: "linear-gradient(to right, #ff5f6d, #ffc371)", // Red gradient
+                        }
+                    }).showToast();
+                }
+            } catch (error) {
+                console.error('GLOBAL ERROR ->', error);
             }
-        } catch (error) {
-            // Handle error
-            console.error('GLOBAL ERROR ->', error);
-        }
     });
 });
 
