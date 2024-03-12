@@ -8,6 +8,33 @@ interface Props {
 const { href, title, isBlack = true } = Astro.props;
 ---
 
-<button class=`w-full h-14 md:w-32 md:h-11 lg:w-40 lg:h-12 xl:w-44 xl:h-14 rounded-full ${!isBlack} ${!isBlack ? 'bg-transparent' : 'bg-stone-900'} ${!isBlack ? 'border-3 border-black' : 'border-none'}`>
+<button class=`button w-full h-14 md:w-32 md:h-11 lg:w-40 lg:h-12 xl:w-44 xl:h-14 rounded-full ${!isBlack} ${!isBlack ? 'bg-transparent' : 'bg-stone-900'} ${!isBlack ? 'border-3 border-black' : 'border-none'}`>
     <a href={href} class=`${!isBlack ? 'text-black' : 'text-white'} text-lg md:text-sm lg:text-lg font-bold` >{title}</a>
 </button>
+
+<script type="module">
+import anime from 'https://cdn.skypack.dev/animejs';
+
+// Entrance animation
+document.querySelectorAll('.button').forEach(function(button, index) {
+    const delay = index * 100; // Delay each button's animation by 100ms
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: entry.target,
+                    scale: [0, 1], // Scale the button from 0 to 1
+                    opacity: [0, 1], // Fade the button in
+                    duration: 2500,
+                    delay: delay, // Apply the delay
+                    easing: 'easeOutElastic(1, .8)' // Use an elastic easing function
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    observer.observe(button);
+});	
+</script>

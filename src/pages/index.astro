@@ -20,8 +20,8 @@ import FooterLabel from '../components/FooterLabel.astro';
 		<div class="flex flex-col-reverse md:grid md:grid-cols-2 xl:h-screen w-full md:my-12 xl:my-0">
 			<div class="flex flex-col justify-center px-4 md:px-8 lg:px-16">
 				<Availability title={"Currently available"} status={"available"} />
-				<h1 class="text-black text-3xl md:text-4xl xl:text-5xl font-black p-2">We transform your vision into real apps.</h1>
-				<p class="font-medium text-md md:text-lg lg:text-xl xl:text-2xl px-2 py-5">
+				<h1 class="text-element text-black text-3xl md:text-4xl xl:text-5xl font-black p-2">We transform your vision into real apps.</h1>
+				<p class="text-element font-medium text-md md:text-lg lg:text-xl xl:text-2xl px-2 py-5">
 					Experts in <span class="font-bold">React</span> & <span class="font-bold">React Native</span>, We're ready <br class="block md:hidden" />
 					to ship your app idea. Our workflows adapts to <br class="hidden lg:block" />
 					anything your project needs.
@@ -40,7 +40,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 			</div>
 		</div>
 		<!-- Services -->
-		<div class="mt-10 md:mt-0 mb-10">
+		<div class="services-section mt-10 md:mt-0 mb-10">
 			<div id="services" class="p-4 md:p-8 lg:p-16">
 				<div class="flex mb-6">
 					<div class="h-8 bg-lime-200">
@@ -299,7 +299,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 						<div class="flex justify-between items-center mb-4 md:mb-0">
 							<div class="flex mb-6">
 								<div class="h-8 md:bg-lime-200">
-									<h3 class="text-3xl lg:text-4xl font-black md:translate-x-2 md:translate-y-1 whitespace-nowrap">Still have questions?</h3>
+									<h3 class="text-3xl lg:text-4xl font-black md:translate-x-2 md:translate-y-1 md:whitespace-nowrap">Still have questions?</h3>
 								</div>
 							</div>
 							<img class="w-20 h-20 lg:w-28 lg:h-28 translate-x-8 md:translate-x-12 -translate-y-8" src="../../public/faq_icon.png" alt="FAQ icon" />
@@ -339,17 +339,60 @@ import FooterLabel from '../components/FooterLabel.astro';
 }
 </style>
 
-<script>
-  document.querySelectorAll('.downArrow').forEach(function(downArrow) {
+<script type="module">
+import anime from 'https://cdn.skypack.dev/animejs';
+
+document.querySelectorAll('.downArrow').forEach(function(downArrow) {
     downArrow.addEventListener('click', function() {
-      var textElement = this.parentElement.nextElementSibling;
-      if (textElement.classList.contains('hidden')) {
+    var textElement = this.parentElement.nextElementSibling;
+    if (textElement.classList.contains('hidden')) {
         textElement.classList.remove('hidden');
         textElement.classList.add('show-text');
-      } else {
+    } else {
         textElement.classList.add('hidden');
         textElement.classList.remove('show-text');
-      }
+    }
+});
+});
+
+// Text entrance animation
+document.querySelectorAll('.text-element').forEach(function(textElement) {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: entry.target,
+                    opacity: [0, 1],
+                    translateY: [-70, 0],
+                    duration: 2000,
+                    easing: 'easeOutExpo'
+                });
+                observer.unobserve(entry.target);
+            }
+        });
     });
-  });
+
+    observer.observe(textElement);
+});
+
+const servicesSection = document.querySelector('.services-section');
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            anime({
+                targets: entry.target,
+                opacity: [0, 1], // Fade the section in
+                translateY: [250, 0], // Move the section up
+                duration: 2500,
+                easing: 'easeOutExpo' // Use an exponential easing function
+            });
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    rootMargin: '-10% 0px', // Trigger when the top of the screen is halfway to the section
+});
+
+observer.observe(servicesSection);
 </script>
