@@ -1,14 +1,15 @@
 
 <form 
+    id="contact-form"
     class="border-3 border-gray-200 rounded-2xl p-6 lg:p-8"
     action="https://formspree.io/f/xpzvlkov"
     method="POST"
 >
     <div class="flex">
-        <input type="text"  class="h-14 w-full bg-gray-100 rounded-xl my-2 p-6" placeholder="Your name" />
+        <input name="name" type="text"  class="h-14 w-full bg-gray-100 rounded-xl my-2 p-6" placeholder="Your name" />
     </div>
     <div class="flex">
-        <input type="email" class="h-14 w-full bg-gray-100 rounded-xl my-2 p-6" placeholder="Your email" />
+        <input name="email" type="email" class="h-14 w-full bg-gray-100 rounded-xl my-2 p-6" placeholder="Your email" />
     </div>
     <div class="flex">
         <textarea name="message" class="w-full h-56 bg-gray-100 rounded-xl resize-none my-2 p-6" placeholder="A short description about your next app idea..." />
@@ -21,11 +22,47 @@
     </div>
 </form>
 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script type="module">
 import anime from 'https://cdn.skypack.dev/animejs';
 
-// New code
 const contactForm = document.querySelector('.contact-form');
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('#contact-form');
+
+    contactForm.addEventListener('submit', async function(e) { // Make the function async
+        e.preventDefault();
+
+        try {
+            const response = await fetch(contactForm.action, { // Await the fetch request
+                method: 'POST',
+                body: new FormData(contactForm),
+                redirect: 'manual'
+            });
+
+            if (response.ok || response.redirected) {
+                // Show toast notification
+                Toastify({
+                    text: "Email sent successfully!",
+                    duration: 3000,
+                    close: true,
+                    gravity: "top", // `top` or `bottom`
+                    position: 'right', // `left`, `center` or `right`
+                    backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                }).showToast();
+            } else {
+                // Handle error
+                console.error('ERROR ->', response.status);
+            }
+        } catch (error) {
+            // Handle error
+            console.error('GLOBAL ERROR ->', error);
+        }
+    });
+});
 
 anime({
     targets: contactForm,
@@ -35,4 +72,5 @@ anime({
     delay: 1000, // Delay the animation by 500ms
     easing: 'easeOutExpo' // Use an exponential easing function
 });
+
 </script>
