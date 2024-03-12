@@ -51,7 +51,7 @@ const testimonials: any = {
 const { testimony } = Astro.props;
 ---
 
-<div class="flex flex-col border-3 border-gray-200 rounded-2xl p-6 mb-8 md:mb-10 md:mx-5">
+<div class="testimonial-card flex flex-col border-3 border-gray-200 rounded-2xl p-6 mb-8 md:mb-10 md:mx-5">
     <div class="flex items-center">
         <img class="w-14 h-14 rounded-full" src=`/public/${testimonials[testimony].avatar}` />
         <div class="flex flex-col ml-3">
@@ -64,3 +64,18 @@ const { testimony } = Astro.props;
         <img class=`h-10 xl:h-11 mt-4` src=`/public/${testimonials[testimony].company_logo}` alt=`${testimonials[testimony].title}` />
     </div>
 </div>
+
+<script type="module">
+import anime from 'https://cdn.skypack.dev/animejs';
+
+// New code
+const testimonialCard = document.querySelector('.testimonial-card');
+
+anime({
+    targets: testimonialCard,
+    scale: [0, 1], // Scale the component from 0.7 to 1
+    opacity: [0, 1], // Fade the component in
+    duration: 2000,
+    easing: 'easeOutElastic(1, .8)' // Use an elastic easing function
+});
+</script>

@@ -195,7 +195,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 			</div>
 		</div>
 		<!-- Testimonials -->
-		<div class="testimonial-section my-10">
+		<div class="testimonials-section my-10">
 			<div class="p-4 md:p-8 lg:p-16">
 				<div class="flex mb-6">
 					<div class="h-8 bg-lime-200">
@@ -220,7 +220,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 			</div>
 		</div>
 		<!-- Contact Us -->
-		<div class="my-20 xl:mt-24 xl:my-10">
+		<div class="contact-section my-20 xl:mt-24 xl:my-10">
 			<div class="grid grid-cols-1 md:grid-cols-2 p-4 md:py-8 md:pr-8 md:pl-8 lg:py-16 lg:pl-16">
 				<div class="flex flex-col w-full md:w-10/12 lg:w-full md:block">
 					<div class="flex flex-col">
@@ -239,7 +239,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 					<ContactForm />
 				</div>
 			</div>
-			<div class="px-4 my-10 md:px-8 xl:px-16">
+			<div class="faq-section px-4 my-10 md:px-8 xl:px-16">
 				<div class="flex flex-col lg:flex-row justify-between">
 					<div class="lg:w-5/12">
 						<h3 class="text-3xl xl:text-4xl font-black">
@@ -382,6 +382,8 @@ const benefitsItems = benefitsSection.querySelectorAll('.benefit-item');
 
 const workSection = document.querySelector('#work');
 const testimonialsSection = document.querySelector('.testimonials-section');
+const contactSection = document.querySelector('.contact-section');
+const faqSection = document.querySelector('.faq-section');
 
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
@@ -408,11 +410,13 @@ const observer = new IntersectionObserver(function(entries) {
         }
     });
 }, {
-    rootMargin: '-10% 0px', // Trigger when the top of the screen is halfway to the section
+    rootMargin: '-5% 0px', // Trigger when the top of the screen is halfway to the section
 });
 
 observer.observe(servicesSection);
 observer.observe(benefitsSection);
 observer.observe(workSection);
 observer.observe(testimonialsSection);
+observer.observe(contactSection);
+observer.observe(faqSection);
 </script>
