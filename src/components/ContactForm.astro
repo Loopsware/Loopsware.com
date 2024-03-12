@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 redirect: 'manual'
             });
 
-            if (response.ok || response.redirected) {
+            if (response.ok || response.type === 'opaqueredirect') {
+                contactForm.reset();
                 // Show toast notification
                 Toastify({
                     text: "Email sent successfully!",
