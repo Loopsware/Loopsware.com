@@ -379,10 +379,7 @@ document.querySelectorAll('.text-element').forEach(function(textElement) {
 });
 
 const servicesSection = document.querySelector('.services-section');
-
 const benefitsSection = document.querySelector('.benefits-section');
-const benefitsItems = benefitsSection.querySelectorAll('.benefit-item');
-
 const workSection = document.querySelector('#work');
 const testimonialsSection = document.querySelector('.testimonials-section');
 const contactSection = document.querySelector('.contact-section');
@@ -399,16 +396,6 @@ const observer = new IntersectionObserver(function(entries) {
 				delay: entry.target === servicesSection ? 0 : 500,
                 easing: 'easeOutExpo' // Use an exponential easing function
             });
-			benefitsItems.forEach(function(benefitItem, index) {
-				anime({
-                    targets: benefitItem,
-                    opacity: [0, 1], // Fade the item in
-                    translateY: [200, 0], // Move the item up
-                    duration: 2500,
-                    delay: index * 200, // Delay each item's animation by 200ms
-                    easing: 'easeOutExpo' // Use an exponential easing function
-                });
-			});
             observer.unobserve(entry.target);
         }
     });
@@ -417,9 +404,48 @@ const observer = new IntersectionObserver(function(entries) {
 });
 
 observer.observe(servicesSection);
-observer.observe(benefitsSection);
 observer.observe(workSection);
 observer.observe(testimonialsSection);
 observer.observe(contactSection);
 observer.observe(faqSection);
+
+const benefitsItems = benefitsSection.querySelectorAll('.benefit-item');
+
+const itemsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            // Check if the animation has already been run
+            if (entry.target.dataset.animated) return;
+			anime({
+                targets: entry.target,
+                opacity: [0, 1], // Fade the section in
+                translateY: [250, 0], // Move the section up
+                duration: 2000,
+				delay: entry.target === servicesSection ? 0 : 500,
+                easing: 'easeOutExpo' // Use an exponential easing function
+            });
+
+            benefitsItems.forEach(function(benefitItem, index) {
+				anime({
+                    targets: benefitItem,
+                    opacity: [0, 1], // Fade the item in
+                    translateY: [200, 0], // Move the item up
+                    duration: 2500,
+                    delay: index * 200, 
+                    easing: 'easeOutExpo' // Use an exponential easing function
+                });
+			});
+
+            // Mark the element as animated
+            entry.target.dataset.animated = 'true';
+
+            itemsObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    rootMargin: '-5% 0px', // Trigger when the top of the screen is halfway to the section
+});
+
+itemsObserver.observe(benefitsSection);
+itemsObserver.observe(benefitsItems);
 </script>

@@ -1,6 +1,4 @@
-
-
-<div class="services-boxes flex flex-col lg:grid lg:grid-cols-2 mx-4 md:mx-8 lg:mx-16">
+<div class="flex flex-col lg:grid lg:grid-cols-2 mx-4 md:mx-8 lg:mx-16">
     <div class="w-full xl:w-11/12 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-0">
         <p class="text-3xl font-bold">
             Pitch your idea. <br class="block md:hidden lg:block" />
@@ -99,28 +97,3 @@
         </a>
     </div>
 </div>
-
-<script type="module">
-import anime from 'https://cdn.skypack.dev/animejs';
-const servicesBoxes = document.querySelector('.services-boxes');
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            anime({
-                targets: entry.target,
-                opacity: [0, 1], // Fade the section in
-                translateY: [250, 0], // Move the section up
-                duration: 2500,
-				delay: entry.target === servicesBoxes ? 0 : 500,
-                easing: 'easeOutExpo' // Use an exponential easing function
-            });
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    rootMargin: '-10% 0px', // Trigger when the top of the screen is halfway to the section
-});
-
-observer.observe(servicesBoxes);
-</script>
