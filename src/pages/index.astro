@@ -20,8 +20,8 @@ import FooterLabel from '../components/FooterLabel.astro';
 		<div class="flex flex-col-reverse md:grid md:grid-cols-2 xl:h-screen w-full md:my-12 xl:my-0">
 			<div class="flex flex-col justify-center px-4 md:px-8 lg:px-16">
 				<Availability title={"Currently available"} status={"available"} />
-				<h1 class="text-element text-black text-3xl md:text-4xl xl:text-5xl font-black p-2">From brain storming to real mobile apps.</h1>
-				<p class="text-element font-medium text-md md:text-lg lg:text-xl xl:text-2xl px-2 py-5">
+				<h1 style={{"font-family": "Grotesque"}}  class="text-element text-black text-3xl md:text-4xl xl:text-5xl font-black p-2">From brain storming to real mobile apps.</h1>
+				<p style={{"font-family": "Inter"}} class="text-element font-medium text-md md:text-lg lg:text-xl xl:text-2xl px-2 py-5">
 					Experts in <span class="font-bold">React</span> & <span class="font-bold">React Native</span>, We're ready <br class="block md:hidden lg:block" />
 					to ship your app idea. Our workflow gives you the <br class="hidden lg:block" />
 					advantage your project needs.
@@ -323,22 +323,21 @@ import FooterLabel from '../components/FooterLabel.astro';
 </Layout>
 
 <style>
-  html {
+html {
     scroll-behavior: smooth;
-  }
+}
 @keyframes slideDownFadeIn {
-  0% {
+0% {
     opacity: 0;
     transform: translateY(-20px);
-  }
-  100% {
+}
+100% {
     opacity: 1;
     transform: translateY(0);
-  }
 }
-
+}
 .show-text {
-  animation: slideDownFadeIn 0.3s ease-out forwards;
+animation: slideDownFadeIn 0.3s ease-out forwards;
 }
 </style>
 
