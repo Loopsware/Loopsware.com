@@ -41,13 +41,18 @@ import FooterLabel from '../components/FooterLabel.astro';
                             <p style={{"font-family": "Inter", "font-style": "bold"}} class="font-bold">What's included?</p>
                             <ul class="flex flex-col mt-4">
                                 <li>
-                                    <p class="xl:text-lg md:text-center font-medium">
-                                        - Go from idea, to launch. Go from idea, to launch.
+                                    <p class="custom-list-item xl:text-lg md:text-center font-medium">
+                                        Braistorming, planning and design over Figma.
                                     </p>
                                 </li>
-                                <li>
+                                <li class="mt-2">
                                     <p class="xl:text-lg md:text-center font-medium">
-                                        - Android, iOS and Web development. Go from idea, to launch. trial.
+                                        Cross-platform development (Android, iOS and Web).
+                                    </p>
+                                </li>
+                                <li class="mt-2">
+                                    <p class="xl:text-lg md:text-center font-medium">
+                                        Deployment and Publishing.
                                     </p>
                                 </li>
                             </ul>
@@ -144,6 +149,15 @@ import FooterLabel from '../components/FooterLabel.astro';
     </main>
     <Footer />
 </Layout>
+
+<style>
+.custom-list-item::before {
+    content: '•';  
+    display: inline-block;
+    width: 0.5em;
+    margin-left: -1em; 
+}    
+</style>
 
 <script type="module">
     import anime from 'https://cdn.skypack.dev/animejs';
