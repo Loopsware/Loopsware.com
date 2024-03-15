@@ -55,15 +55,23 @@ if (model) {
   controls.target.set(model.position.x, model.position.y, model.position.z);
 }
 
+let time = 0; // Initialize a time variable
+
 // Animation loop
 function animate() {
   requestAnimationFrame(animate);
 
-  // Update controls
-  controls.update();
+  // Check if the model is loaded
+  if (model) {
+    // Rotate the model back and forth between -0.4 and 0.4
+    model.rotation.y = Math.sin(time) * 0.4;
+    time += 0.005; // Increase time
+  }
 
+  controls.update();
   renderer.render(scene, camera);
 }
+
 animate();
 
 // Select the container element
