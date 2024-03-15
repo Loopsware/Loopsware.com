@@ -377,10 +377,9 @@ animation: slideDownFadeIn 0.3s ease-out forwards;
 }
 </style>
 
+<script src="/src/3d.ts" />
 <script type="module">
 import anime from 'https://cdn.skypack.dev/animejs';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 document.querySelectorAll('.downArrow').forEach(function(downArrow) {
     downArrow.addEventListener('click', function() {
@@ -485,37 +484,4 @@ const itemsObserver = new IntersectionObserver(function(entries) {
 
 itemsObserver.observe(benefitsSection);
 itemsObserver.observe(benefitsItems);
-
-// Create a scene
-const scene = new THREE.Scene();
-
-// Create a camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
-
-// Create a renderer
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-// Load a .glb file
-const loader = new GLTFLoader();
-loader.load('/public/phonehand.glb', function(gltf) {
-  scene.add(gltf.scene);
-}, undefined, function(error) {
-  console.error(error);
-});
-
-// Animation loop
-function animate() {
-  requestAnimationFrame(animate);
-  renderer.render(scene, camera);
-}
-animate();
-
-// Select the container element
-const container = document.querySelector('#scene');
-
-// Append the renderer to the container instead of the body
-container.appendChild(renderer.domElement);
 </script>
