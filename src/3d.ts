@@ -25,9 +25,11 @@ camera.position.z = 5;
 
 // Create a renderer
 // Create a renderer with alpha
-const renderer = new THREE.WebGLRenderer({ alpha: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setClearColor(0x000000, 0); // the second parameter is the opacity, set it to 0 for full transparency
 renderer.setSize(window.innerWidth / 1.333, window.innerHeight / 1.333);
+renderer.setPixelRatio(window.devicePixelRatio);
+
 document.body.appendChild(renderer.domElement);
 
 let model: any;
