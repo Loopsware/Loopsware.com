@@ -32,7 +32,8 @@ import FooterLabel from '../components/FooterLabel.astro';
 				</div>
 			</div>
 			<div class="flex flex-col justify-center items-center pr-0 md:pr-8 lg:pr-0 mt-20 md:mt-0">
-				<img class="h-5/6 w-5/6 md:h-4/5 md:w-full lg:w-5/6 lg:h-4/5 xl:w-3/4 xl:h-4/5" src="/public/phone_3d.png" alt="hand and smartphone illustration" />
+				<div id="scene"></div>
+				<!-- <img class="h-5/6 w-5/6 md:h-4/5 md:w-full lg:w-5/6 lg:h-4/5 xl:w-3/4 xl:h-4/5" src="/public/phone_3d.png" alt="hand and smartphone illustration" /> -->
 			</div>
 			<div class="hidden md:block md:mx-8 lg:mx-16 md:mt-16 xl:mt-0">
 				<FooterLabel title="Home" />
@@ -220,7 +221,7 @@ import FooterLabel from '../components/FooterLabel.astro';
 		</div>
 		<!-- Contact Us -->
 		<div class="contact-section my-20 xl:mt-24 xl:my-10">
-			<div class="grid grid-cols-1 md:grid-cols-2 p-4 md:py-8 md:pr-8 md:pl-8 lg:py-16 lg:pl-16">
+			<div class="grid grid-cols-1 md:grid-cols-2 p-4 md:py-8 md:pr-8 md:pl-8 xl:py-0 lg:pl-16">
 				<div class="flex flex-col w-full md:w-10/12 lg:w-full md:block">
 					<div class="flex flex-col">
 						<h2 style={{"font-family": "Grotesque"}} class="text-3xl xl:text-4xl font-black">
@@ -232,13 +233,13 @@ import FooterLabel from '../components/FooterLabel.astro';
 							next app idea. We respond as soon as possible.
 						</p>
 					</div>
-					<img class="h-4/6 lg:3/6 xl:h-4/6" src="/public/oliver_3d.webp" alt="Man working on a laptop" />
+					<img class="h-4/6 lg:3/6 xl:h-3/6" src="/public/oliver_3d.png" alt="Man working on a laptop" />
 				</div>
 				<div class="lg:mr-12">
 					<ContactForm />
 				</div>
 			</div>
-			<div class="faq-section px-4 my-10 md:px-8 xl:px-16">
+			<div class="faq-section px-4 my-10 md:px-8 xl:px-16 xl:my-0">
 				<div class="flex flex-col lg:flex-row justify-between">
 					<div class="lg:w-5/12">
 						<h3 style={{"font-family": "Grotesque"}} class="text-3xl xl:text-4xl font-black">
@@ -378,6 +379,8 @@ animation: slideDownFadeIn 0.3s ease-out forwards;
 
 <script type="module">
 import anime from 'https://cdn.skypack.dev/animejs';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 document.querySelectorAll('.downArrow').forEach(function(downArrow) {
     downArrow.addEventListener('click', function() {
@@ -482,4 +485,37 @@ const itemsObserver = new IntersectionObserver(function(entries) {
 
 itemsObserver.observe(benefitsSection);
 itemsObserver.observe(benefitsItems);
+
+// Create a scene
+const scene = new THREE.Scene();
+
+// Create a camera
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 5;
+
+// Create a renderer
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// Load a .glb file
+const loader = new GLTFLoader();
+loader.load('/public/phonehand.glb', function(gltf) {
+  scene.add(gltf.scene);
+}, undefined, function(error) {
+  console.error(error);
+});
+
+// Animation loop
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+animate();
+
+// Select the container element
+const container = document.querySelector('#scene');
+
+// Append the renderer to the container instead of the body
+container.appendChild(renderer.domElement);
 </script>
