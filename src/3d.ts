@@ -21,13 +21,16 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
+
+camera.position.x = 0.5;
+camera.position.y = 1;
 camera.position.z = 5;
 
 // Create a renderer
 // Create a renderer with alpha
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setClearColor(0x000000, 0); // the second parameter is the opacity, set it to 0 for full transparency
-renderer.setSize(window.innerWidth / 1.333, window.innerHeight / 1.333);
+renderer.setSize(window.innerWidth / 1.3, window.innerHeight / 1.3);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 document.body.appendChild(renderer.domElement);
@@ -47,10 +50,22 @@ loader.load(
   }
 );
 
+// Add a light from the left
+const leftLight = new THREE.DirectionalLight(0xffffff, 1);
+leftLight.position.set(-1, 0, 0);
+scene.add(leftLight);
+
+// Add a fluorescent green light from the right
+const rightLight = new THREE.DirectionalLight(0xffa500, 1);
+rightLight.position.set(1, 0, 0);
+scene.add(rightLight);
+
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
-controls.minPolarAngle = Math.PI / 4; // Limit the camera to 45 degrees above the horizon
+controls.minPolarAngle = Math.PI / 2.5; // Limit the camera to 45 degrees above the horizon
 controls.maxPolarAngle = Math.PI / 2; // Limit the camera to 90 degrees above the horizon
+controls.minAzimuthAngle = -Math.PI / 4; // Limit the camera to 45 degrees to the left
+controls.maxAzimuthAngle = Math.PI / 5; // Limit the camera to 45 degrees to the right
 
 // Set the target to the model's position
 if (model) {
@@ -65,8 +80,8 @@ function animate() {
 
   // Check if the model is loaded
   if (model) {
-    // Rotate the model back and forth between -0.4 and 0.4
-    model.rotation.y = Math.sin(time) * 0.4;
+    // Rotate the model back and forth between -0.1 and 0.1
+    model.rotation.y = Math.sin(time) * 0.1;
     time += 0.005; // Increase time
   }
 
