@@ -6,11 +6,11 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 const scene = new THREE.Scene();
 // Existing point light
 const light = new THREE.PointLight(0xffffff, 80, 100);
-light.position.set(0, 0, 5);
+light.position.set(0, 0, 7);
 scene.add(light);
 
 // New point light for back illumination
-const backLight = new THREE.PointLight(0xffffff, 70, 100);
+const backLight = new THREE.PointLight(0xffffff, 80, 100);
 backLight.position.set(0, 0, -5); // Position it behind the model
 scene.add(backLight);
 
@@ -52,14 +52,15 @@ loader.load(
 );
 
 // Add a light from the left
-const leftLight = new THREE.DirectionalLight(0xffffff, 1);
-leftLight.position.set(-1, 0, 0);
-scene.add(leftLight);
+// Add a fluorescent blue light from the left
+const leftBlueLight = new THREE.DirectionalLight(0x0000ff, 2);
+leftBlueLight.position.set(-1, 0, 0);
+scene.add(leftBlueLight);
 
 // Add a fluorescent green light from the right
-const rightLight = new THREE.DirectionalLight(0xffa500, 1);
-rightLight.position.set(1, 0, 0);
-scene.add(rightLight);
+const rightBlueLight = new THREE.DirectionalLight(0x0000ff, 2);
+rightBlueLight.position.set(1, 0, 0);
+scene.add(rightBlueLight);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
@@ -91,6 +92,31 @@ function animate() {
 }
 
 animate();
+
+// Create a geometry for the particles
+const particlesGeometry = new THREE.BufferGeometry();
+const particlesCount = 5000;
+const posArray = new Float32Array(particlesCount * 3);
+
+for (let i = 0; i < particlesCount * 3; i++) {
+  // Fill the position array with random values
+  posArray[i] = (Math.random() - 0.5) * 5;
+}
+
+particlesGeometry.setAttribute(
+  "position",
+  new THREE.BufferAttribute(posArray, 3)
+);
+
+// Create a material for the particles
+const particlesMaterial = new THREE.PointsMaterial({
+  size: 0.025,
+  color: "yellow",
+});
+
+// Create the particle system and add it to the scene
+const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+scene.add(particlesMesh);
 
 // Select the container element
 const container = document.querySelector("#scene");
