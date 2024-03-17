@@ -5,7 +5,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 // Create a scene
 const scene = new THREE.Scene();
 // Existing point light
-const light = new THREE.PointLight(0xffffff, 70, 100);
+const light = new THREE.PointLight(0xffffff, 80, 100);
 light.position.set(0, 0, 5);
 scene.add(light);
 
@@ -56,7 +56,8 @@ loader.load(
   function (gltf) {
     model2 = gltf.scene;
     // Adjust the position of the second model
-    model2.position.set(1, 0, 0);
+    model2.position.set(1, -10, -3);
+    model2.scale.set(7, 7, 3);
     scene.add(model2);
   },
   undefined,
@@ -79,16 +80,12 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
 controls.minPolarAngle = Math.PI / 2.5; // Limit the camera to 45 degrees above the horizon
 controls.maxPolarAngle = Math.PI / 2; // Limit the camera to 90 degrees above the horizon
-controls.minAzimuthAngle = -Math.PI / 4; // Limit the camera to 45 degrees to the left
+controls.minAzimuthAngle = -Math.PI / 6; // Limit the camera to 45 degrees to the left
 controls.maxAzimuthAngle = Math.PI / 5; // Limit the camera to 45 degrees to the right
 
 // Set the target to the model's position
 if (model1) {
   controls.target.set(model1.position.x, model1.position.y, model1.position.z);
-}
-
-if (model2) {
-  controls.target.set(model2.position.x, model2.position.y, model2.position.z);
 }
 
 let time = 0; // Initialize a time variable
@@ -98,13 +95,17 @@ function animate() {
   requestAnimationFrame(animate);
 
   // Check if the model is loaded
-  if (model1) {
+  if (model1 && model2) {
     // Rotate the model back and forth between -0.15 and 0.15
     model1.rotation.y = Math.sin(time) * 0.15;
+    model2.rotation.y = Math.sin(time) * 0.15;
     time += 0.0065; // Increase time
   }
 
-  controls.update();
+  if (model1) {
+    controls.update();
+  }
+
   renderer.render(scene, camera);
 }
 
