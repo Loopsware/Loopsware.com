@@ -35,30 +35,15 @@ renderer.setPixelRatio(window.devicePixelRatio);
 
 document.body.appendChild(renderer.domElement);
 
+let model: any;
 // Load a .glb file
 const loader = new GLTFLoader();
-let model1: any, model2: any;
 
 loader.load(
   "/public/phonehand.glb",
   function (gltf) {
-    model1 = gltf.scene;
-    scene.add(model1);
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
-);
-
-loader.load(
-  "/public/confetti.glb",
-  function (gltf) {
-    model2 = gltf.scene;
-    // Adjust the position of the second model
-    model2.position.set(1, -10, -3);
-    model2.scale.set(7, 7, 3);
-    scene.add(model2);
+    model = gltf.scene;
+    scene.add(model);
   },
   undefined,
   function (error) {
@@ -84,8 +69,8 @@ controls.minAzimuthAngle = -Math.PI / 6; // Limit the camera to 45 degrees to th
 controls.maxAzimuthAngle = Math.PI / 5; // Limit the camera to 45 degrees to the right
 
 // Set the target to the model's position
-if (model1) {
-  controls.target.set(model1.position.x, model1.position.y, model1.position.z);
+if (model) {
+  controls.target.set(model.position.x, model.position.y, model.position.z);
 }
 
 let time = 0; // Initialize a time variable
@@ -95,17 +80,13 @@ function animate() {
   requestAnimationFrame(animate);
 
   // Check if the model is loaded
-  if (model1 && model2) {
+  if (model) {
     // Rotate the model back and forth between -0.15 and 0.15
-    model1.rotation.y = Math.sin(time) * 0.15;
-    model2.rotation.y = Math.sin(time) * 0.15;
-    time += 0.0065; // Increase time
+    model.rotation.y = Math.sin(time) * 0.15;
+    time += 0.005; // Increase time
   }
 
-  if (model1) {
-    controls.update();
-  }
-
+  controls.update();
   renderer.render(scene, camera);
 }
 
