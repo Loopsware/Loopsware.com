@@ -51,7 +51,7 @@ const testimonials: any = {
 const { testimony } = Astro.props;
 ---
 
-<div class="testimonial-card flex flex-col border-3 border-gray-200 rounded-2xl p-6 mb-8 md:mb-10 md:mx-5">
+<div class=`${testimony === '2' && 'hidden md:block'} testimonial-card flex flex-col border-3 border-gray-200 rounded-2xl p-6 mb-8 md:mb-10 md:mx-5`>
     <div class="flex items-center">
         <img class="w-14 h-14 rounded-full" src=`/public/${testimonials[testimony].avatar}` />
         <div class="flex flex-col ml-3">
