@@ -21,7 +21,11 @@ scene.add(frontLight);
 // Create a renderer with anti-aliasing
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setClearColor(0x000000, 0);
-renderer.setSize(window.innerWidth / 2.5, window.innerHeight / 2);
+if (window.innerWidth < 768) {
+  renderer.setSize(window.innerWidth / 1.15, window.innerHeight / 1.6);
+} else {
+  renderer.setSize(window.innerWidth / 2.5, window.innerHeight / 1.9);
+}
 renderer.setPixelRatio(window.devicePixelRatio);
 
 // Create a function to update the renderer and camera
@@ -42,14 +46,14 @@ function onWindowResize() {
 window.addEventListener("resize", onWindowResize, false);
 
 const camera = new THREE.PerspectiveCamera(
-  78,
+  80,
   window.innerWidth / window.innerHeight,
   0.1,
   1000
 );
 
 camera.position.z = 5;
-camera.position.x = 0;
+camera.position.x = 1;
 camera.position.y = 1.5;
 
 // Make the camera look at the center of the scene
@@ -85,7 +89,7 @@ controls.enableZoom = false;
 controls.minPolarAngle = Math.PI / 4; // Limit the camera to 45 degrees above the horizon
 controls.maxPolarAngle = Math.PI / 2; // Limit the camera to 90 degrees above the horizon
 controls.minAzimuthAngle = -Math.PI / 4; // Limit the camera to 45 degrees to the left
-controls.maxAzimuthAngle = Math.PI / 5; // Limit the camera to 45 degrees to the right
+controls.maxAzimuthAngle = Math.PI / 4; // Limit the camera to 45 degrees to the right
 
 // Set the target to the model's position
 if (model) {
@@ -100,9 +104,9 @@ function animate() {
   // Check if the model is loaded
   if (model) {
     // Rotate the model back and forth between -0.25 and 0.25
-    model.rotation.y = Math.sin(time) * 0.2;
+    model.rotation.x = Math.sin(time) * 0.15;
 
-    const scaleFactor = window.innerWidth < 768 ? 0.85 : 1.5; // Increase the scale on mobile devices
+    const scaleFactor = window.innerWidth < 768 ? 0.85 : 1.4; // Increase the scale on mobile devices
     model.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
     time += 0.005; // Increase time
