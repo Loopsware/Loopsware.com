@@ -51,6 +51,10 @@ if (!window.myScene) {
     function (gltf) {
       model = gltf.scene;
       scene.add(model);
+
+      const scaleFactorX = window.innerWidth < 768 ? 0.55 : 1;
+      model.scale.set(scaleFactorX, 1, scaleFactorX);
+      model.position.x -= 0.2;
     },
     undefined,
     function (error) {
@@ -97,6 +101,33 @@ if (!window.myScene) {
   }
 
   animate();
+
+  // Get the window's width and height
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+
+  // Adjust the height if on mobile
+  if (width < 768) {
+    height *= 0.45; // Reduce the height by 25%
+  }
+
+  // Update the renderer's size
+  renderer.setSize(width, height);
+
+  // Update the camera's aspect ratio when the window is resized
+  window.addEventListener("resize", function () {
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    if (width < 768) {
+      height *= 0.45; // Reduce the height by 25%
+    }
+
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(width, height);
+  });
 }
 
 // Select the container element
