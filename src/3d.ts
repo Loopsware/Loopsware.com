@@ -54,7 +54,7 @@ if (!window.myScene) {
 
       const scaleFactorX = window.innerWidth < 768 ? 0.55 : 1;
       model.scale.set(scaleFactorX, 1, scaleFactorX);
-      model.position.x -= 0.2;
+      model.position.x = -0.25;
     },
     undefined,
     function (error) {
