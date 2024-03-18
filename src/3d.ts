@@ -30,7 +30,7 @@ if (!window.myScene) {
 
   // Create a camera
   const camera = new THREE.PerspectiveCamera(
-    80,
+    81,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
@@ -112,8 +112,8 @@ if (!window.myScene) {
   if (width < 768) {
     height *= 0.45; // Reduce the height by 45%
   } else if (width >= 768) {
-    height *= 0.7; // Reduce the height by 80%
-    width *= 0.58; // Reduce the width by 50%
+    height *= 0.725; // Reduce the height by 80%
+    width *= 0.65; // Reduce the width by 50%
   }
 
   // Update the renderer's size
