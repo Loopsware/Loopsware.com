@@ -11,7 +11,7 @@ declare global {
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setClearColor(0x000000, 0); // the second parameter is the opacity, set it to 0 for full transparency
-renderer.setSize(window.innerWidth / 1.3, window.innerHeight / 1.3);
+renderer.setSize(window.innerWidth / 1.333, window.innerHeight / 1.333);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 if (!window.myScene) {
@@ -30,7 +30,7 @@ if (!window.myScene) {
 
   // Create a camera
   const camera = new THREE.PerspectiveCamera(
-    90,
+    80,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
@@ -38,7 +38,9 @@ if (!window.myScene) {
 
   camera.position.x = 0.5;
   camera.position.y = 1;
-  camera.position.z = 5;
+  camera.position.z = camera.position.z = window.innerWidth < 768 ? 5.65 : 5;
+
+  window.myCamera = camera;
 
   document.body.appendChild(renderer.domElement);
 
@@ -52,7 +54,7 @@ if (!window.myScene) {
       model = gltf.scene;
       scene.add(model);
 
-      const scaleFactorX = window.innerWidth < 768 ? 0.55 : 1;
+      const scaleFactorX = window.innerWidth < 768 ? 0.45 : 1;
       model.scale.set(scaleFactorX, 1, scaleFactorX);
       model.position.x = -0.25;
     },
@@ -108,7 +110,10 @@ if (!window.myScene) {
 
   // Adjust the height if on mobile
   if (width < 768) {
-    height *= 0.45; // Reduce the height by 25%
+    height *= 0.45; // Reduce the height by 45%
+  } else if (width >= 768) {
+    height *= 0.7; // Reduce the height by 80%
+    width *= 0.58; // Reduce the width by 50%
   }
 
   // Update the renderer's size
