@@ -21,13 +21,28 @@ scene.add(frontLight);
 // Create a renderer with anti-aliasing
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setClearColor(0x000000, 0);
-renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
-document.body.appendChild(renderer.domElement);
-
+renderer.setSize(window.innerWidth / 2.5, window.innerHeight / 2);
 renderer.setPixelRatio(window.devicePixelRatio);
 
+// Create a function to update the renderer and camera
+function onWindowResize() {
+  // Update the renderer's size
+  if (window.innerWidth < 768) {
+    renderer.setSize(window.innerWidth / 1.15, window.innerHeight / 1.6);
+  } else {
+    renderer.setSize(window.innerWidth / 2.5, window.innerHeight / 2);
+  }
+
+  // Update the camera's aspect ratio
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+}
+
+// Add the event listener
+window.addEventListener("resize", onWindowResize, false);
+
 const camera = new THREE.PerspectiveCamera(
-  55,
+  78,
   window.innerWidth / window.innerHeight,
   0.1,
   1000
@@ -86,6 +101,10 @@ function animate() {
   if (model) {
     // Rotate the model back and forth between -0.25 and 0.25
     model.rotation.y = Math.sin(time) * 0.2;
+
+    const scaleFactor = window.innerWidth < 768 ? 0.85 : 1.5; // Increase the scale on mobile devices
+    model.scale.set(scaleFactor, scaleFactor, scaleFactor);
+
     time += 0.005; // Increase time
   }
 
