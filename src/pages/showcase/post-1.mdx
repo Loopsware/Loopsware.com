@@ -1,20 +1,22 @@
 ---
 layout: "../../layouts/ShowcasePost.astro"
-title: "My First Blog Post"
-pubDate: 2022-07-01
+business: "Kluu.mx"
+title: "Deliverying high quality groceries to the customers door"
 description: "This is the first post of my new Astro blog."
-author: "Astro Learner"
 image:
-  url: "https://docs.astro.build/assets/full-logo-light.png"
-  alt: "The full Astro logo."
-tags: ["astro", "blogging", "learning in public"]
+  url: "kluu_banner_half.png"
+  alt: "Kluu banner"
+services: ["UI design", "Development", "Publishing"]
+platforms: ["iOS", "Android"]
+technologies: ["React Native", "Expo", "GraphQL"]
+links: ["https://kluu.mx", "https://kluu.mx"]
 ---
 
 import NavBar from "../../layouts/NavBar.astro";
 import Footer from "../../layouts/Footer.astro";
-import Layout from "../../layouts/ShowcasePost.astro"; // Add this line
+import Layout from "../../layouts/ShowcasePost.astro";
 
-<Layout>
+<Layout title={`Loopsware | ${title}`}>
   <NavBar />
   <main>
     <h2>This is the content of the post!</h2>

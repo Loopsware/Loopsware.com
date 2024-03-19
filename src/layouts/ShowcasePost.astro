@@ -18,30 +18,30 @@ const { title } = Astro.params;
 const {frontmatter} = Astro.props;
 ---
 
-<Layout title={`Loopsware | ${title}`}>
+<Layout title={`Loopsware | ${frontmatter?.title}`}>
     <NavBar />
     <div class="flex flex-col lg:flex-row px-4 md:px-8 lg:px-16 mt-20 mb-8 lg:mt-10 lg:mb-0">
     <main transition:name="hero"  class="flex flex-col w-full lg:w-9/12">
         <div class="flex flex-col">
-          <div class="w-full border-4 border-gray-200 rounded-2xl">
-            <img src="../../../public/app_sample_banner.png" alt="app_banner" />
+          <div class="border-4 border-gray-200 rounded-2xl">
+            <img class="rounded-2xl" src={`../../public/${frontmatter.image.url}`} alt=`${frontmatter.image.alt}` />
           </div>
         </div>
     </main>
     <aside class="flex flex-col w-full lg:w-3/12 lg:pl-8 mt-4 lg:mt-0">
-      <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-3xl md:text-4xl font-bold">{frontmatter.title}</p>
+      <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-3xl md:text-4xl font-bold">{frontmatter?.business}</p>
       <div class="flex justify-between lg:h-3/4 lg:flex-col my-4 lg:my-0">
       <div class="flex flex-col">
         <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-lg md:text-xl font-bold">Services</p>
         <ul>
           <li>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">Planning</p>
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">{frontmatter?.services[0]}</p>
           </li>
           <li>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">UI design</p>
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">{frontmatter?.services[1]}</p>
           </li>
           <li>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">Development</p>
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">{frontmatter?.services[2]}</p>
           </li>
         </ul>
       </div>
@@ -49,10 +49,10 @@ const {frontmatter} = Astro.props;
         <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-lg md:text-xl font-bold">Platforms</p>
         <ul>
           <li>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">iOS</p>
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">{frontmatter?.platforms[0]}</p>
           </li>
           <li>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">Android</p>
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">{frontmatter?.platforms[1]}</p>
           </li>
         </ul>
       </div>
@@ -60,13 +60,13 @@ const {frontmatter} = Astro.props;
         <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-lg md:text-xl font-bold">Technologies</p>
         <ul>
           <li>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">React Native</p>
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">{frontmatter?.technologies[0]}</p>
           </li>
           <li>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">Expo</p>
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">{frontmatter?.technologies[1]}</p>
           </li>
           <li>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">Supabase</p>
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md md:text-lg">{frontmatter?.technologies[2]}</p>
           </li>
         </ul>
       </div>
@@ -83,7 +83,7 @@ const {frontmatter} = Astro.props;
     </div>
     <div class="lg:w-9/12 px-4 md:px-8 lg:px-16">
       <div class="lg:my-8 mb-16">
-        <h2 style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-3xl md:text-4xl font-bold">Sample project title</h2>
+        <h2 style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-3xl md:text-4xl font-bold">{frontmatter?.title}</h2>
         <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-justify leading-7 mt-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
               Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
