@@ -18,7 +18,7 @@ const { title } = Astro.params;
 const {frontmatter} = Astro.props;
 ---
 
-<Layout title={`Loopsware | ${frontmatter?.title}`}>
+<Layout title={`Loopsware | ${frontmatter?.business}`}>
     <NavBar />
     <div class="flex flex-col lg:flex-row px-4 md:px-8 lg:px-16 mt-20 mb-8 lg:mt-10 lg:mb-0">
     <main transition:name="hero"  class="flex flex-col w-full lg:w-9/12">
@@ -72,10 +72,10 @@ const {frontmatter} = Astro.props;
       </div>
       </div>
       <div class="flex items-center lg:items-start lg:flex-col">
-        <a href="#" class="my-2">
+        <a href=`${frontmatter.links[0]}` class="my-2">
           <img class="w-32" src="../../../public/donwload_appstore.png" alt="app store banner" />
         </a>
-        <a href="#" class="ml-3 lg:ml-0">
+        <a href=`${frontmatter.links[1]}` class="ml-3 lg:ml-0">
           <img class="w-32 my-1" src="../../../public/google_play_banner.webp" alt="google play store banner" />
         </a>
       </div>
