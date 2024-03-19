@@ -1,7 +1,6 @@
 ---
 layout: "../../layouts/ShowcasePost.astro"
 title: "My First Blog Post"
-layout: "/pages/swhocase/ShowcasePost.astro"
 pubDate: 2022-07-01
 description: "This is the first post of my new Astro blog."
 author: "Astro Learner"
@@ -11,4 +10,14 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-This is the content of the post!
+import NavBar from "../../layouts/NavBar.astro";
+import Footer from "../../layouts/Footer.astro";
+import Layout from "../../layouts/ShowcasePost.astro"; // Add this line
+
+<Layout>
+  <NavBar />
+  <main>
+    <h2>This is the content of the post!</h2>
+  </main>
+  <Footer />
+</Layout>
