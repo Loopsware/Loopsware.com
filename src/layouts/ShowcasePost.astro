@@ -84,79 +84,53 @@ const {frontmatter} = Astro.props;
     <div class="lg:w-9/12 px-4 md:px-8 lg:px-16">
       <div class="lg:my-8 mb-16">
         <h2 style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-3xl md:text-4xl font-bold">{frontmatter?.title}</h2>
-        <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-justify leading-7 mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
-            </p>
+        <slot />
       </div>
-      <div class="showcase-section grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 my-8">
-          <div class=`flex items-end w-full h-52 md:h-56 xl:h-60 border-3 border-gray-200 rounded-2xl`>
-            <img class="w-full lg:h-56" src="../../../public/app_sample_banner.png" alt="app_banner" />
-          </div>
-          <div class=`flex items-end w-full h-52 md:h-56 xl:h-60 border-3 border-gray-200 rounded-2xl`>
-            <img class="w-full lg:h-56" src="../../../public/app_sample_banner.png" alt="app_banner" />
-          </div>
-          <div class=`flex items-end w-full h-52 md:h-56 xl:h-60 border-3 border-gray-200 rounded-2xl`>
-            <img class="w-full lg:h-56" src="../../../public/app_sample_banner.png" alt="app_banner" />
-          </div>
-          <div class=`flex items-end w-full h-52 md:h-56 xl:h-60 border-3 border-gray-200 rounded-2xl`>
-            <img class="w-full lg:h-56" src="../../../public/app_sample_banner.png" alt="app_banner" />
+      <div class="w-full md:w-7/12 xl:w-5/12 border-3 border-gray-200 rounded-2xl px-6 md:px-8 py-4 md:py-2 my-16">
+      <div class="flex justify-between md:items-center">
+        <div class="flex mb-6">
+          <div class="h-5 md:bg-lime-200">
+            <h3
+              style={{ "font-family": "Telegraf", "font-style": "medium" }}
+              class="text-2xl font-black lg:text-center md:translate-x-1 md:translate-y-1"
+            >
+              Ready to get started?
+            </h3>
           </div>
         </div>
-        <div class="stack-section my-20">
-          <div class="flex justify-center mb-16">
-            <div class="h-8 bg-lime-200">
-               <h2 style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-3xl md:text-4xl md:text-center font-bold translate-x-2 translate-y-2">Why this stack?</h2>
-            </div>
-          </div>
-          <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-justify leading-7 my-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur.
-              Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur.
+        <img
+          class="w-20 h-20 translate-x-10 -translate-y-10 md:translate-x-14 md:-translate-y-8"
+          src="../../public/energy_drink_icon.webp"
+          alt="energy drink icon"
+        />
+      </div>
+      <p
+        style={{ "font-family": "Inter", "font-style": "medium" }}
+        class="text-md lg:text-center mb-4"
+      >
+        You can book an intro 15min call for free<br />
+        Pitch your idea, ask any question or just talk.
+      </p>
+      <div class="flex justify-center">
+        <a
+          href="https://cal.com/oliverloops/15min"
+          class="items-center justify-center h-12 md:h-14 w-4/5 md:w-3/5 bg-stone-900 rounded-full my-2"
+          target="_blank"
+        >
+          <p
+            style={{ "font-family": "Telegraf", "font-style": "bold" }}
+            class="text-white text-center font-bold px-4 pt-3 md:pt-4"
+          >
+            Book a call (it's free)
           </p>
-          <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-justify leading-7 my-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur. Suspendisse dapibus metus ut mattis efficitur. 
-              Suspendisse dapibus metus ut mattis efficitur.
-          </p>
-        <div class="w-full md:w-7/12 xl:w-5/12 border-3 border-gray-200 rounded-2xl px-6 md:px-8 py-4 md:py-2 mt-16">
-				  <div class="flex justify-between md:items-center">
-							<div class="flex mb-6">
-								<div class="h-5 md:bg-lime-200">
-									<h3 style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-2xl font-black lg:text-center md:translate-x-1 md:translate-y-1">Ready to get started?</h3>
-								</div>
-							</div>
-							<img class="w-20 h-20 translate-x-10 -translate-y-10 md:translate-x-14 md:-translate-y-8" src="../../public/energy_drink_icon.webp" alt="energy drink icon" />
-						</div>
-						<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-md lg:text-center mb-4">
-							You can book an intro 15min call for free<br />
-							Pitch your idea, ask any question or just talk.
-						</p>
-						<div class="flex justify-center">
-        			<a href="https://cal.com/oliverloops/15min" class="items-center justify-center h-12 md:h-14 w-4/5 md:w-3/5 bg-stone-900 rounded-full my-2" target="_blank">
-            		<p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-white text-center font-bold px-4 pt-3 md:pt-4">Book a call (it's free)</p>
-        			</a>
-    					</div>
-					</div>
-        </div>
-        <a style={{"font-family": "Telegraf", "font-style": "medium"}} href="/#work" class="md:text-lg text-blue-500 font-semibold" >
-          &larr; Go Back
-        </a>      
+        </a>
+      </div>
     </div>
-    <Footer />
+      <a style={{"font-family": "Telegraf", "font-style": "medium"}} href="/#work" class="md:text-lg text-blue-500 font-semibold" >
+        &larr; Go Back
+      </a>      
+    </div>
+  <Footer />
 </Layout>
 
 <script type="module">
