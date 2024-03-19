@@ -1,0 +1,488 @@
+---
+//* Layout
+import Layout from '../../layouts/Layout.astro';
+import NavBar from '../../layouts/NavBar.astro';
+import Footer from '../../layouts/Footer.astro';
+//* UI comps.
+import Button from '../../components/Button.astro';
+import Availability from '../../components/Availability.astro';
+import ServiceBoxes from '../../components/ServiceBoxes.astro';
+import ShowcaseCard from '../../components/ShowcaseCard.astro';
+import TestimonialCard from '../../components/TestimonialCard.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import FooterLabel from '../../components/FooterLabel.astro';
+---
+
+<Layout title="Loopsware | React Native Experts">
+	<NavBar />
+	<main>
+		<!-- Main section -->
+		<div class="flex flex-col-reverse md:grid md:grid-cols-2 xl:h-screen w-full md:my-12 xl:my-0">
+			<div class="flex flex-col justify-center px-4 md:px-8 lg:px-16">
+				<Availability title={"Currently available"} status={"available"} />
+				<h1 style={{"font-family": "Grotesque"}}  class="text-element text-black text-3xl md:text-4xl xl:text-5xl font-black p-2">De una lluvia de ideas a una aplicación real.</h1>
+				<p style={{"font-family": "Telegraf"}} class="text-element font-medium text-md md:text-lg lg:text-xl xl:text-2xl px-2 py-5">
+					<span class="font-bold">React</span> & <span class="font-bold">React Native</span> cross-platform development agency, 
+					We're ready to build your next app idea with full support for Android, iOS and Web.
+				</p>
+				<div class="flex w-full mt-8">
+					<Button title='Pricing' href="/pricing" isBlack />
+					<div class="mx-2 md:mx-3 my-2 md:my-0"></div>
+					<Button title='Book a call' href="https://cal.com/oliverloops/15min" isBlack={false} />
+				</div>
+			</div>
+			<div class="flex flex-col justify-center items-center pr-0 md:pr-8 lg:pr-0 mt-20 md:mt-0">
+				<div id="scene" class="cursor-grab"></div>
+				<!-- <img class="h-5/6 w-5/6 md:h-4/5 md:w-full lg:w-5/6 lg:h-4/5 xl:w-3/4 xl:h-4/5" src="/public/phone_3d.png" alt="hand and smartphone illustration" /> -->
+			</div>
+			<div class="hidden md:block md:mx-8 lg:mx-16 md:mt-16 xl:mt-0">
+				<FooterLabel title="Home" />
+			</div>
+		</div>
+		<!-- Services -->
+		<div class="services-section mt-10 md:mt-0 mb-10">
+			<div id="services" class="p-4 md:p-8 lg:p-16">
+				<div class="flex mb-6">
+					<div class="h-8 bg-lime-200">
+						<h2 style={{"font-family": "Grotesque"}} class="text-4xl md:text-5xl font-black translate-x-2">Services</h2>
+					</div>
+				</div>
+				<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-xl font-medium my-2">
+					How can we assist you?. We can build your app <br class="hidden md:block" />
+					from scratch or give you a hand on existing projects
+				</p>   
+			</div>
+			<ServiceBoxes />
+			<div class="hidden md:block w-5/6 my-10 md:mx-8 lg:mx-16">
+				<FooterLabel title="Home" />
+			</div>
+		</div>
+		<!-- Benefits -->
+		<div class="benefits-section md:my-16 xl:my-10">
+			<div  class="p-4 md:p-8 lg:p-16">
+				<div class="flex mb-6">
+					<div class="h-8 bg-lime-200">
+						<h2 style={{"font-family": "Grotesque"}} class="text-4xl md:text-5xl font-black translate-x-2">Benefits</h2>
+					</div>
+				</div>
+				<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-xl font-medium my-2">
+					Why this is the right choice for your project? <br class="hidden md:block" />
+					These are some of the perks for you.
+				</p>   
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-3 mt-10 md:mt-2">
+				<div>
+					<div class="benefit-item flex flex-col items-center">
+						<div class="flex flex-col justify-center h-20 w-20 lg:h-24 lg:w-24 bg-lime-200">
+							<img class="h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 translate-x-2 translate-y-2 absolute" src="/public/colorpallettes_3d.png" alt="Quality icon" />
+						</div>
+						<p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-lg font-black mt-4">
+							Unique UI design
+						</p>
+						<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-center my-2">
+							Custom designs made specifically  <br />
+							for a better app experience  
+						</p>
+					</div>
+					<div class="benefit-item flex flex-col items-center my-16">
+						<div class="flex flex-col justify-center h-20 w-20 lg:h-24 lg:w-24 bg-lime-200">
+							<img class="h-24 w-24 md:h-28 md:w-28 translate-x-2 translate-y-2 absolute" src="/public/fast_3d.png" alt="Quality icon" />
+						</div>						
+						<p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-lg font-black mt-4">
+							Fast Delivery
+						</p>
+						<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-center my-2">
+							Your design is ready in few days <br />
+							development takes a few weeks for MVP
+						</p>
+					</div>
+				</div>
+				<div>
+					<div class="benefit-item flex flex-col items-center">
+						<div class="flex flex-col justify-center h-20 w-20 lg:h-24 lg:w-24 bg-lime-200">
+							<img class="h-24 w-24 md:h-28 md:w-28 translate-x-2 translate-y-2 absolute" src="/public/custom_3d.png" alt="Quality icon" />
+						</div>
+						<p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-lg font-black mt-4">
+							Complete Customization
+						</p>
+						<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-center my-2">
+							The app is built to fit your <br />
+							project's needs.
+						</p>
+					</div>
+					<div class="benefit-item flex flex-col items-center my-16">
+						<div class="flex flex-col justify-center h-20 w-20 lg:h-24 lg:w-24 bg-lime-200">
+							<img class="h-24 w-24 translate-x-4 translate-y-2 absolute" src="/public/kanban_3d.png" alt="Quality icon" />
+						</div>
+						<p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-lg font-black mt-4">
+							Easy Project Management
+						</p>
+						<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-center my-2">
+							Simple kanban boards, <br />
+							not overwhelming tools
+						</p>
+					</div>
+				</div>
+				<div>
+					<div class="benefit-item flex flex-col items-center">
+						<div class="flex flex-col justify-center h-20 w-20 lg:h-24 lg:w-24 bg-lime-200">
+							<img class="h-24 w-24 translate-x-4 translate-y-2 absolute" src="/public/crossplatform_3d.png" alt="Quality icon" />
+						</div>
+						<p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-lg font-black mt-4">
+							Multiple Platforms
+						</p>
+						<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-center my-2">
+							Take your app to iOS, Android <br />
+							and the web with a single codebase
+						</p>
+					</div>
+					<div class="benefit-item flex flex-col items-center my-16">
+						<div class="flex flex-col justify-center h-20 w-20 lg:h-24 lg:w-24 bg-lime-200">
+							<img class="h-24 w-24 md:h-28 md:w-28 translate-x-2 translate-y-2 absolute" src="/public/moneywrapped_3d.png" alt="Quality icon" />
+						</div>
+						<p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-lg font-black mt-4">
+							Fixed monthly rate
+						</p>
+						<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-center my-2">
+							Not hourly rates, no surprises. <br />
+							we work with a fixed monthly rate 
+						</p>
+					</div>
+				</div>
+			<div class="hidden md:block w-5/6 my-10 md:mx-8 lg:mx-16">
+				<FooterLabel title="Home" />
+			</div>
+		</div>
+		<!-- Work -->
+		<div id="work" class="my-10">
+			<div class="p-4 md:p-8 lg:p-16">
+				<div class="flex mb-6">
+					<div class="h-8 bg-lime-200">
+						<h2 style={{"font-family": "Grotesque"}} class="text-4xl md:text-5xl font-black translate-x-2">Work</h2>
+					</div>
+				</div>
+				<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-xl font-medium my-4">
+					We have experience crafting <br />
+					mobile digital experiences from scratch. 
+				</p>   
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 md:px-4 lg:pl-8 lg:pr-12 lg:px-0">
+				<div class="flex flex-col items-center">
+					<ShowcaseCard title="Medizona" size="large" route='/showcase/post-3' />
+					<div class="flex flex-row justify-between w-11/12">
+						<div  class="w-11/12 lg:w-full mr-2 lg:mr-6">
+							<ShowcaseCard title="Kluu" size="small" route='/showcase/post-1' />
+						</div>
+						<div class="w-11/12 lg:w-full ml-2 lg:ml-6">
+							<!-- <ShowcaseCard title="Arriba" size="small" route='arriba' /> -->
+							<ShowcaseCard title="UG groups" size="small" route='/showcase/post-2' />
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-col items-center">
+					<ShowcaseCard title="BoletoMovil" size="large" route='https://play.google.com/store/apps/details?id=com.livement.livement&hl=es' />
+					<div class="flex flex-row justify-between w-11/12">
+						<!-- <div class="w-11/12 lg:w-full mr-2 lg:mr-6">
+							<ShowcaseCard title="UG groups" size="small" route='poetical' />
+						</div> -->
+						<a href="/pricing" class="flex justify-center items-center w-full h-52 md:h-44 lg:h-60 border-3 border-gray-300 bg-gray-100  rounded-2xl my-2 md:my-4 lg:my-6 cursor-pointer hover:bg-lime-100 hover:underline transition-all">
+							<p style={{"font-family": "Telegraf", "font-style": "bold"}} class="font-black text-xl lg:text-2xl hover:underline">Your App? &rarr;</p>
+						</a>	
+					</div>
+				</div>
+			</div>
+			<div class="hidden md:block w-3/6 my-10 mx-8 lg:mx-16">
+				<FooterLabel title="Home" />
+			</div>
+		</div>
+		<!-- Testimonials -->
+		<div class="testimonials-section my-10">
+			<div class="p-4 md:p-8 lg:p-16">
+				<div class="flex mb-6">
+					<div class="h-8 bg-lime-200">
+						<h2 style={{"font-family": "Grotesque"}} class="text-4xl md:text-5xl font-black translate-x-2">Testimonials:</h2>
+					</div>
+				</div>
+				<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-xl font-medium my-4">
+					What some of the customers and <br /> 
+					previous collaborators think <a class="font-bold text-blue-500 underline" href="/about">about</a>.
+				</p>   
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2 px-4 lg:px-12">
+				<TestimonialCard testimony='0' />
+				<TestimonialCard testimony='2' />
+				<TestimonialCard testimony='4' />
+				<TestimonialCard testimony='1' />
+				<TestimonialCard testimony='3' />
+				<TestimonialCard testimony='5' />
+			</div>
+			<div class="hidden md:block h-10 w-4/6 p-4 p-8 lg:p-16">
+				<FooterLabel title="Home" />
+			</div>
+		</div>
+		<!-- Contact Us -->
+		<div class="contact-section my-20 xl:mt-24 xl:my-10">
+			<div class="grid grid-cols-1 md:grid-cols-2 p-4 md:py-8 md:pr-8 md:pl-8 xl:py-0 lg:pl-16">
+				<div class="flex flex-col w-full md:w-10/12 lg:w-full md:block">
+					<div class="flex flex-col">
+						<h2 style={{"font-family": "Grotesque"}} class="text-3xl xl:text-4xl font-black">
+							Let us know <br />
+							about the project
+						</h2>
+						<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="xl:text-xl font-medium my-4">
+							Ask any question, tell us more about your <br class="block md:hidden lg:block" />
+							next app idea. We respond as soon as possible.
+						</p>
+					</div>
+					<img class="h-4/6 lg:3/6 xl:h-3/6" src="/public/oliver_3d.png" alt="Man working on a laptop" />
+				</div>
+				<div class="lg:mr-12">
+					<ContactForm />
+				</div>
+			</div>
+			<div class="faq-section px-4 my-10 md:px-8 xl:px-16 xl:my-0">
+				<div class="flex flex-col lg:flex-row justify-between">
+					<div class="lg:w-5/12">
+						<h3 style={{"font-family": "Grotesque"}} class="text-3xl xl:text-4xl font-black">
+							Frequently <br />
+							asked questions
+						</h3>
+						<div class="flex flex-col my-6">
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg text-slate-600">Why not just hire a full-time mobile developer?</p>
+									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p style={{"font-family": "Inter", "font-style": "medium"}}  class="questionText text-md my-2 hidden">
+									The average salary for a mobile developer exceed $100,000 per year (depending on their experience some can be more expensive). 
+									Also you should consider the number of platforms you're targeting, you usually need to hire more than one developer. 
+								</p>
+							</div>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg text-slate-600">Can you build apps for iOS and Android?</p>
+									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p style={{"font-family": "Inter", "font-style": "medium"}} class="questionText text-md my-2 hidden" >
+									Thanks to technologies like Expo and React Native we can build apps for both platforms with a single codebase.
+									Saving extra costs and development time.
+								</p>
+							</div>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg text-slate-600">What's is React and React Native?</p>
+									<p class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p style={{"font-family": "Inter", "font-style": "medium"}} class="questionText text-md my-2 hidden">
+									Good question!, <a class="font-bold text-blue-400 underline" href="https://react.dev">React</a> is a JavaScript library for building user interfaces, and 
+									<a class="font-bold text-blue-400 underline" href="https://reactnative.dev">React Native</a> is a framework for building native mobile apps (and even more native platforms) using React. 
+								</p>
+							</div>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg text-slate-600">How React Native benefits my business</p>
+									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p style={{"font-family": "Inter", "font-style": "medium"}}  class="questionText text-md my-2 hidden">
+									If you're starting a new project or a company, you can save a lot in costs using a shared React Native codebase
+									instead of building separate apps for iOS and Android or even the web. You can also reuse web development knowlegde
+									and mobile teams can rearchitecture in order to share code between different teams. 
+								</p>
+							</div>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg text-slate-600">Which programs and technologies you use?</p>
+									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p style={{"font-family": "Inter", "font-style": "medium"}} class="questionText text-md my-2 hidden" >
+									I use Visual Studio Code as my main code editor, Figma for UI/UX design, Xcode and Android Studio where needed.
+									I work mainly with React, React Native, Expo and Node.js.
+								</p>
+							</div>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg text-slate-600">How is your work process?</p>
+									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p style={{"font-family": "Inter", "font-style": "medium"}} class="questionText text-md my-2 hidden" >
+									Start with a call to understand your project, maybe giving some ideas or suggestions (if needed)
+									then I create a design and development plan, We iterate on the design before development stage.
+									After that, I start the development and we keep in touch for feedback and updates.
+								</p>
+							</div>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-md text-slate-600">What happens if I don't like the results??</p>
+									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p style={{"font-family": "Inter", "font-style": "medium"}} class="questionText text-md my-2 hidden" >
+									You don't have to worry about that, We'll be iterating the design and development until you're satisfied with the results.
+								</p>
+							</div>
+							<div class="flex flex-col my-2">
+								<div class="flex justify-between">
+									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg text-slate-600">What's the payment method?</p>
+									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+								</div>
+								<p style={{"font-family": "Inter", "font-style": "medium"}} class="questionText text-md my-2 hidden" >
+									We work with a fixed monthly rate, through Stripe (link provided once we're ready to start).
+									If you're from Mexico we can use bank transfers.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="flex justify-center">
+					<div class="md:w-8/12 lg:w-11/12 lg:h-72 border-3 border-gray-200 rounded-2xl px-6 md:px-8 mt-14 lg:mt-0 pb-4">
+						<div class="flex justify-between items-center mb-4 md:mb-0">
+							<div class="flex mb-6">
+								<div class="h-8 md:bg-lime-200">
+									<h3 style={{"font-family": "Grotesque"}} class="text-3xl lg:text-4xl font-black md:translate-x-2 md:translate-y-1 md:whitespace-nowrap">Still have questions?</h3>
+								</div>
+							</div>
+							<img class="w-20 h-20 lg:w-28 lg:h-28 translate-x-8 md:translate-x-12 -translate-y-8" src="../../public/faq_icon.png" alt="FAQ icon" />
+						</div>
+						<p style={{"font-family": "Inter", "font-style": "medium"}} class="md:text-lg mb-4">
+							You can book an intro 15min call for free<br />
+							Pitch your idea, ask any question or just talk.
+						</p>
+						<a href="https://cal.com/oliverloops/15min" class="flex justify-center" target="_blank">
+        					<button class="h-12 lg:h-14 w-3/4 md:w-3/5 xl:w-3/6 bg-stone-900 rounded-full my-2 hover:opacity-90 hover:shadow-lg transition-all">
+            					<p style={{"font-family": "Inter", "font-style": "bold"}}  class="text-white font-bold px-4 py-2" >Schedule now for free</p>
+        					</button>
+    					</a>
+					</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+@keyframes slideDownFadeIn {
+0% {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+.show-text {
+animation: slideDownFadeIn 0.3s ease-out forwards;
+}
+</style>
+
+<script src="/src/3d.ts" />
+<script type="module">
+import anime from 'https://cdn.skypack.dev/animejs';
+
+document.querySelectorAll('.downArrow').forEach(function(downArrow) {
+    downArrow.addEventListener('click', function() {
+    var textElement = this.parentElement.nextElementSibling;
+    if (textElement.classList.contains('hidden')) {
+        textElement.classList.remove('hidden');
+        textElement.classList.add('show-text');
+    } else {
+        textElement.classList.add('hidden');
+        textElement.classList.remove('show-text');
+    }
+});
+});
+
+// Text entrance animation
+document.querySelectorAll('.text-element').forEach(function(textElement) {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: entry.target,
+                    opacity: [0, 1],
+                    translateY: [-70, 0],
+                    duration: 2000,
+                    easing: 'easeOutExpo'
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    observer.observe(textElement);
+});
+
+const servicesSection = document.querySelector('.services-section');
+const benefitsSection = document.querySelector('.benefits-section');
+const workSection = document.querySelector('#work');
+const testimonialsSection = document.querySelector('.testimonials-section');
+const contactSection = document.querySelector('.contact-section');
+const faqSection = document.querySelector('.faq-section');
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            anime({
+                targets: entry.target,
+                opacity: [0, 1], // Fade the section in
+                translateY: [250, 0], // Move the section up
+                duration: 2000,
+				delay: entry.target === servicesSection ? 0 : 500,
+                easing: 'easeOutExpo' // Use an exponential easing function
+            });
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    rootMargin: '-5% 0px', // Trigger when the top of the screen is halfway to the section
+});
+
+observer.observe(servicesSection);
+observer.observe(workSection);
+observer.observe(testimonialsSection);
+observer.observe(contactSection);
+observer.observe(faqSection);
+
+const benefitsItems = benefitsSection.querySelectorAll('.benefit-item');
+
+const itemsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            // Check if the animation has already been run
+            if (entry.target.dataset.animated) return;
+			anime({
+                targets: entry.target,
+                opacity: [0, 1], // Fade the section in
+                translateY: [250, 0], // Move the section up
+                duration: 2000,
+				delay: entry.target === servicesSection ? 0 : 500,
+                easing: 'easeOutExpo' // Use an exponential easing function
+            });
+
+            benefitsItems.forEach(function(benefitItem, index) {
+				anime({
+                    targets: benefitItem,
+                    opacity: [0, 1], // Fade the item in
+                    translateY: [200, 0], // Move the item up
+                    duration: 2500,
+                    delay: index * 200, 
+                    easing: 'easeOutExpo' // Use an exponential easing function
+                });
+			});
+
+            // Mark the element as animated
+            entry.target.dataset.animated = 'true';
+
+            itemsObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    rootMargin: '-5% 0px', // Trigger when the top of the screen is halfway to the section
+});
+
+itemsObserver.observe(benefitsSection);
+itemsObserver.observe(benefitsItems);
+</script>
