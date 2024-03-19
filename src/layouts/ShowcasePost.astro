@@ -24,7 +24,7 @@ const {frontmatter} = Astro.props;
     <main transition:name="hero"  class="flex flex-col w-full lg:w-9/12">
         <div class="flex flex-col">
           <div class="border-4 border-gray-200 rounded-2xl">
-            <img class="rounded-2xl" src={`../../public/${frontmatter.image.url}`} alt=`${frontmatter.image.alt}` />
+            <img class="h-48 md:h-auto rounded-2xl" src={`../../public/${frontmatter.image.url}`} alt=`${frontmatter.image.alt}` />
           </div>
         </div>
     </main>
