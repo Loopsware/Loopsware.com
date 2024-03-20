@@ -1,3 +1,6 @@
+---
+let lang: string = Astro.props.lang || 'en';
+---
 
 <form 
     id="contact-form"
@@ -6,18 +9,20 @@
     method="POST"
 >
     <div class="flex">
-        <input style={{"font-family": "Inter", "font-style": "medium"}} name="name" type="text"  class="h-14 w-full bg-gray-100 rounded-xl my-2 p-6" placeholder="Your name" required />
+        <input style={{"font-family": "Inter", "font-style": "medium"}} name="name" type="text"  class="h-14 w-full bg-gray-100 rounded-xl my-2 p-6" placeholder=`${lang === 'en' ? 'Your name' : 'Tu nombre'}` required />
     </div>
     <div class="flex">
-        <input style={{"font-family": "Inter", "font-style": "medium"}} name="email" type="email" class="h-14 w-full bg-gray-100 rounded-xl my-2 p-6" placeholder="Your email" required />
+        <input style={{"font-family": "Inter", "font-style": "medium"}} name="email" type="email" class="h-14 w-full bg-gray-100 rounded-xl my-2 p-6" placeholder=`${lang === 'en' ? 'Your email' : 'Tu correo electrónico'}` required />
     </div>
     <div class="flex">
-        <textarea style={{"font-family": "Inter", "font-style": "medium"}} name="message" class="w-full h-56 bg-gray-100 rounded-xl resize-none my-2 p-6" placeholder="A short description about your next app idea..." required />
+        <textarea style={{"font-family": "Inter", "font-style": "medium"}} name="message" class="w-full h-56 bg-gray-100 rounded-xl resize-none my-2 p-6" placeholder=`${lang === 'en' ? 'A short description about your app idea...' : 'Una breve descripción sobre tu siguiente idea...'}` required />
     </div>
     <div class="flex flex-col md:flex-row justify-between items-center mt-4">
-        <p style={{"font-family": "Inter", "font-style": "medium"}}>Or contact us: <a class="text-blue-400" href="mailto:hello@loophau5.com">hello@loopsware.com</a></p>
+        <p style={{"font-family": "Inter", "font-style": "medium"}}>{lang === 'en' ? 'Or contact us:' : 'O contáctanos en: '}<a class="text-blue-400" href="mailto:hello@loophau5.com">hello@loopsware.com</a></p>
         <button type="submit" class="w-full md:w-6/12 lg:w-4/12 xl:w-3/12 bg-stone-900 rounded-full p-4 mt-5 md:mt-0 hover:opacity-90 hover:shadow-lg transition-all">
-            <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-white font-bold">Send</p>
+            <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-white font-bold">
+                {lang === 'en' ? 'Send' : 'Enviar'}
+            </p>
         </button>
     </div>
 </form>

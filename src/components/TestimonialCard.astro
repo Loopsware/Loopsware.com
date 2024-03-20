@@ -1,45 +1,49 @@
 ---
 interface Props {
     testimony: string;
+    lang: string;
 }
 
+import { translations } from '../translations';
+let lang: string = Astro.props.lang || 'en';
+
 const testimonials: any = {
-    0: {
+    one: {
         avatar: 'fernando_carral.jpeg',
         title: 'Fernando Carral',
         role: 'COO & Co-founder at Medizona',
         description: 'I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.',
         company_logo: 'medizona_logo.png'
     },
-    1: {
+    two: {
         avatar: 'jose_lopez.jpeg',
         title: 'Jose Lopez',
         role: 'Software Engineer at Microsoft',
         description: 'Oliver is a great front-end and mobile developer. He has shown amazing skills for software engineering and cross-platform development. He is a great team player and has a great attitude towards learning and sharing knowledge.',
         company_logo: 'microsoft_logo.png'
     },
-    2: {
+    three: {
         avatar: 'ana_paula_santana.jpeg',
         title: 'Ana Paula Santana',
         role: 'CEO & Co-founder at Kluu.mx',
         description: 'Oliver has been a key player in the development of our mobile app. His knowledge and advice have been invaluable for our engineering team. He is a great professional and a great person to work with. I highly recommend him.',
         company_logo: 'kluu_logo.png'
     },
-    3: {
+    four: {
         avatar: 'fernando_contreras.jpeg',
         title: 'Fernando Contreras',
         role: 'Former Software Engineer at C3.ai',
         description: 'I worked with Oliver in a consulting firm, I can highlight his commitment to deadlines, which most of the times were very aggressive, as well as his professionalism in following good programming practices, which is key when developing high quality software.',
         company_logo: 'c3ai_logo.png'
     },
-    4: {
+    five: {
         avatar: 'caspian_zhao.jpeg',
         title: 'Caspian Zhao',
         role: 'Full Stack Developer at Dosu AI',
         description: 'Oliver has been a key collaborator in the development of the react-native-reanimated-carousel project. His passion for programming and prowess in React Native have left a lasting impression on me. Should any new projects or creative ventures arise in the future, he will undoubtedly be my top choice!',
         company_logo: 'dosu_logo.svg'
     },
-    5: {
+    six: {
         avatar: 'alfonso_zavala.jpeg',
         title: 'Alfonso Zavala',
         role: 'Software Engineer at f5',
@@ -55,12 +59,12 @@ const { testimony } = Astro.props;
     <div class="flex items-center">
         <img class="w-14 h-14 rounded-full" src=`/public/${testimonials[testimony].avatar}` />
         <div class="flex flex-col ml-3">
-            <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="font-bold">{testimonials[testimony].title}</p>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-sm text-gray-500 font-medium">{testimonials[testimony].role}</p>
+            <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="font-bold">{translations[lang].testimonials[testimony].name}</p>
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-sm text-gray-500 font-medium">{translations[lang].testimonials[testimony].position}</p>
         </div>
     </div>
     <div class="mt-6">
-        <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-sm">"{testimonials[testimony].description}"</p>
+        <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-sm">"{translations[lang].testimonials[testimony].text}"</p>
         <img class=`h-10 xl:h-11 mt-4` src=`/public/${testimonials[testimony].company_logo}` alt=`${testimonials[testimony].title}` />
     </div>
 </div>

@@ -33,6 +33,38 @@ export const translations = {
       },
       button: "Check pricing",
     },
+    testimonials: {
+      one: {
+        name: "Fernando Carral",
+        position: "COO & Co-Founder at Medizona",
+        text: "I can confidently affirm that Oliver has been a tremendous asset to our team. His dedication and innovative ideas played a pivotal role in the development of the Medizona app, reflecting his unwavering commitment to excellence.",
+      },
+      two: {
+        name: "Jose Lopez",
+        position: "Software Engineer at Microsoft",
+        text: "Oliver is a great front-end and mobile developer. He has shown amazing skills for software engineering and cross-platform development. He is a great team player and has a great attitude towards learning and sharing knowledge.",
+      },
+      three: {
+        name: "Ana Paula Santana",
+        position: "CEO & Co-Founder at Kluu.mx",
+        text: "Oliver has been a important piece in the development of our mobile app. His knowledge and advice have been invaluable for our team. He is a great professional and a great person to work with. I highly recommend him.",
+      },
+      four: {
+        name: "Fernando Contreras",
+        position: "Former Software Engineer at C3.ai",
+        text: "I worked with Oliver in a consulting firm, I can highlight his commitment to deadlines, which most of the times were very aggressive, as well as his professionalism in following good programming practices, which is key when developing high quality software.",
+      },
+      five: {
+        name: "Caspian Zhao",
+        position: "Full Stack Developer at Dosu AI",
+        text: "Oliver has been a key collaborator in the development of the react-native-reanimated-carousel project. His passion for programming and prowess in React Native have left a lasting impression on me. Should any new projects or creative ventures arise in the future, he will undoubtedly be my top choice",
+      },
+      six: {
+        name: "Alfonso Zavala",
+        position: "Software Engineer at F5",
+        text: "Oliver and I worked together in freelance projects and I have to say that he is one of the best developers I have ever worked with. His knowledge and commitment is amazing, as well as his creativity and professionalism. Definitely a great person to work with.",
+      },
+    },
   },
   es: {
     navbar: {
@@ -66,6 +98,38 @@ export const translations = {
         },
       },
       button: "Ver precios",
+    },
+    testimonials: {
+      one: {
+        name: "Fernando Carral",
+        position: "COO y Co-Fundador en Medizona",
+        text: "Puedo afirmar sin temor a equivocarme que Oliver ha sido un gran activo para nuestro equipo. Su dedicación y sus ideas innovadoras han desempeñado un papel fundamental en el desarrollo de la aplicación de Medizona, lo que refleja su inquebrantable compromiso con la excelencia.",
+      },
+      two: {
+        name: "Jose Lopez",
+        position: "Ingeniero de Software en Microsoft",
+        text: "Oliver es un gran desarrollador front-end y móvil. Ha demostrado unas habilidades increíbles para la ingeniería de software y el desarrollo multiplataforma. Es un gran compañero en equipo y tiene una gran actitud hacia el aprendizaje y la enseñanza.",
+      },
+      three: {
+        name: "Ana Paula Santana",
+        position: "CEO y Co-fundador en Kluu.mx",
+        text: "Oliver ha sido una pieza importante en el desarrollo de nuestra aplicación móvil. Sus conocimientos y consejos han sido inestimables para nuestro equipo. Es un gran profesional y una gran persona con la que trabajar. Lo recomiendo encarecidamente.",
+      },
+      four: {
+        name: "Fernando Contreras",
+        position: "Ex Ingeniero de Software en C3 AI",
+        text: "Trabajé con Oliver en una consultora, puedo destacar su compromiso con los plazos de tiempo, que la mayoría de las veces eran muy agresivos, así como su profesionalidad a la hora de seguir buenas prácticas de programación, algo clave a la hora de desarrollar software de alta calidad.",
+      },
+      five: {
+        name: "Caspian Zhao",
+        position: "Desarrollador Full Stack en Dosu AI",
+        text: "Oliver ha sido un colaborador clave en el desarrollo del proyecto react-native-reanimated-carousel. Su pasión por la programación y su destreza en React Native han dejado una impresión duradera en mí. En caso de que surjan nuevos proyectos o empresas creativas en el futuro, él será sin duda mi primera opción.",
+      },
+      six: {
+        name: "Alfonso Zavala",
+        position: "Ingeniero de Software en F5",
+        text: "Oliver y yo trabajamos juntos en proyectos freelance y tengo que decir que es uno de los mejores desarrolladores con los que he trabajado. Su conocimiento y compromiso es increíble, así como su creatividad y profesionalidad. Definitivamente una gran persona con la que trabajar.",
+      },
     },
   },
 };
