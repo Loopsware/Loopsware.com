@@ -106,7 +106,12 @@ function animate() {
     // Rotate the model back and forth between -0.25 and 0.25
     model.rotation.x = Math.sin(time) * 0.15;
 
-    const scaleFactor = window.innerWidth < 768 ? 0.85 : 1.4; // Increase the scale on mobile devices
+    const scaleFactor =
+      window.innerWidth < 768
+        ? 0.85
+        : window.innerWidth >= 768 && window.innerWidth < 1024
+        ? 1
+        : 1.4; // Increase the scale on mobile devices
     model.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
     time += 0.005; // Increase time

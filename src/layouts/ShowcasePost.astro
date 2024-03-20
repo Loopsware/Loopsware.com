@@ -18,7 +18,7 @@ const {frontmatter} = Astro.props;
 ---
 
 <Layout title={`Loopsware | ${frontmatter?.business}`}>
-    <NavBar />
+    <NavBar lang={frontmatter?.language === "en" ? "en" : "es"} />
     <div class="flex flex-col lg:flex-row px-4 md:px-8 lg:px-16 mt-20 mb-8 lg:mt-10 lg:mb-0">
     <main transition:name="hero"  class="flex flex-col w-full lg:w-9/12">
         <div class="flex flex-col">
@@ -128,7 +128,7 @@ const {frontmatter} = Astro.props;
         </a>
       </div>
     </div>
-      <a style={{"font-family": "Telegraf", "font-style": "medium"}} href="/#work" class="md:text-lg text-blue-500 font-semibold" >
+      <a style={{"font-family": "Telegraf", "font-style": "medium"}} href=`${frontmatter?.language === "en" ? "/#work" : "/es/#work"}` class="md:text-lg text-blue-500 font-semibold" >
         &larr; {frontmatter?.language === "en" ? "Go Back" :  "Volver" }
       </a>      
     </div>

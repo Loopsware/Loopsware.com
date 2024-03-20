@@ -55,7 +55,12 @@ if (!window.myScene) {
       model = gltf.scene;
       scene.add(model);
 
-      const scaleFactorX = window.innerWidth < 768 ? 0.45 : 1;
+      const scaleFactorX =
+        window.innerWidth < 768
+          ? 0.45
+          : window.innerWidth > 768 && window.innerWidth < 1024
+          ? 0.65
+          : 1;
       model.scale.set(scaleFactorX, 1, scaleFactorX);
       model.position.x = -0.25;
     },
@@ -112,7 +117,10 @@ if (!window.myScene) {
   // Adjust the height if on mobile
   if (width < 768) {
     height *= 0.45; // Reduce the height by 45%
-  } else if (width >= 768) {
+  } else if (width >= 768 && width < 1024) {
+    height *= 0.55; // Reduce the height by 80%
+    width *= 0.65; // Reduce the width by 50%
+  } else if (width >= 1024) {
     height *= 0.725; // Reduce the height by 80%
     width *= 0.75; // Reduce the width by 50%
   }
