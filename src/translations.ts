@@ -65,6 +65,12 @@ export const translations = {
         text: "Oliver and I worked together in freelance projects and I have to say that he is one of the best developers I have ever worked with. His knowledge and commitment is amazing, as well as his creativity and professionalism. Definitely a great person to work with.",
       },
     },
+    founder: {
+      title: "Meet the founder",
+      presentation: "Hi, I'm Oliver",
+      text: "I'm really passionate about programming, entrepreneurship and technology. I'm here to build your next app idea. Let's chat about your project and see how I can help.",
+      button: "Agendar una llamada",
+    },
   },
   es: {
     navbar: {
@@ -130,6 +136,12 @@ export const translations = {
         position: "Ingeniero de Software en F5",
         text: "Oliver y yo trabajamos juntos en proyectos freelance y tengo que decir que es uno de los mejores desarrolladores con los que he trabajado. Su conocimiento y compromiso es increíble, así como su creatividad y profesionalidad. Definitivamente una gran persona con la que trabajar.",
       },
+    },
+    founder: {
+      title: "Conoce al fundador",
+      presentation: "Hola, Soy Oliver",
+      text: "Soy un apasionado de la programación, el emprendimiento y la tecnología. Estoy aquí para construir tu próxima idea. Hablemos sobre tu proyecto y veamos cómo puedo ayudarte.",
+      button: "Agendar una llamada",
     },
   },
 };
