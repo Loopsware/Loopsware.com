@@ -11,10 +11,8 @@ export const translations = {
       serviceOne: {
         titleLineOne: "Pitch your idea.",
         titleLineTwo: "Let's make it real.",
-        subtitleLineOne:
-          "If your starting out, we can help you with the ideation,",
-        subtitleLineTwo:
-          "planning, design, development and publishing of your app.",
+        subtitle:
+          "If your starting out, we can help you with the ideation, planning, design, development and publishing of your app.",
         items: {
           planning: "Planning",
           design: "Design",
@@ -22,11 +20,11 @@ export const translations = {
           publication: "Publishing",
         },
       },
-      servicesTwo: {
+      serviceTwo: {
         titleLineOne: "Need an extra hand?",
         titleLineTwo: "Let us help with it.",
-        subtitleLineOne: "Do you already have a project?, let's work together",
-        subtitleLineTwo: "we can provide you support or mantainance.",
+        subtitle:
+          "Do you already have a project?, let's work together we can provide you support, mantainance and updates.",
         items: {
           planning: "Bug Fixing",
           design: "Live Support",
@@ -47,27 +45,24 @@ export const translations = {
       serviceOne: {
         titleLineOne: "Cuentanos tu idea.",
         titleLineTwo: "La hacemos realidad.",
-        subtitleLineOne:
-          "Si estás empezando, podemos ayudarte con la ideación,",
-        subtitleLineTwo:
-          "planificación, diseño, desarrollo y publicación de su aplicación.",
+        subtitle:
+          "Si estás empezando, podemos ayudarte con la ideación, planificación, diseño, desarrollo y publicación de tu aplicación.",
         items: {
           planning: "Planificación",
           design: "Diseño",
           development: "Desarrollo",
-          publication: "Publicación",
+          publishing: "Publicación",
         },
       },
-      servicesTwo: {
+      serviceTwo: {
         titleLineOne: "¿Necesitas apoyo?",
         titleLineTwo: "Nosotros te ayudamos.",
-        subtitleLineOne: "¿Tienes ya algún proyecto?. trabajemos juntos",
-        subtitleLineTwo:
-          "podemos proveer soporte técnico, mantenimiento y actualizaciones.",
+        subtitle:
+          "¿Tienes ya algún proyecto?. trabajemos juntos podemos proveer soporte técnico, mantenimiento y actualizaciones.",
         items: {
-          planning: "Solución a bugs",
-          design: "Soporte en vivo",
-          development: "Modulos nativos",
+          bugs: "Solución a bugs",
+          support: "Soporte en vivo",
+          modules: "Modulos nativos",
         },
       },
       button: "Ver precios",

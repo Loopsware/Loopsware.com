@@ -10,8 +10,7 @@ let lang: string = Astro.props.lang || 'en';
             {translations[lang].services.serviceOne.titleLineTwo}
         </p>
         <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg my-2">
-            If your starting out, we can help you with the ideation, <br class="hidden xl:block" />
-            planning, design, development and publishing of your app.
+            {translations[lang].services.serviceOne.subtitle} 
         </p>
         <div class="flex justify-between items-center my-16">
             <div class="flex flex-col">
@@ -20,7 +19,9 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
                 <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                     <img width="55" height="55" src="/public/planning_3d.png" />
-                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm lg:text-md font-black">Planning</p>
+                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm lg:text-md font-black">
+                    {translations[lang].services.serviceOne.items.planning}
+                    </p>
                 </div>
             </div>
             <div class="flex flex-col">
@@ -29,7 +30,9 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
                 <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                     <img width="60" height="60" src="/public/uidesign_3d.png" />
-                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm lg:text-md font-black">Design</p>
+                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm lg:text-md font-black">
+                     {translations[lang].services.serviceOne.items.design}
+                    </p>
                 </div>
             </div>
             <div class="flex flex-col">
@@ -38,7 +41,8 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
                 <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                     <img width="60" height="60" src="/public/development_3d.png" />
-                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">Development</p>
+                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">
+                     {translations[lang].services.serviceOne.items.development}</p>
                 </div>
             </div>
                 <div class="flex flex-col">
@@ -47,24 +51,27 @@ let lang: string = Astro.props.lang || 'en';
                     </div>
                     <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                         <img width="60" height="60" src="/public/publishing_3d.png" />
-                        <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">Publish</p>
+                        <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">
+                        {translations[lang].services.serviceOne.items.publishing}
+                        </p>
                     </div>
                 </div>
             </div>
         <a href="/pricing" class="flex flex-col items-center">
             <button class="h-12 w-2/3 md:w-2/5 xl:w-1/3 bg-stone-900 rounded-full hover:opacity-90 hover:shadow-lg transition-all">
-                <p style={{"font-family": "Telegraf", "font-style": "medium"}}  class="text-white px-4 py-2">Check pricing</p>
+                <p style={{"font-family": "Telegraf", "font-style": "medium"}}  class="text-white px-4 py-2">
+                 {translations[lang].services.button}
+                </p>
             </button>
         </a>
     </div>
     <div class="w-full lg:w-11/12 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-8 lg:my-0 lg:ml-8">
         <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-bold">
-            Need an extra hand? <br class="hidden xl:block" />
-            Let us help with it.
+            {translations[lang].services.serviceTwo.titleLineOne} <br class="block md:hidden lg:block" />
+            {translations[lang].services.serviceTwo.titleLineTwo}
         </p>
         <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg my-2">
-            Do you already have a project?, let's work together  <br class="hidden xl:block" />
-            we can provide you support or mantainance. 
+            {translations[lang].services.serviceTwo.subtitle} 
         </p>
         <div class="flex justify-evenly xl:justify-around my-16">
             <div class="flex flex-col">
@@ -73,7 +80,9 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
                 <div class="flex flex-col justify-center items-center">
                     <img class="w-14 h-14 md:w-16 md:h-16" src="/public/bugfixing_3d.png" />
-                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">Bug Fixing</p>
+                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">
+                        {translations[lang].services.serviceTwo.items.bugs}
+                    </p>
                 </div>
             </div>
             <div class="flex flex-col">
@@ -82,7 +91,9 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
                 <div class="flex flex-col justify-center items-center">
                     <img class="w-14 h-14 md:w-16 md:h-16" src="/public/livesupport_3d.png" />
-                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">Live Support</p>
+                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">
+                        {translations[lang].services.serviceTwo.items.support}
+                    </p>
                 </div>
             </div>
             <div class="flex flex-col">
@@ -91,13 +102,17 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
                 <div class="flex flex-col justify-center items-center">
                     <img class="w-14 h-14 md:w-16 md:h-16" src="/public/nativemodules_3d.png" />
-                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">Native Modules</p>
+                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">
+                        {translations[lang].services.serviceTwo.items.modules}
+                    </p>
                 </div>
             </div>
         </div>
         <a href="/pricing" class="flex flex-col items-center">
             <button class="h-12 w-2/3 md:w-2/5 xl:w-1/3 bg-stone-900 rounded-full hover:opacity-90 hover:shadow-lg transition-all">
-                <p style={{"font-family": "Telegraf", "font-style": "medium"}}  class="text-white px-4 py-2">Check pricing</p>
+                <p style={{"font-family": "Telegraf", "font-style": "medium"}}  class="text-white px-4 py-2">
+                    {translations[lang].services.button}
+                </p>
             </button>
         </a>
     </div>
