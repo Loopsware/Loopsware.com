@@ -8,7 +8,7 @@ interface Props {
 const { title, size, route } = Astro.props;
 ---
 
-<a href={route}  class=`flex items-end ${size === "large" ? 'w-11/12' : 'w-full'} h-52 md:h-44 lg:h-64 border-3 border-gray-200 hover:border-lime-200 rounded-2xl my-2 md:my-4 lg:my-6 cursor-pointer relative`>
+<a href={route}  class=`flex items-end ${size === "large" ? 'w-11/12' : 'w-full'} h-52 md:h-44 lg:h-60 border-3 border-gray-200 hover:border-lime-200 rounded-2xl my-2 md:my-4 lg:my-6 cursor-pointer relative`>
     <img class="object-cover w-full h-full rounded-2xl" src=`../../../public/${title}_banner.png` alt="app_banner" />
     <div  class=`flex justify-center items-center ${size === 'large' ? 'w-4/12 lg:w-3/12' : 'w-7/12 md:w-6/12 lg:w-5/12'} h-10 lg:h-12 bg-black/60 backdrop-blur-sm rounded-full m-4 absolute`>
         <p style={{ "font-family": "Telegraf" }} class=`${size === 'large' ? 'text-sm lg:text-md' : 'text-sm' } text-white font-bold p-2`>{title}</p>
