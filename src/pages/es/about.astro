@@ -1,0 +1,175 @@
+---
+//* Layout
+import Layout from '../../layouts/Layout.astro';
+import NavBar from '../../layouts/NavBar.astro';
+import Footer from '../../layouts/Footer.astro';
+//* Components
+import FounderCard from '../../components/FounderCard.astro';
+import FooterLabel from '../../components/FooterLabel.astro';
+---
+
+<Layout title="Loopsware | Acerca de">
+    <NavBar />
+    <main>
+        <!-- Main section -->
+        <div class="about-section my-20 md:my-10">
+			<div class="p-6 md:p-8 lg:p-16">
+				<div class="flex mb-6">
+					<div class="h-8 bg-lime-200">
+						<h2 style={{"font-family": "Grotesque"}} class="text-4xl md:text-5xl font-black translate-x-2">Acerca de</h2>
+					</div>
+				</div>
+				<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-xl font-medium my-4">
+                    Un poco sobre este proyecto y <br />
+                    el contexto de lo que hacemos
+				</p>
+                <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg lg:text-justify font-medium my-8">
+                    Hace un par de años me introdujé en el mundo de React y me meto de lleno en React Native por el potencial que tiene <br class="block md:hidden lg:block" />
+                    y el gran ecosistema y comunidad que hay detrás. Teniendo también background en desarrollo móvil nativo, <br class="block md:hidden lg:block" />
+                    me sorprendió la idea de tener un único código base para ambas plataformas.
+                </p>
+                <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg lg:text-justify font-medium mt-8">
+                    Estoy realmente convencido de que React Native es la mejor manera de construir experiencias multiplataforma para nativos y web <br class="block md:hidden lg:block" />
+                    y tomar la iniciativa para ayudar a particulares, startups y empresas a construir aplicaciones universales reales con menos tiempo y coste. <br class="block md:hidden lg:block" />
+                </p>
+                <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg lg:text-justify font-medium mt-8">
+                    Por eso fundé Loopsware. Una agencia de desarrollo multiplataforma de uno solo (sí, con "nosotros" quiero decir "yo, yo mismo y yo"). <br class="block md:hidden lg:block" />
+                    Pero no te preocupes, tu proyecto está en buenas manos. Recibirás eficacia, flexibilidad y rapidez.
+                </p>    
+                <div class="flex flex-col md:flex-row mt-8 md:mt-16">
+                    <div class="w-full md:w-8/12">
+                        <div class="flex justify-between mt-2">
+                            <div class="flex flex-col pr-4 lg:pr-8">
+                                <img class="h-12 w-16 xl:h-16 xl:w-16" src="/public/lightbulb_3d.png" alt="3D lightbulb" />
+                                <p style={{"font-family": "Inter", "font-style": "bold"}} class="text-lg xl:text-xl font-black">Filosofía</p>
+                                <p class="md:text-sm lg:text-md xl:text-lg my-4">
+                                    Ofrecer soluciones personalizadas y la mejor experiencia a nuestros clientes.
+                                    detrás de cada pantalla siempre debe haber un gran diseño.
+                                </p>
+                            </div>
+                            <div class="flex flex-col pr-4 lg:pr-8">
+                                <img class="h-12 w-20 xl:h-16 xl:w-24" src="/public/handshake_3d.png" alt="3D handshake" />
+                                <p style={{"font-family": "Inter", "font-style": "bold"}} class="text-lg xl:text-xl font-black">Compromiso</p>
+                                <p class="md:text-sm lg:text-md xl:text-lg my-4">
+                                    El cliente es nuestro activo más importante. Estamos comprometidos a entregar los mejores resultados.
+                                    y asegurarnos de que el producto final salga al mundo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between my-8">
+                            <div class="flex flex-col pr-4 lg:pr-8">
+                                <img class="h-12 w-12 xl:h-16 xl:w-16" src="/public/flag_3d.png" alt="3D flag" />
+                                <p style={{"font-family": "Inter", "font-style": "bold"}} class="text-lg xl:text-xl font-black">Misión</p>
+                                <p class="md:text-sm lg:text-md xl:text-lg my-4">
+                                    Crear las mejores experiencias multiplataforma para plataformas nativas y la web.
+                                    ayudando a que cada proyecto alcance su máximo potencial.
+                                </p>
+                            </div>
+                            <div class="flex flex-col pr-4 lg:pr-8">
+                                <img class="h-12 w-12 xl:h-16 xl:w-16" src="/public/react_3d.png" alt="3D react logo" />
+                                <p style={{"font-family": "Inter", "font-style": "bold"}} class="text-lg md:text-xl font-black">¿Por qué React?</p>
+                                <p class="md:text-sm lg:text-md xl:text-lg my-4">
+                                    React es la mejor manera de construir experiencias multiplataforma para plataformas nativas y la web.
+                                    y somos expertos en ello.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-6/12 lg:w-4/12">
+                        <FounderCard />
+                    </div>
+                </div>
+                <div class="hidden md:block w-4/6">
+				<FooterLabel title="Acerca de" />
+			</div>
+			</div>
+		</div>
+        <!-- Tech Stack -->
+        <div class="stack-section my-10">
+            <div class="p-6 md:p-8 lg:p-16">
+                <div class="flex mb-6">
+					<div class="h-8 bg-lime-200">
+						<h2 style={{"font-family": "Grotesque"}} class="text-4xl md:text-5xl font-black translate-x-2">Tecnologías</h2>
+					</div>
+				</div>
+				<p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-xl font-medium my-4">
+                    Las herramientas que usamos para hacer el trabajo <br />
+                    y hacer que tus ideas sean una realidad
+				</p>
+                <div class="flex flex-col md:flex-row w-full justify-between items-center">
+                    <div class="w-full md:w-11/12 xl:w-7/12">
+                        <div class="grid grid-cols-3 my-8 md:my-0">
+                            <div class="my-4">
+                                <a href="https://react.dev/" target="_blank" class="flex flex-col justify-center items-center border-3 border-gray-300 hover:border-lime-200 rounded-2xl p-2 md:p-4 xl:p-8 my-3 lg:my-8 mr-3 lg:mr-8">
+                                    <img class="w-14 h-12 lg:w-24 lg:h-20 xl:w-28 xl:h-24" src="/public/react_logo.png" alt="React logo" />
+                                    <p style={{"font-family": "Telegraf", "font-size": "bold"}} class="text-md lg:text-xl font-black mt-2 md:mt-4">React</p>
+                                </a>
+                                <a href="https://nodejs.org/en/about" target="_blank" class="flex flex-col justify-center items-center border-3 border-gray-300 hover:border-lime-200 rounded-2xl p-2 md:p-4 xl:p-8 my-3 lg:my-8 mr-3 lg:mr-8">
+                                    <img class="w-12 h-12 lg:w-20 lg:h-20 xl:w-24 xl:h-24" src="/public/nodejs_logo.png" alt="React logo" />
+                                    <p style={{"font-family": "Telegraf", "font-size": "bold"}} class="text-md lg:text-xl font-black mt-2 md:mt-4">Node.js</p>
+                                </a>
+                            </div>
+                            <div class="my-4">
+                                <a href="https://expo.dev/" target="_blank" class="flex flex-col justify-center items-center border-3 border-gray-300 hover:border-lime-200 rounded-2xl p-2 md:p-4 xl:p-8 my-3 lg:my-8 mr-3 lg:mr-8">
+                                    <img class="w-12 h-12 lg:w-24 lg:h-20 xl:w-28 xl:h-24" src="/public/expo_logo.svg" alt="React logo" />
+                                    <p style={{"font-family": "Telegraf", "font-size": "bold"}} class="text-md lg:text-xl font-black mt-2 md:mt-4">Expo</p>
+                                </a>
+                                <a href="https://swift.org/" target="_blank" class="flex flex-col justify-center items-center border-3 border-gray-300 hover:border-lime-200 rounded-2xl p-2 md:p-4 xl:p-8 my-3 lg:my-8 mr-3 lg:mr-8">
+                                    <img class="w-14 h-12 lg:w-24 lg:h-20 xl:w-28 xl:h-24" src="/public/swift_logo.png" alt="React logo" />
+                                    <p style={{"font-family": "Telegraf", "font-size": "bold"}} class="text-md lg:text-xl font-black mt-2 md:mt-4">Swift</p>
+                                </a>
+                            </div>
+                            <div class="my-4">
+                                <a href="https://reactnative.dev/" target="_blank" class="flex flex-col justify-center items-center border-3 border-gray-300 hover:border-lime-200 rounded-2xl p-2 md:p-4 xl:p-8 my-3 lg:my-8 mr-3 lg:mr-8">
+                                    <img class="w-14 h-12 lg:w-24 lg:h-20 xl:w-28 xl:h-24" src="/public/react_native_logo.png" alt="React logo" />
+                                    <p style={{"font-family": "Telegraf", "font-size": "bold"}} class="text-xs md:text-lg xl:text-xl font-black line-clamp-1 mt-4">React Native</p>
+                                </a>
+                                <a href="https://kotlinlang.org/" target="_blank" class="flex flex-col justify-center items-center border-3 border-gray-300 hover:border-lime-200 rounded-2xl p-2 md:p-4 xl:p-8 my-3 lg:my-8 mr-3 lg:mr-8">
+                                    <img class="w-12 h-12 lg:w-20 lg:h-20 xl:w-24 xl:h-24" src="/public/kotlin_logo.png" alt="React logo" />
+                                    <p style={{"font-family": "Telegraf", "font-size": "bold"}} class="text-md lg:text-xl font-black mt-2 md:mt-4">Kotlin</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center lg:justify-start">
+                        <div id="scene" class="cursor-grab"></div>
+                        <!-- <img class="w-10/12 md:w-9/12 xl:w-11/12" src="/public/retrocomputer_3d.webp" alt="Retro computer" /> -->
+                    </div>
+                </div>
+                <div class="hidden md:block w-4/6 my-8">
+				<FooterLabel title="Acerca de" />
+			</div>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>
+
+<script src="/src/computer_render.ts" />
+<script type="module">
+    import anime from 'https://cdn.skypack.dev/animejs';
+    
+    const aboutSection = document.querySelector('.about-section');
+    const stackSection = document.querySelector('.stack-section');
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: entry.target,
+                    opacity: [0, 1], // Fade the section in
+                    translateY: [250, 0], // Move the section up
+                    duration: 2000,
+				    delay: entry.target === aboutSection ? 0 : 500,
+                    easing: 'easeOutExpo' // Use an exponential easing function
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        rootMargin: '-5% 0px', // Trigger when the top of the screen is halfway to the section
+    });
+
+    observer.observe(aboutSection);
+    observer.observe(stackSection);
+</script>
