@@ -1,8 +1,13 @@
+---
+import { translations } from '../translations';
+let lang: string = Astro.props.lang || 'en';
+---
+
 <div class="flex flex-col lg:grid lg:grid-cols-2 mx-4 md:mx-8 lg:mx-16">
     <div class="w-full xl:w-11/12 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-0">
         <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-bold">
-            Pitch your idea. <br class="block md:hidden lg:block" />
-            Let's make it real.
+            {translations[lang].services.serviceOne.titleLineOne} <br class="block md:hidden lg:block" />
+            {translations[lang].services.serviceOne.titleLineTwo}
         </p>
         <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg my-2">
             If your starting out, we can help you with the ideation, <br class="hidden xl:block" />
