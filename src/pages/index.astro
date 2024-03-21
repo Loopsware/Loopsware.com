@@ -394,7 +394,12 @@ animation: slideDownFadeIn 0.3s ease-out forwards;
 <script is:inline type="module">
 import { init3D } from '/src/3d.ts';
 
-init3D();
+document.addEventListener('DOMContentLoaded', (event) => {
+    if (window.location.pathname === '/') {
+        init3D();
+		console.log('3D initialized');
+    }
+});
 </script>
 
 <script is:inline type="module">

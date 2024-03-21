@@ -43,6 +43,7 @@ function init3D() {
       window.innerWidth < 768 ? 5.65 : 5.825;
 
     window.myCamera = camera;
+    scene.add(camera);
 
     document.body.appendChild(renderer.domElement);
 
@@ -96,6 +97,7 @@ function init3D() {
 
     // Animation loop
     function animate() {
+      requestAnimationFrame(animate);
       // Check if the model is loaded
       if (model) {
         // Rotate the model back and forth between -0.15 and 0.15
@@ -104,7 +106,7 @@ function init3D() {
       }
 
       controls.update();
-      renderer.render(window.myScene, window.myCamera);
+      renderer.render(scene, camera);
     }
     animate();
 
