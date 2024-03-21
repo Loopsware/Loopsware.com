@@ -14,10 +14,10 @@ export function getStaticPaths() {
   ];
 }
 
-const {frontmatter} = Astro.props;
+const {frontmatter}: any = Astro.props;
 ---
 
-<Layout title={`Loopsware | ${frontmatter?.business}`}>
+<Layout title={`Loopsware | ${(frontmatter as { business?: string })?.business}`}>
     <NavBar lang={frontmatter?.language === "en" ? "en" : "es"} />
     <div class="flex flex-col lg:flex-row px-4 md:px-8 lg:px-16 mt-20 mb-8 lg:mt-10 lg:mb-0">
     <main transition:name="hero"  class="flex flex-col w-full lg:w-9/12">
