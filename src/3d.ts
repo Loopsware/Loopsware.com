@@ -10,12 +10,6 @@ declare global {
 }
 
 function init3D() {
-  let animationId = null;
-
-  if (animationId !== null) {
-    cancelAnimationFrame(animationId);
-  }
-
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setClearColor(0x000000, 0); // the second parameter is the opacity, set it to 0 for full transparency
   renderer.setSize(window.innerWidth / 1.333, window.innerHeight / 1.333);
@@ -57,7 +51,7 @@ function init3D() {
     const loader = new GLTFLoader();
 
     loader.load(
-      "/images/phonehand.glb",
+      "/public/phonehand.glb",
       function (gltf) {
         model = gltf.scene;
         scene.add(model);
@@ -111,7 +105,6 @@ function init3D() {
 
       controls.update();
       renderer.render(window.myScene, window.myCamera);
-      animationId = requestAnimationFrame(animate);
     }
     animate();
 
