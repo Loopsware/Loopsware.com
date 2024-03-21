@@ -10,6 +10,12 @@ declare global {
 }
 
 function init3D() {
+  let animationId = null;
+
+  if (animationId !== null) {
+    cancelAnimationFrame(animationId);
+  }
+
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setClearColor(0x000000, 0); // the second parameter is the opacity, set it to 0 for full transparency
   renderer.setSize(window.innerWidth / 1.333, window.innerHeight / 1.333);
@@ -81,7 +87,7 @@ function init3D() {
     rightBlueLight.position.set(1, 0, 0);
     scene.add(rightBlueLight);
 
-    const controls = new OrbitControls(camera, renderer.domElement);
+    let controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
     controls.minPolarAngle = Math.PI / 2.5; // Limit the camera to 45 degrees above the horizon
     controls.maxPolarAngle = Math.PI / 2; // Limit the camera to 90 degrees above the horizon
@@ -96,8 +102,6 @@ function init3D() {
 
     // Animation loop
     function animate() {
-      requestAnimationFrame(animate);
-
       // Check if the model is loaded
       if (model) {
         // Rotate the model back and forth between -0.15 and 0.15
@@ -106,9 +110,9 @@ function init3D() {
       }
 
       controls.update();
-      renderer.render(scene, camera);
+      renderer.render(window.myScene, window.myCamera);
+      animationId = requestAnimationFrame(animate);
     }
-
     animate();
 
     // Get the window's width and height
