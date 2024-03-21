@@ -51,7 +51,7 @@ function init3D() {
     const loader = new GLTFLoader();
 
     loader.load(
-      "/public/phonehand.glb",
+      "/images/phonehand.glb",
       function (gltf) {
         model = gltf.scene;
         scene.add(model);
