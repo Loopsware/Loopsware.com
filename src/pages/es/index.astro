@@ -378,7 +378,13 @@ animation: slideDownFadeIn 0.3s ease-out forwards;
 }
 </style>
 
-<script src="/src/3d.ts" />
+<script type="module">
+import { init3D } from '/src/3d.ts';
+
+if (window.location.pathname === '/es' || window.location.pathname === '/es/#services') {
+	init3D();
+}
+</script>
 <script type="module">
 import anime from 'https://cdn.skypack.dev/animejs';
 
@@ -414,6 +420,26 @@ document.querySelectorAll('.text-element').forEach(function(textElement) {
 
     observer.observe(textElement);
 });
+
+// Scene entrance animation
+const scene = document.getElementById('scene');
+
+const sceneObserver = new IntersectionObserver(function(entries) {
+	entries.forEach(function(entry) {
+		if (entry.isIntersecting) {
+			anime({
+				targets: scene,
+				opacity: [0, 1],
+				translateX: [250, 0],
+				duration: 2500,
+				easing: 'easeOutExpo'
+			});
+			sceneObserver.unobserve(scene);
+		}
+	});
+});
+
+sceneObserver.observe(scene);
 
 const servicesSection = document.querySelector('.services-section');
 const benefitsSection = document.querySelector('.benefits-section');
