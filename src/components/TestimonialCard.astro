@@ -57,7 +57,7 @@ const { testimony } = Astro.props;
 
 <div class=`${testimony === '2' && 'hidden md:block'} testimonial-card flex flex-col border-3 border-gray-200 rounded-2xl p-6 mb-8 md:mb-10 md:mx-5`>
     <div class="flex items-center">
-        <img class="w-14 h-14 rounded-full" src=`/public/${testimonials[testimony].avatar}` />
+        <img class="w-14 h-14 rounded-full" src=`/images/${testimonials[testimony].avatar}` />
         <div class="flex flex-col ml-3">
             <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="font-bold">{translations[lang].testimonials[testimony].name}</p>
             <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-sm text-gray-500 font-medium">{translations[lang].testimonials[testimony].position}</p>
@@ -65,7 +65,7 @@ const { testimony } = Astro.props;
     </div>
     <div class="mt-6">
         <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-sm">"{translations[lang].testimonials[testimony].text}"</p>
-        <img class=`h-10 xl:h-11 mt-4` src=`/public/${testimonials[testimony].company_logo}` alt=`${testimonials[testimony].title}` />
+        <img class=`h-10 xl:h-11 mt-4` src=`/images/${testimonials[testimony].company_logo}` alt=`${testimonials[testimony].title}` />
     </div>
 </div>
 

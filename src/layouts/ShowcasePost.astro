@@ -23,7 +23,7 @@ const {frontmatter}: any = Astro.props;
     <main transition:name="hero"  class="flex flex-col w-full lg:w-9/12">
         <div class="flex flex-col">
           <div class="border-4 border-gray-200 rounded-2xl">
-            <img class="h-48 md:h-auto rounded-2xl" src={`../../public/${frontmatter.image.url}`} alt=`${frontmatter.image.alt}` />
+            <img class="h-48 md:h-auto rounded-2xl" src={`/public/images/${frontmatter.image.url}`} alt=`${frontmatter.image.alt}` />
           </div>
         </div>
     </main>
@@ -75,10 +75,10 @@ const {frontmatter}: any = Astro.props;
       </div>
       <div class="flex items-center lg:items-start lg:flex-col">
         <a href=`${frontmatter.links[0]}` class="my-2">
-          <img class="w-32" src="../../../public/donwload_appstore.png" alt="app store banner" />
+          <img class="w-32" src="/public/images/donwload_appstore.png" alt="app store banner" />
         </a>
         <a href=`${frontmatter.links[1]}` class="ml-3 lg:ml-0">
-          <img class="w-32 my-1" src="../../../public/google_play_banner.webp" alt="google play store banner" />
+          <img class="w-32 my-1" src="/public/images/google_play_banner.webp" alt="google play store banner" />
         </a>
       </div>
     </aside>
@@ -102,7 +102,7 @@ const {frontmatter}: any = Astro.props;
         </div>
         <img
           class="w-20 h-20 translate-x-10 -translate-y-10 md:translate-x-14 md:-translate-y-8"
-          src="../../public/energy_drink_icon.webp"
+          src="/public/images/energy_drink_icon.webp"
           alt="energy drink icon"
         />
       </div>

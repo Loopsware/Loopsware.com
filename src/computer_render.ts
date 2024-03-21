@@ -63,7 +63,7 @@ let model: any;
 
 const loader = new GLTFLoader();
 loader.load(
-  "/public/old_computer.glb",
+  "/images/old_computer.glb",
   function (gltf) {
     model = gltf.scene;
     scene.add(model);
