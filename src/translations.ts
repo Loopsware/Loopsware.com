@@ -26,9 +26,9 @@ export const translations = {
         subtitle:
           "Do you already have a project?, let's work together we can provide you support, mantainance and updates.",
         items: {
-          planning: "Bug Fixing",
-          design: "Live Support",
-          development: "Native Modules",
+          bugs: "Bug Fixing",
+          support: "Live Support",
+          modules: "Native Modules",
         },
       },
       button: "Check pricing",
