@@ -17,7 +17,7 @@ export const translations = {
           planning: "Planning",
           design: "Design",
           development: "Development",
-          publication: "Publishing",
+          publishing: "Publishing",
         },
       },
       serviceTwo: {
