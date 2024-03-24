@@ -378,13 +378,14 @@ animation: slideDownFadeIn 0.3s ease-out forwards;
 }
 </style>
 
-<script is:inline type="module">
+<!-- <script is:inline type="module">
 import { init3D } from './3d.ts';
 
 if (window.location.pathname === '/es' || window.location.pathname === '/es/#services') {
 	init3D();
 }
-</script>
+</script> -->
+<script src="./3d.ts" />
 <script is:inline type="module">
 import anime from 'https://cdn.skypack.dev/animejs';
 
