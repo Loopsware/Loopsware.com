@@ -6,6 +6,7 @@ import Footer from '../../layouts/Footer.astro';
 //* Components
 import FounderCard from '../../components/FounderCard.astro';
 import FooterLabel from '../../components/FooterLabel.astro';
+import ComputerScene from '../../components/ComputerScene.jsx';
 ---
 
 <Layout title="Loopsware | Acerca de">
@@ -24,13 +25,13 @@ import FooterLabel from '../../components/FooterLabel.astro';
                     el contexto de lo que hacemos
 				</p>
                 <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg lg:text-justify font-medium my-8">
-                    Hace un par de años me introdujé en el mundo de React y me meto de lleno en React Native por el potencial que tiene <br class="block md:hidden lg:block" />
-                    y el gran ecosistema y comunidad que hay detrás. Teniendo también background en desarrollo móvil nativo, <br class="block md:hidden lg:block" />
-                    me sorprendió la idea de tener un único código base para ambas plataformas.
+                    Hace un par de años me introdujé en el mundo de React y entré complementamente en React Native por el potencial que tiene <br class="block md:hidden lg:block" />
+                    y el gran ecosistema y comunidad que hay detrás. Teniendo también experiencia previa en desarrollo móvil nativo, <br class="block md:hidden lg:block" />
+                    me sorprendió la idea de tener una única base de código para ambas plataformas.
                 </p>
                 <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg lg:text-justify font-medium mt-8">
-                    Estoy realmente convencido de que React Native es la mejor manera de construir experiencias multiplataforma para nativos y web <br class="block md:hidden lg:block" />
-                    y tomar la iniciativa para ayudar a particulares, startups y empresas a construir aplicaciones universales reales con menos tiempo y coste. <br class="block md:hidden lg:block" />
+                    Estoy realmente convencido de que React Native es la mejor manera de construir experiencias multiplataforma para entornos nativos y web <br class="block md:hidden lg:block" />
+                    y fué entonces que tomé la iniciativa de ayudar a emprendimientos independientes, startups y empresas a construir aplicaciones universales reales a un menor tiempo y costo. <br class="block md:hidden lg:block" />
                 </p>
                 <p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg lg:text-justify font-medium mt-8">
                     Por eso fundé Loopsware. Una agencia de desarrollo multiplataforma de uno solo (sí, con "nosotros" quiero decir "yo, yo mismo y yo"). <br class="block md:hidden lg:block" />
@@ -44,7 +45,7 @@ import FooterLabel from '../../components/FooterLabel.astro';
                                 <p style={{"font-family": "Inter", "font-style": "bold"}} class="text-lg xl:text-xl font-black">Filosofía</p>
                                 <p class="md:text-sm lg:text-md xl:text-lg my-4">
                                     Ofrecer soluciones personalizadas y la mejor experiencia a nuestros clientes.
-                                    detrás de cada pantalla siempre debe haber un gran diseño.
+                                    detrás de cada pantalla siempre debe existir un gran diseño.
                                 </p>
                             </div>
                             <div class="flex flex-col pr-4 lg:pr-8">
@@ -132,8 +133,8 @@ import FooterLabel from '../../components/FooterLabel.astro';
                         </div>
                     </div>
                     <div class="flex justify-center lg:justify-start">
-                        <div id="scene" class="cursor-grab"></div>
-                        <!-- <img class="w-10/12 md:w-9/12 xl:w-11/12" src="/public/retrocomputer_3d.webp" alt="Retro computer" /> -->
+                        <ComputerScene client:load />
+                        <!-- <div id="scene" class="cursor-grab"></div> -->
                     </div>
                 </div>
                 <div class="hidden md:block w-4/6 my-8">
@@ -145,7 +146,6 @@ import FooterLabel from '../../components/FooterLabel.astro';
     <Footer />
 </Layout>
 
-<script src="/src/computer_render.ts" />
 <script is:inline type="module">
     import anime from 'https://cdn.skypack.dev/animejs';
     
