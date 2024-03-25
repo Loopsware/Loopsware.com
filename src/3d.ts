@@ -52,7 +52,7 @@ function init3D() {
     const loader = new GLTFLoader();
 
     loader.load(
-      "/phonehand.glb",
+      "/public/phonehand.glb",
       function (gltf) {
         model = gltf.scene;
         scene.add(model);
@@ -102,7 +102,7 @@ function init3D() {
       if (model) {
         // Rotate the model back and forth between -0.15 and 0.15
         model.rotation.y = Math.sin(time) * 0.15;
-        time += 0.005; // Increase time
+        time += 0.0075; // Increase time
       }
 
       controls.update();
