@@ -7,7 +7,7 @@ function Scene() {
     console.log("Scene mounted");
   }, []);
 
-  return <div id="scene"></div>;
+  return <div id="scene" className="cursor-grab"></div>;
 }
 
 export default Scene;
