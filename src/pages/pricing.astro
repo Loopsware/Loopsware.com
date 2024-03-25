@@ -190,16 +190,3 @@ import FooterLabel from '../components/FooterLabel.astro';
     observer.observe(pricingSection);
 </script>
 
-<script is:inline type="module">
-import { init3D } from '/src/3d.ts';
-
-if (localStorage.getItem('3dInitialized') !== 'true') {
-  init3D();
-  console.log('3D initialized');
-  localStorage.setItem('3dInitialized', 'true');
-}
-
-window.addEventListener('beforeunload', function() {
-  localStorage.removeItem('3dInitialized');
-});
-</script>
