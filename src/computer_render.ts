@@ -64,7 +64,7 @@ function ComputerRender() {
 
   const loader = new GLTFLoader();
   loader.load(
-    "/images/old_computer.glb",
+    "/old_computer.glb",
     function (gltf) {
       model = gltf.scene;
       scene.add(model);
