@@ -252,7 +252,7 @@ import Scene from '../components/Scene.jsx';
 							<div class="flex flex-col my-2">
 								<div class="flex justify-between">
 									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-lg text-slate-600">Why not just hire a full-time mobile developer?</p>
-									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
+									<p class="downArrow text-xl text-slate-600 cursor-pointer transform transition-transform">&darr;</p>
 								</div>
 								<p style={{"font-family": "Inter", "font-style": "medium"}}  class="questionText text-md my-2 hidden">
 									The average salary for a mobile developer exceed $100,000 per year (depending on their experience some can be more expensive). 
@@ -313,7 +313,7 @@ import Scene from '../components/Scene.jsx';
 							</div>
 							<div class="flex flex-col my-2">
 								<div class="flex justify-between">
-									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-md text-slate-600">What happens if I don't like the results??</p>
+									<p style={{"font-family": "Inter", "font-style": "medium"}} class="text-md text-slate-600">What happens if I don't like the results?</p>
 									<p  class="downArrow text-xl text-slate-600 cursor-pointer">&darr;</p>
 								</div>
 								<p style={{"font-family": "Inter", "font-style": "medium"}} class="questionText text-md my-2 hidden" >
@@ -344,7 +344,7 @@ import Scene from '../components/Scene.jsx';
 						</div>
 						<p style={{"font-family": "Inter", "font-style": "medium"}} class="md:text-lg mb-4">
 							You can book an intro 15min call for free<br />
-							Pitch your idea, ask any question or just talk.
+							Pitch your idea or ask any question.
 						</p>
 						<a href="https://cal.com/oliverloops/15min" class="flex justify-center" target="_blank">
         					<button class="h-12 lg:h-14 w-3/4 md:w-3/5 xl:w-3/6 bg-stone-900 rounded-full my-2 hover:opacity-90 hover:shadow-lg transition-all">
@@ -395,8 +395,14 @@ animation: slideDownFadeIn 0.3s ease-out forwards;
 <script is:inline type="module">
 import anime from 'https://cdn.skypack.dev/animejs';
 
+function toggleAnswer(event) {
+	const arrow = event.target;
+    arrow.classList.toggle('rotate-180');
+}
+		
 document.querySelectorAll('.downArrow').forEach(function(downArrow) {
     downArrow.addEventListener('click', function() {
+	toggleAnswer(event);
     var textElement = this.parentElement.nextElementSibling;
     if (textElement.classList.contains('hidden')) {
         textElement.classList.remove('hidden');
