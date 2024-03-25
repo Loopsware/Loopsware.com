@@ -11,6 +11,7 @@ import ShowcaseCard from '../components/ShowcaseCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import ContactForm from '../components/ContactForm.astro';
 import FooterLabel from '../components/FooterLabel.astro';
+import Scene from '../components/Scene.jsx';
 ---
 
 <Layout title="Loopsware | React Native Experts">
@@ -32,8 +33,8 @@ import FooterLabel from '../components/FooterLabel.astro';
 				</div>
 			</div>
 			<div class="flex flex-col justify-center items-center pr-0 md:pr-8 lg:pr-0 mt-20 md:mt-0">
-				<div id="scene" class="cursor-grab"></div>
-				<!-- <img class="h-5/6 w-5/6 md:h-4/5 md:w-full lg:w-5/6 lg:h-4/5 xl:w-3/4 xl:h-4/5" src="/public/phone_3d.png" alt="hand and smartphone illustration" /> -->
+				<Scene client:load />
+				<!-- <div id="scene" class="cursor-grab"></div> -->
 			</div>
 			<div class="hidden md:block md:mx-8 lg:mx-16 md:mt-16 xl:mt-0">
 				<FooterLabel title="Home" />
@@ -390,13 +391,6 @@ animation: slideDownFadeIn 0.3s ease-out forwards;
 }
 
 </style>
-
-<script is:inline type="module">
-import { init3D } from '/src/3d.ts';
-
-init3D();
-console.log('3D initialized');
-</script>
 
 <script is:inline type="module">
 import anime from 'https://cdn.skypack.dev/animejs';
