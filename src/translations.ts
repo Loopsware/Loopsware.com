@@ -69,7 +69,7 @@ export const translations = {
       title: "Meet the founder",
       presentation: "Hi, I'm Oliver",
       text: "I'm really passionate about programming, entrepreneurship and technology. I'm here to build your next app idea. Let's chat about your project and see how I can help.",
-      button: "Agendar una llamada",
+      button: "Book a free call",
     },
   },
   es: {

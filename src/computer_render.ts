@@ -121,7 +121,6 @@ function ComputerRender() {
     controls.update();
     renderer.render(scene, camera);
   }
-
   animate();
 
   const container = document.querySelector("#scene");
