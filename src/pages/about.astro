@@ -6,6 +6,7 @@ import Footer from '../layouts/Footer.astro';
 //* Components
 import FounderCard from '../components/FounderCard.astro';
 import FooterLabel from '../components/FooterLabel.astro';
+import ComputerScene from '../components/ComputerScene.jsx';
 ---
 
 <Layout title="Loopsware | About">
@@ -132,8 +133,8 @@ import FooterLabel from '../components/FooterLabel.astro';
                         </div>
                     </div>
                     <div class="flex justify-center lg:justify-start">
-                        <div id="scene" class="cursor-grab"></div>
-                        <!-- <img class="w-10/12 md:w-9/12 xl:w-11/12" src="/public/retrocomputer_3d.webp" alt="Retro computer" /> -->
+                        <ComputerScene client:load />
+                        <!-- <div id="scene" class="cursor-grab"></div> -->
                     </div>
                 </div>
                 <div class="hidden md:block w-4/6 my-8">
