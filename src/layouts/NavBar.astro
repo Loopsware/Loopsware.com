@@ -14,7 +14,7 @@ let lang: string = Astro.props.lang || 'en';
     </button>
   </div>
   <div id="menu" class="flex flex-col md:flex-row md:w-full h-screen md:h-auto md:flex md:justify-end md:items-center md:bg-white md:relative md:p-0 hidden fixed top-0 left-0 w-full bg-white p-6 pt-20 md:mt-0 transition-transform duration-200 z-40 md:z-0">
-    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '#services' : '/es/#services'}`>{translations[lang].navbar.services}</a>
+    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/#services' : '/es/#services'}`>{translations[lang].navbar.services}</a>
     <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/pricing' : '/es/pricing'}`>{translations[lang].navbar.pricing}</a>
     <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/about' : '/es/about'}`>{translations[lang].navbar.about}</a>
     <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="text-white font-bold" href="https://cal.com/oliverloops/15min" target="_blank">
@@ -61,12 +61,10 @@ let lang: string = Astro.props.lang || 'en';
   }
 </style>
 
-<script src="https://cdn.skypack.dev/animejs"></script>
+<script is:inline type="module">
+  import anime from 'https://cdn.skypack.dev/animejs';
 
-<script>
-  import anime from 'animejs/lib/anime.es.js';
-
-  var button:any = document.getElementById('menu-button');
+  var button = document.getElementById('menu-button');
   var line1 = document.getElementById('line1');
   var line2 = document.getElementById('line2');
   var menu = document.getElementById('menu');
@@ -96,7 +94,6 @@ let lang: string = Astro.props.lang || 'en';
     line2?.classList.toggle('-rotate-45', !isOpen);
   });
 
-  // New code
   var navbar = document.querySelector('.navbar');
 
   anime({
