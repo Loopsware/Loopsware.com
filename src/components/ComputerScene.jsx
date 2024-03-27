@@ -4,7 +4,6 @@ import { ComputerRender } from "../computer_render";
 function ComputerScene() {
   useEffect(() => {
     ComputerRender();
-    console.log("ComputerScene mounted");
   }, []);
 
   return <div id="scene" className="cursor-grab"></div>;
