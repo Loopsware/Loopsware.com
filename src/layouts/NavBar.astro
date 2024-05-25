@@ -3,7 +3,7 @@ import { translations } from '../translations';
 let lang: string = Astro.props.lang || 'en';
 ---
 
-<nav class="navbar flex items-center justify-between w-full bg-white bg-opacity-50 md:bg-opacity-1 px-6 py-5 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
+<nav class="navbar flex items-center justify-between w-full bg-gradient-to-tl from-lime-200 to-45% to-white bg-opacity-50 md:bg-opacity-1 px-6 py-5 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
   <a href=`${lang === 'en' ? '/' : '/es'}`>
     <img class="h-8 md:h-8 md:w-56 xl:h-10 xl:w-72" src="/images/loopsware_logo.png" alt="loopsware logo" />
   </a>
@@ -13,7 +13,7 @@ let lang: string = Astro.props.lang || 'en';
       <span id="line2" class="block w-8 h-1 bg-black transition-transform duration-200 rounded"></span>
     </button>
   </div>
-  <div id="menu" class="flex flex-col md:flex-row md:w-full h-screen md:h-auto md:flex md:justify-end md:items-center md:bg-white md:relative md:p-0 hidden fixed top-0 left-0 w-full bg-white p-6 pt-20 md:mt-0 transition-transform duration-200 z-40 md:z-0">
+  <div id="menu" class="flex flex-col md:flex-row md:w-full h-screen md:h-auto md:flex md:justify-end md:items-center md:relative md:p-0 hidden fixed top-0 left-0 w-full bg-white md:bg-transparent p-6 pt-20 md:mt-0 transition-transform duration-200 z-40 md:z-0">
     <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/#services' : '/es/#services'}`>{translations[lang].navbar.services}</a>
     <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/pricing' : '/es/pricing'}`>{translations[lang].navbar.pricing}</a>
     <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/about' : '/es/about'}`>{translations[lang].navbar.about}</a>
