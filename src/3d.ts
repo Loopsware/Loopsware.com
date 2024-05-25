@@ -72,12 +72,12 @@ function init3D() {
   );
 
   // Add a lime green light from the left
-  const leftGreenLight = new THREE.DirectionalLight(0x32cd32, 2);
+  const leftGreenLight = new THREE.DirectionalLight(0xd7eda7, 3);
   leftGreenLight.position.set(-1, 0, 0);
   scene.add(leftGreenLight);
 
   // Add a lime green light from the right
-  const rightGreenLight = new THREE.DirectionalLight(0x32cd32, 2);
+  const rightGreenLight = new THREE.DirectionalLight(0xd7eda7, 3);
   rightGreenLight.position.set(1, 0, 0);
   scene.add(rightGreenLight);
 
