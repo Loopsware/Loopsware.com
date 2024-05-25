@@ -71,15 +71,15 @@ function init3D() {
     }
   );
 
-  // Add a fluorescent blue light from the left
-  const leftBlueLight = new THREE.DirectionalLight(0x0000ff, 2);
-  leftBlueLight.position.set(-1, 0, 0);
-  scene.add(leftBlueLight);
+  // Add a lime green light from the left
+  const leftGreenLight = new THREE.DirectionalLight(0x32cd32, 2);
+  leftGreenLight.position.set(-1, 0, 0);
+  scene.add(leftGreenLight);
 
-  // Add a fluorescent green light from the right
-  const rightBlueLight = new THREE.DirectionalLight(0x0000ff, 2);
-  rightBlueLight.position.set(1, 0, 0);
-  scene.add(rightBlueLight);
+  // Add a lime green light from the right
+  const rightGreenLight = new THREE.DirectionalLight(0x32cd32, 2);
+  rightGreenLight.position.set(1, 0, 0);
+  scene.add(rightGreenLight);
 
   let controls = new OrbitControls(camera, renderer.domElement);
   controls.enableZoom = false;
