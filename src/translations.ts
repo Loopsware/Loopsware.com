@@ -9,8 +9,8 @@ export const translations = {
     },
     services: {
       serviceOne: {
-        titleLineOne: "Pitch your idea.",
-        titleLineTwo: "Let's make it real.",
+        titleLineOne: "Have an app idea?",
+        titleLineTwo: "We make it real.",
         subtitle:
           "If your starting out, we can help you with the ideation, planning, design, development and publishing of your app.",
         items: {
@@ -24,12 +24,25 @@ export const translations = {
         titleLineOne: "Need an extra hand?",
         titleLineTwo: "Let us help with it.",
         subtitle:
-          "Do you already have a project?, let's work together we can provide you support, mantainance and updates.",
+          "Do you already have a project?, we can provide you support, mantainance and updates.",
         items: {
           bugs: "Bug Fixing",
           support: "Live Support",
           modules: "Native Modules",
         },
+      },
+      serviceThree: {
+        titleLineOne: "Need a design system?",
+        titleLineTwo: "We build one for you.",
+        subtitle:
+          "We have experience building design systems from Figma to production. Let's find what's the best fit for your next app idea, it can be NativeWind, Tamagui or a custom one. ",
+      },
+      serviceFour: {
+        titleLineOne: "Custom Component",
+        titleLineTwo: "Custom Native Module",
+        subtitleOne:
+          "Do you already have a project?, let's work together we can provide you support, mantainance and updates.",
+        subtitleTwo: "",
       },
       button: "Check pricing",
     },
