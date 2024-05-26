@@ -35,7 +35,7 @@ export const translations = {
         titleLineOne: "Need a design system?",
         titleLineTwo: "We build one for you.",
         subtitle:
-          "We have experience building design systems from Figma to production. Let's find what's the best fit for your next app idea, it can be NativeWind, Tamagui or a custom one. ",
+          "We have experience building design systems from scratch. Let's find what's the best fit for your app, it can be NativeWind, Tamagui or a custom one. ",
       },
       serviceFour: {
         titleLineOne: "Custom Component",
