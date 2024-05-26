@@ -23,8 +23,7 @@ export const translations = {
       serviceTwo: {
         titleLineOne: "Need an extra hand?",
         titleLineTwo: "Let us help with it.",
-        subtitle:
-          "Do you already have a project?, we can provide you support, mantainance and updates.",
+        subtitle: "We provide you code mantainance and updates.",
         items: {
           bugs: "Bug Fixing",
           support: "Live Support",
