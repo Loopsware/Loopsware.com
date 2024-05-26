@@ -40,9 +40,8 @@ export const translations = {
       serviceFour: {
         titleLineOne: "Custom Component",
         titleLineTwo: "Custom Native Module",
-        subtitleOne:
-          "Do you already have a project?, let's work together we can provide you support, mantainance and updates.",
-        subtitleTwo: "",
+        subtitleOne: "Custom React components or specific animations.",
+        subtitleTwo: "Native modules for specific functionalities.",
       },
       button: "Check pricing",
     },
