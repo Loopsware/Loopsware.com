@@ -106,8 +106,7 @@ export const translations = {
       serviceTwo: {
         titleLineOne: "¿Necesitas apoyo?",
         titleLineTwo: "Nosotros te ayudamos.",
-        subtitle:
-          "¿Tienes ya algún proyecto?. podemos proveer soporte técnico, mantenimiento y actualizaciones.",
+        subtitle: "Damos soporte, mantenimiento y actualizaciones.",
         items: {
           bugs: "Solución a bugs",
           support: "Soporte en vivo",
@@ -115,7 +114,7 @@ export const translations = {
         },
       },
       serviceThree: {
-        titleLineOne: "¿Necesitas un sistema de diseño?",
+        titleLineOne: "¿Un sistema de diseño?",
         titleLineTwo: "Lo contruimos por ti.",
         subtitle:
           "Tenemos experiencia creando sistemas de diseño desde cero. Veamos cual es el mejor para tu app, puede ser NativeWind, Tamagui o uno personalizado. ",
