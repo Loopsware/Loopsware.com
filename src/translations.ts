@@ -92,7 +92,7 @@ export const translations = {
     },
     services: {
       serviceOne: {
-        titleLineOne: "Cuentanos tu idea.",
+        titleLineOne: "Cuentános tu idea.",
         titleLineTwo: "La hacemos realidad.",
         subtitle:
           "Si estás empezando, podemos ayudarte con la ideación, planificación, diseño, desarrollo y publicación de tu aplicación.",
@@ -121,9 +121,9 @@ export const translations = {
       },
       serviceFour: {
         titleLineOne: "Componente Personalizado",
-        titleLineTwo: "Modulo Nativo Personalizado",
+        titleLineTwo: "Módulo Nativo Personalizado",
         subtitleOne: "Componente personalizado de React o animaciones.",
-        subtitleTwo: "Modulos nativos para funcionalidades especifícas.",
+        subtitleTwo: "Módulos nativos para funcionalidades especifícas.",
       },
       button: "Ver precios",
     },
