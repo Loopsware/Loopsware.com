@@ -58,8 +58,8 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
             </div>
     </div>
-    <div class="flex w-full h-4/6 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-0">
-        <img class="xl:w-36 xl:h-48 mr-4" src="/images/styling_hands.png" alt="Styling logos and hands" />
+    <div class="flex flex-col items-center md:items-start md:flex-row w-full h-4/6 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-0">
+        <img class="w-28 h-44 xl:w-36 xl:h-48 mr-4" src="/images/styling_hands.png" alt="Styling logos and hands" />
         <span class="flex flex-col">
             <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-bold">
             {translations[lang].services.serviceThree.titleLineOne} <br class="block md:hidden lg:block" />
@@ -70,19 +70,21 @@ let lang: string = Astro.props.lang || 'en';
         </p>
         </span>
     </div>
-    <div class="flex w-full h-3/5 lg:w-11/12 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-10 lg:my-12">
+    <div class="flex w-full h-3/5 items-center md:items-start lg:w-11/12 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-10 lg:my-12">
         <span>
             <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-bold">
-                {translations[lang].services.serviceTwo.titleLineOne} <br class="block md:hidden lg:block" />
+                {translations[lang].services.serviceTwo.titleLineOne} <br class="hidden lg:block" />
                 {translations[lang].services.serviceTwo.titleLineTwo}
             </p>
             <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg my-2">
             {translations[lang].services.serviceTwo.subtitle} 
         </p>
         </span>
-        <img class="xl:w-36 xl:h-36" src="/images/clapping_hands.png" alt="Clapping hands" />
+        <div class="w-5/6 md:w-auto">
+            <img class="w-36 h-36" src="/images/clapping_hands.png" alt="Clapping hands" />
+        </div>
     </div>
-    <div class="flex w-full -translate-y-1/4">
+    <div class="flex w-full md:-translate-y-1/4">
         <div class="w-full xl:w-11/12 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-0 mr-6">
              <img class="w-20 h-16 ml-2 xl:w-24 xl:h-20" src="/images/react_3d.png" alt="React 3D logo" />
             <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-bold mt-4">
