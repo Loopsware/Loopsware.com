@@ -38,7 +38,7 @@ export const translations = {
       },
       serviceFour: {
         titleLineOne: "Custom Component",
-        titleLineTwo: "Custom Native Module",
+        titleLineTwo: "Native Modules",
         subtitleOne: "Custom React components or specific animations.",
         subtitleTwo: "Native modules for specific functionalities.",
       },
@@ -121,7 +121,7 @@ export const translations = {
       },
       serviceFour: {
         titleLineOne: "Componente Personalizado",
-        titleLineTwo: "Módulo Nativo Personalizado",
+        titleLineTwo: "Módulos Nativos",
         subtitleOne: "Componente personalizado de React o animaciones.",
         subtitleTwo: "Módulos nativos para funcionalidades especifícas.",
       },
