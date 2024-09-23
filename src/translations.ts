@@ -105,7 +105,7 @@ export const translations = {
       },
       serviceTwo: {
         titleLineOne: "¿Necesitas apoyo?",
-        titleLineTwo: "Nosotros te ayudamos.",
+        titleLineTwo: "Te ayudamos.",
         subtitle: "Damos soporte, mantenimiento y actualizaciones.",
         items: {
           bugs: "Solución a bugs",
@@ -120,10 +120,10 @@ export const translations = {
           "Tenemos experiencia creando sistemas de diseño desde cero. Veamos cual es el mejor para tu app, puede ser NativeWind, Tamagui o uno personalizado. ",
       },
       serviceFour: {
-        titleLineOne: "Componente Personalizado",
-        titleLineTwo: "Módulos Nativos",
-        subtitleOne: "Componente personalizado de React o animaciones.",
-        subtitleTwo: "Módulos nativos para funcionalidades especifícas.",
+        titleLineOne: "Desarrollo Backend",
+        titleLineTwo: "Módulo Nativo",
+        subtitleOne: "Desarrollo del lado del servidor para tu app full-stack.",
+        subtitleTwo: "Módulos Personalizados en Swift y Kotlin.",
       },
       button: "Ver precios",
     },
