@@ -3,10 +3,10 @@ import { translations } from '../translations';
 let lang: string = Astro.props.lang || 'en';
 ---
 
-<div class="flex flex-col lg:grid lg:grid-cols-2 mx-4 md:mx-8 lg:mx-16">
-    <div class="w-full xl:w-11/12 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-0">
-        <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-bold">
-            {translations[lang].services.serviceOne.titleLineOne} <br class="block md:hidden lg:block" />
+<div class="flex flex-col lg:grid lg:grid-cols-2 mx-4 md:mx-8 lg:mx-20">
+    <div class="w-full xl:w-11/12 border-3 border-gray-200 rounded-3xl p-6 md:p-10 lg:p-8 my-4 md:my-0">
+        <p style={{ "font-family": "Grotesque" }} class="text-2xl font-bold">
+            {translations[lang].services.serviceOne.titleLineOne} <br class="block md:hidden" />
             {translations[lang].services.serviceOne.titleLineTwo}
         </p>
         <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg my-2">
@@ -14,19 +14,19 @@ let lang: string = Astro.props.lang || 'en';
         </p>
         <div class="flex justify-between items-center mt-12">
             <div class="flex flex-col">
-                <div class="w-4 h-4 md:w-6 md:h-6 bg-lime-200">
-                    <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-black -translate-x-1 -translate-y-3">1</p>
+                <div class="w-4 h-4 md:w-5 md:h-5 bg-lime-200">
+                    <p style={{ "font-family": "Grotesque" }} class="text-2xl  font-black -translate-x-1 -translate-y-3">1</p>
                 </div>
                 <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
-                    <img width="50" height="50" src="/images/planning_3d.png" />
+                    <img width="55" height="60" src="/images/planning_3d.png" />
                     <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm lg:text-md font-black">
                     {translations[lang].services.serviceOne.items.planning}
                     </p>
                 </div>
             </div>
             <div class="flex flex-col">
-                <div class="w-4 h-4 md:w-6 md:h-6 bg-lime-200">
-                    <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-black -translate-x-1 -translate-y-3">2</p>
+                <div class="w-4 h-4 md:w-5 md:h-5 bg-lime-200">
+                    <p style={{ "font-family": "Grotesque" }} class="text-2xl font-black -translate-x-1 -translate-y-3">2</p>
                 </div>
                 <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                     <img width="60" height="60" src="/images/uidesign_3d.png" />
@@ -36,8 +36,8 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
             </div>
             <div class="flex flex-col">
-                <div class="w-4 h-4 md:w-6 md:h-6 bg-lime-200">
-                    <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-black -translate-x-1 -translate-y-3">3</p>
+                <div class="w-4 h-4 md:w-5 md:h-5 bg-lime-200">
+                    <p style={{ "font-family": "Grotesque" }} class="text-2xl font-black -translate-x-1 -translate-y-3">3</p>
                 </div>
                 <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                     <img width="60" height="60" src="/images/development_3d.png" />
@@ -46,8 +46,8 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
             </div>
                 <div class="flex flex-col">
-                    <div class="w-4 h-4 md:w-6 md:h-6 bg-lime-200">
-                        <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-black -translate-x-1 -translate-y-3">4</p>
+                    <div class="w-4 h-4 md:w-5 md:h-5 bg-lime-200">
+                        <p style={{ "font-family": "Grotesque" }} class="text-2xl font-black -translate-x-1 -translate-y-3">4</p>
                     </div>
                     <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                         <img width="60" height="60" src="/images/publishing_3d.png" />
@@ -58,8 +58,8 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
             </div>
     </div>
-    <div class="flex flex-col items-center md:items-start md:flex-row w-full lg:h-5/6 xl:h-4/6 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:mt-10 lg:my-0 lg:ml-8 xl:ml-0">
-        <img class="w-28 h-44 xl:w-36 xl:h-48 mr-4" src="/images/styling_hands.png" alt="Styling logos and hands" />
+    <div class="flex flex-col items-center md:items-start md:flex-row w-full lg:h-5/6 xl:h-4/6 border-3 border-gray-200 rounded-3xl p-6 md:p-10 lg:p-6 my-4 md:mt-10 lg:my-0 lg:ml-8 xl:ml-0">
+        <img class="w-28 h-44 xl:w-32 xl:h-40 mr-4" src="/images/styling_hands.png" alt="Styling logos and hands" />
         <span class="flex flex-col">
             <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-bold">
             {translations[lang].services.serviceThree.titleLineOne} <br class="block md:hidden lg:block" />
@@ -70,33 +70,30 @@ let lang: string = Astro.props.lang || 'en';
         </p>
         </span>
     </div>
-    <div class="flex w-full xl:h-3/5 items-center xl:items-start lg:w-11/12 border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-10 lg:my-12">
+    <div class="flex w-full xl:h-2/5 items-center justify-between lg:w-11/12 border-3 border-gray-200 rounded-3xl p-6 md:p-10 lg:px-6 lg:py-5 my-4 md:my-10 lg:my-8">
         <span>
-            <p style={{ "font-family": "Grotesque" }} class="text-2xl md:text-3xl font-bold">
+            <p style={{ "font-family": "Grotesque" }} class="text-2xl font-bold">
                 {translations[lang].services.serviceTwo.titleLineOne} <br class="hidden lg:block" />
                 {translations[lang].services.serviceTwo.titleLineTwo}
             </p>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg my-2">
-            {translations[lang].services.serviceTwo.subtitle} 
-        </p>
         </span>
-        <div class="w-5/6 xl:w-auto">
-            <img class="w-36 h-36" src="/images/clapping_hands.png" alt="Clapping hands" />
+        <div class="w-4/6 xl:w-auto">
+            <img class="w-24 h-24" src="/images/clapping_hands.png" alt="Clapping hands" />
         </div>
     </div>
-    <div class="flex w-full  xl:-translate-y-1/4 lg:ml-8 xl:ml-0">
-        <div class="flex flex-col w-full h-1/2 lg:h-5/6 xl:h-auto lg:w-11/12 items-center md:items-start border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-0 mr-6">
-             <img class="w-20 h-20" src="/images/database_3d.png" alt="Database 3D logo" />
-            <p style={{ "font-family": "Grotesque" }} class="text-xl md:text-3xl text-center md:text-left font-bold mt-4">
+    <div class="flex w-full xl:-translate-y-1/4 lg:ml-8 xl:ml-0">
+        <div class="flex flex-col w-full h-1/2 lg:h-5/6 xl:h-5/6 lg:w-11/12 items-center md:items-start border-3 border-gray-200 rounded-3xl p-6 md:p-8 lg:p-6 my-4 md:my-0 mr-6">
+             <img class="w-16 h-16" src="/images/database_3d.png" alt="Database 3D logo" />
+            <p style={{ "font-family": "Grotesque" }} class="text-xl md:text-2xl text-center md:text-left font-bold mt-4">
                 {translations[lang].services.serviceFour.titleLineOne}
             </p>
             <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg text-center md:text-left my-2">
                 {translations[lang].services.serviceFour.subtitleOne} 
             </p>
         </div>
-        <div class="flex flex-col w-full h-1/2 lg:h-5/6 xl:h-auto lg:w-11/12 items-center md:items-start border-3 border-gray-200 rounded-2xl p-6 md:p-10 lg:p-8 my-4 md:my-0 xl:ml-6">
-            <img class="w-28 h-16 xl:w-36 xl:h-20" src="/images/modules_3d.png" alt="Kotlin & Swift 3D logos" />
-            <p style={{ "font-family": "Grotesque" }} class="text-xl md:text-3xl text-center md:text-left font-bold mt-4">
+        <div class="flex flex-col w-full h-1/2 lg:h-5/6 xl:h-5/6 lg:w-11/12 items-center md:items-start border-3 border-gray-200 rounded-3xl p-6 md:p-8 lg:p-6 my-4 md:my-0 xl:ml-6">
+            <img class="w-28 h-16 xl:w-32 xl:h-16" src="/images/modules_3d.png" alt="Kotlin & Swift 3D logos" />
+            <p style={{ "font-family": "Grotesque" }} class="text-xl md:text-2xl text-center md:text-left font-bold mt-4">
                 {translations[lang].services.serviceFour.titleLineTwo} 
             </p>
             <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg text-center md:text-left my-2">
