@@ -37,10 +37,10 @@ export const translations = {
           "We have experience building design systems from scratch. Let's find what's the best fit for your app, it can be NativeWind, Tamagui or a custom one. ",
       },
       serviceFour: {
-        titleLineOne: "Custom Component",
+        titleLineOne: "Backend Development",
         titleLineTwo: "Native Modules",
-        subtitleOne: "Custom React components or specific animations.",
-        subtitleTwo: "Native modules for specific functionalities.",
+        subtitleOne: "Server side development to make your app fullstack.",
+        subtitleTwo: "Custom Swift and Kotlin modules.",
       },
       button: "Check pricing",
     },
