@@ -167,14 +167,16 @@ export const translations = {
       },
     },
     founderOne: {
-      title: "A founder",
-      presentation: "Hi, I'm Oliver",
-      text: "I'm really passionate about programming, entrepreneurship and technology. I'm here to build your next app idea. Let's chat about your project and see how I can help.",
+      title: "Un fundador",
+      presentation: "Hola, soy Oliver",
+      role: "📱 Desarrollador Móvil | MacOS lover",
+      text: "Me apasiona mucho la programación, el emprendimiento y su intersección con la tecnología. Estoy aquí para ayudarte a desarrollar tu próxima idea y lanzarla al mundo.",
     },
     founderTwo: {
-      title: "The other founder",
-      presentation: "Hi, I'm Oliver",
-      text: "I'm really passionate about programming, entrepreneurship and technology. I'm here to build your next app idea. Let's chat about your project and see how I can help.",
+      title: "El otro fundador",
+      presentation: "Hola, soy Fer",
+      role: "🧑‍💻 Desarrollador Backend | Linux lover",
+      text: "Con una profunda pasión por la programación y una habilidad para resolver problemas complejos, me dedico a convertir ideas innovadoras en realidad y a impulsar la excelencia tecnológica.",
     },
   },
 };
