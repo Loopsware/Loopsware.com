@@ -99,7 +99,7 @@ export const translations = {
     services: {
       serviceOne: {
         titleLineOne: "Cuentános tu idea.",
-        titleLineTwo: "La hacemos realidad.",
+        titleLineTwo: "",
         subtitle:
           "Si estás empezando, podemos ayudarte con la ideación, planificación, diseño, desarrollo y publicación de tu aplicación.",
         items: {
@@ -120,16 +120,17 @@ export const translations = {
         },
       },
       serviceThree: {
-        titleLineOne: "¿Un sistema de diseño?",
-        titleLineTwo: "Lo contruimos por ti.",
+        titleLineOne: "¿Necesitas un design system?",
+        titleLineTwo: "",
         subtitle:
           "Tenemos experiencia creando sistemas de diseño desde cero. Veamos cual es el mejor para tu app, puede ser NativeWind, Tamagui o uno personalizado. ",
       },
       serviceFour: {
         titleLineOne: "Desarrollo Backend",
-        titleLineTwo: "Módulo Nativo",
-        subtitleOne: "Desarrollo del lado del servidor para tu app full-stack.",
-        subtitleTwo: "Módulos Personalizados en Swift y Kotlin.",
+        titleLineTwo: "Módulo Nativo Personalizado",
+        subtitleOne:
+          "Desarrollo del lado del servidor para hacer tu app full-stack.",
+        subtitleTwo: "Módulos en Swift y Kotlin para funcionalidad nativa.",
       },
       button: "Ver precios",
     },
