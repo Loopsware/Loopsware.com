@@ -79,13 +79,13 @@ export const translations = {
     founderOne: {
       title: "A founder",
       presentation: "It's me, Oliver",
-      role: "📱 Mobile Developer",
+      role: "📱 Mobile Developer | MacOS lover",
       text: "I'm really passionate about programming, entrepreneurship and their intersection with technology. I'm here to help you build your next app idea and release it to the world.",
     },
     founderTwo: {
       title: "The other founder",
       presentation: "It's me, Fer",
-      role: "🧑‍💻 Backend Developer",
+      role: "🧑‍💻 Backend Developer | Linux lover",
       text: "With a deep passion for programming and a knack for solving complex problems, I'm dedicated to turning innovative ideas into reality and driving technological excellence.",
     },
   },
