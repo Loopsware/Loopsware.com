@@ -72,9 +72,11 @@ let lang: string = Astro.props.lang || 'en';
     <div class="flex w-full xl:h-3/5 items-center justify-between lg:w-11/12 border-3 border-gray-200 rounded-3xl p-6 md:p-10 lg:px-6 lg:py-5 my-4 md:my-10 lg:my-10">
         <span>
             <p style={{ "font-family": "Grotesque" }} class="text-2xl font-bold">
-                {translations[lang].services.serviceTwo.titleLineOne} <br class="hidden lg:block" />
-                {translations[lang].services.serviceTwo.titleLineTwo}
+                {translations[lang].services.serviceTwo.titleLineOne} 
             </p>
+              <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg my-2">
+            {translations[lang].services.serviceTwo.subtitle} 
+        </p>
         </span>
         <div class="w-4/6 xl:w-auto">
             <img class="w-24 h-24" src="/images/clapping_hands.png" alt="Clapping hands" />

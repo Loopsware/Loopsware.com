@@ -9,8 +9,8 @@ export const translations = {
     },
     services: {
       serviceOne: {
-        titleLineOne: "Have an app idea?",
-        titleLineTwo: "We make it real.",
+        titleLineOne: "Let us know your app idea.",
+        titleLineTwo: "",
         subtitle:
           "If your starting out, we can help you with the ideation, planning, design, development and publishing of your app.",
         items: {
@@ -31,16 +31,16 @@ export const translations = {
         },
       },
       serviceThree: {
-        titleLineOne: "Need a design system?",
-        titleLineTwo: "We build one for you.",
+        titleLineOne: "Design System? We got you.",
+        titleLineTwo: "",
         subtitle:
-          "We have experience building design systems from scratch. Let's find what's the best fit for your app, it can be NativeWind, Tamagui or a custom one. ",
+          "We have experience building design systems from scratch. Let's find what's the best fit for your app.",
       },
       serviceFour: {
         titleLineOne: "Backend Development",
         titleLineTwo: "Custom\n Native Modules",
         subtitleOne: "Server side development to make your app fullstack.",
-        subtitleTwo: "Custom Swift and Kotlin modules.",
+        subtitleTwo: "Swift and Kotlin modules for native functionality.",
       },
       button: "Check pricing",
     },
