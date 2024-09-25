@@ -76,11 +76,17 @@ export const translations = {
         text: "Oliver and I worked together in freelance projects and I have to say that he is one of the best developers I have ever worked with. His knowledge and commitment is amazing, as well as his creativity and professionalism. Definitely a great person to work with.",
       },
     },
-    founder: {
-      title: "Meet the founder",
-      presentation: "Hi, I'm Oliver",
-      text: "I'm really passionate about programming, entrepreneurship and technology. I'm here to build your next app idea. Let's chat about your project and see how I can help.",
-      button: "Book a free call",
+    founderOne: {
+      title: "A founder",
+      presentation: "It's me, Oliver",
+      role: "📱 Mobile Developer",
+      text: "I'm really passionate about programming, entrepreneurship and their intersection with technology. I'm here to help you build your next app idea and release it to the world.",
+    },
+    founderTwo: {
+      title: "The other founder",
+      presentation: "It's me, Fer",
+      role: "🧑‍💻 Backend Developer",
+      text: "With a deep passion for programming and a knack for solving complex problems, I'm dedicated to turning innovative ideas into reality and driving technological excellence.",
     },
   },
   es: {
@@ -159,11 +165,15 @@ export const translations = {
         text: "Oliver y yo trabajamos juntos en proyectos freelance y tengo que decir que es uno de los mejores desarrolladores con los que he trabajado. Su conocimiento y compromiso es increíble, así como su creatividad y profesionalidad. Definitivamente una gran persona con la que trabajar.",
       },
     },
-    founder: {
-      title: "Conoce al fundador",
-      presentation: "Hola, Soy Oliver",
-      text: "Soy un apasionado de la programación, el emprendimiento y la tecnología. Estoy aquí para construir tu próxima idea. Hablemos sobre tu proyecto y veamos cómo puedo ayudarte.",
-      button: "Agendar una llamada",
+    founderOne: {
+      title: "A founder",
+      presentation: "Hi, I'm Oliver",
+      text: "I'm really passionate about programming, entrepreneurship and technology. I'm here to build your next app idea. Let's chat about your project and see how I can help.",
+    },
+    founderTwo: {
+      title: "The other founder",
+      presentation: "Hi, I'm Oliver",
+      text: "I'm really passionate about programming, entrepreneurship and technology. I'm here to build your next app idea. Let's chat about your project and see how I can help.",
     },
   },
 };
