@@ -116,7 +116,7 @@ export const translations = {
         items: {
           bugs: "Solución a bugs",
           support: "Soporte en vivo",
-          modules: "Modulos nativos",
+          modules: "Módulos nativos",
         },
       },
       serviceThree: {
@@ -127,7 +127,7 @@ export const translations = {
       },
       serviceFour: {
         titleLineOne: "Desarrollo Backend",
-        titleLineTwo: "Módulo Nativo Personalizado",
+        titleLineTwo: "Módulos Nativos",
         subtitleOne:
           "Desarrollo del lado del servidor para hacer tu app full-stack.",
         subtitleTwo: "Módulos en Swift y Kotlin para funcionalidad nativa.",
