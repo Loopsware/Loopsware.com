@@ -19,7 +19,7 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
                 <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                     <img width="55" height="60" src="/images/planning_3d.png" />
-                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm lg:text-md font-black">
+                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-xs lg:text-md font-black">
                     {translations[lang].services.serviceOne.items.planning}
                     </p>
                 </div>
@@ -30,7 +30,7 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
                 <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                     <img width="60" height="60" src="/images/uidesign_3d.png" />
-                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm lg:text-md font-black">
+                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-xs lg:text-md font-black">
                     {translations[lang].services.serviceOne.items.design}
                     </p>
                 </div>
@@ -41,7 +41,7 @@ let lang: string = Astro.props.lang || 'en';
                 </div>
                 <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                     <img width="60" height="60" src="/images/development_3d.png" />
-                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">
+                    <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-xs md:text-md font-black">
                     {translations[lang].services.serviceOne.items.development}</p>
                 </div>
             </div>
@@ -51,7 +51,7 @@ let lang: string = Astro.props.lang || 'en';
                     </div>
                     <div class="flex flex-col w-20 h-20 md:w-24 md:h-24 justify-center items-center">
                         <img width="60" height="60" src="/images/publishing_3d.png" />
-                        <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-sm md:text-md font-black">
+                        <p style={{"font-family": "Telegraf", "font-style": "bold"}} class="text-xs md:text-md font-black">
                         {translations[lang].services.serviceOne.items.publishing}
                         </p>
                     </div>
@@ -83,21 +83,21 @@ let lang: string = Astro.props.lang || 'en';
         </div>
     </div>
     <div class="flex w-full xl:-translate-y-1/4 lg:ml-8 xl:ml-0">
-        <div class="flex flex-col w-full h-1/2 lg:h-5/6 xl:h-auto lg:w-11/12 items-center md:items-start border-3 border-gray-200 rounded-3xl p-6 md:p-8 lg:p-6 my-4 md:my-0 mr-6">
+        <div class="flex flex-col w-1/2 h-1/2 lg:h-5/6 xl:h-auto lg:w-11/12 items-center md:items-start border-3 border-gray-200 rounded-3xl p-6 md:p-8 lg:p-6 my-4 md:my-0 mr-2 lg:mr-6">
              <img class="w-16 h-16" src="/images/database_3d.png" alt="Database 3D logo" />
             <p style={{ "font-family": "Grotesque" }} class="text-xl md:text-2xl text-center md:text-left font-bold mt-4">
                 {translations[lang].services.serviceFour.titleLineOne}
             </p>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg text-center md:text-left my-2">
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="hidden lg:block text-md lg:text-lg text-center md:text-left my-2">
                 {translations[lang].services.serviceFour.subtitleOne} 
             </p>
         </div>
-        <div class="flex flex-col w-full h-1/2 lg:h-5/6 xl:h-auto lg:w-11/12 items-center md:items-start border-3 border-gray-200 rounded-3xl p-6 md:p-8 lg:p-6 my-4 md:my-0 xl:ml-6">
-            <img class="w-28 h-16 xl:w-32 xl:h-16" src="/images/modules_3d.png" alt="Kotlin & Swift 3D logos" />
+        <div class="flex flex-col w-full h-1/2 lg:h-5/6 xl:h-auto lg:w-11/12 items-center md:items-start border-3 border-gray-200 rounded-3xl p-6 md:p-8 lg:p-6 my-4 md:my-0 ml-2 xl:ml-6">
+            <img class="w-24 h-16 xl:w-32 xl:h-16" src="/images/modules_3d.png" alt="Kotlin & Swift 3D logos" />
             <p style={{ "font-family": "Grotesque" }} class="text-xl md:text-2xl text-center md:text-left font-bold mt-4">
                 {translations[lang].services.serviceFour.titleLineTwo} 
             </p>
-            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="text-md lg:text-lg text-center md:text-left my-2">
+            <p style={{"font-family": "Telegraf", "font-style": "medium"}} class="hidden lg:block text-md lg:text-lg text-center md:text-left my-2">
                 {translations[lang].services.serviceFour.subtitleTwo} 
             </p>
         </div>

@@ -38,7 +38,7 @@ export const translations = {
       },
       serviceFour: {
         titleLineOne: "Backend Development",
-        titleLineTwo: "Custom\n Native Modules",
+        titleLineTwo: "Native Modules",
         subtitleOne: "Server side development to make your app fullstack.",
         subtitleTwo: "Swift and Kotlin modules for native functionality.",
       },
