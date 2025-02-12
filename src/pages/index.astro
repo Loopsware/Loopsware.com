@@ -6,11 +6,6 @@ import NavBar from '../layouts/NavBar.astro';
 import Footer from '../layouts/Footer.astro';
 //* UI comps.
 import Button from '../components/Button.astro';
-import Availability from '../components/Availability.astro';
-import ServiceBoxes from '../components/ServiceBoxes.astro';
-import ShowcaseCard from '../components/ShowcaseCard.astro';
-import TestimonialCard from '../components/TestimonialCard.astro';
-import ContactForm from '../components/ContactForm.astro';
 import FooterLabel from '../components/FooterLabel.astro';
 import Scene from '../components/Scene.jsx';
 ---
@@ -22,9 +17,8 @@ import Scene from '../components/Scene.jsx';
 		<!-- Main section -->
 		<div class="flex flex-col-reverse md:grid md:grid-cols-2 xl:h-screen w-full md:my-12 xl:my-0">
 			<div class="flex flex-col justify-center px-4 md:px-8 lg:px-16">
-				<Availability title={"Unavailable"} status={'unavailable'} />
-				<h1 style={{"font-family": "Grotesque"}}  class="text-element text-black text-3xl md:text-4xl xl:text-5xl font-black p-2">From brain storming to a real mobile app.</h1>
-				<p style={{"font-family": "Telegraf"}} class="text-element font-medium text-md md:text-lg lg:text-xl xl:text-2xl px-2 py-5">
+				<h1 style={{"font-family": "Grotesque"}}  class="text-element text-white text-3xl md:text-4xl xl:text-5xl font-black p-2">From brain storming to a real mobile app.</h1>
+				<p style={{"font-family": "Telegraf"}} class="text-element text-white font-medium text-md md:text-lg lg:text-xl xl:text-2xl px-2 py-5">
 					<span class="font-bold">Expo</span> & <span class="font-bold">React Native</span> cross-platform development agency, 
 					We're ready to build your next app idea with full support for iOS & Android.
 				</p>
@@ -33,13 +27,6 @@ import Scene from '../components/Scene.jsx';
 					<div class="mx-2 md:mx-3 my-2 md:my-0"></div>
 					<Button title='Book a call' href="https://cal.com/oliverloops/15min" isBlack={false} />
 				</div>
-			</div>
-			<div class="flex flex-col justify-center items-center pr-0 md:pr-8 lg:pr-0 mt-20 md:mt-0">
-				<Scene client:load />
-				<!-- <div id="scene" class="cursor-grab"></div> -->
-			</div>
-			<div class="hidden md:block md:px-8 lg:px-16 md:pt-16 xl:pt-0">
-				<FooterLabel title="Home" />
 			</div>
 		</div>
 	</main>
@@ -75,139 +62,4 @@ animation: slideDownFadeIn 0.3s ease-out forwards;
     transform: translateY(0);
 }
 }
-
 </style>
-
-<script is:inline type="module">
-import anime from 'https://cdn.skypack.dev/animejs';
-
-function toggleAnswer(event) {
-	const arrow = event.target;
-    arrow.classList.toggle('rotate-180');
-}
-		
-document.querySelectorAll('.downArrow').forEach(function(downArrow) {
-    downArrow.addEventListener('click', function() {
-	toggleAnswer(event);
-    var textElement = this.parentElement.nextElementSibling;
-    if (textElement.classList.contains('hidden')) {
-        textElement.classList.remove('hidden');
-        textElement.classList.add('show-text');
-    } else {
-        textElement.classList.add('hidden');
-        textElement.classList.remove('show-text');
-    }
-});
-});
-
-// Text entrance animation
-document.querySelectorAll('.text-element').forEach(function(textElement) {
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                anime({
-                    targets: entry.target,
-                    opacity: [0, 1],
-                    translateY: [-70, 0],
-                    duration: 2000,
-                    easing: 'easeOutExpo'
-                });
-                observer.unobserve(entry.target);
-            }
-        });
-    });
-
-    observer.observe(textElement);
-});
-
-// Scene entrance animation
-const scene = document.getElementById('scene');
-
-const sceneObserver = new IntersectionObserver(function(entries) {
-	entries.forEach(function(entry) {
-		if (entry.isIntersecting) {
-			anime({
-				targets: scene,
-				opacity: [0, 1],
-				translateX: [250, 0],
-				duration: 2500,
-				easing: 'easeOutExpo'
-			});
-			sceneObserver.unobserve(scene);
-		}
-	});
-});
-
-sceneObserver.observe(scene);
-
-const servicesSection = document.querySelector('.services-section');
-const benefitsSection = document.querySelector('.benefits-section');
-const workSection = document.querySelector('#work');
-const testimonialsSection = document.querySelector('.testimonials-section');
-const contactSection = document.querySelector('.contact-section');
-const faqSection = document.querySelector('.faq-section');
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            anime({
-                targets: entry.target,
-                opacity: [0, 1], // Fade the section in
-                translateY: [250, 0], // Move the section up
-                duration: 2000,
-				delay: entry.target === servicesSection ? 0 : 500,
-                easing: 'easeOutExpo' // Use an exponential easing function
-            });
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    rootMargin: '-7% 0px', // Trigger when the top of the screen is halfway to the section
-});
-
-observer.observe(servicesSection);
-observer.observe(workSection);
-observer.observe(testimonialsSection);
-observer.observe(contactSection);
-observer.observe(faqSection);
-
-const benefitsItems = benefitsSection.querySelectorAll('.benefit-item');
-
-const itemsObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            // Check if the animation has already been run
-            if (entry.target.dataset.animated) return;
-			anime({
-                targets: entry.target,
-                opacity: [0, 1], // Fade the section in
-                translateY: [250, 0], // Move the section up
-                duration: 2000,
-				delay: entry.target === servicesSection ? 0 : 500,
-                easing: 'easeOutExpo' // Use an exponential easing function
-            });
-
-            benefitsItems.forEach(function(benefitItem, index) {
-				anime({
-                    targets: benefitItem,
-                    opacity: [0, 1], // Fade the item in
-                    translateY: [200, 0], // Move the item up
-                    duration: 2500,
-                    delay: index * 200, 
-                    easing: 'easeOutExpo' // Use an exponential easing function
-                });
-			});
-
-            // Mark the element as animated
-            entry.target.dataset.animated = 'true';
-
-            itemsObserver.unobserve(entry.target);
-        }
-    });
-}, {
-    rootMargin: '-7% 0px', // Trigger when the top of the screen is halfway to the section
-});
-
-itemsObserver.observe(benefitsSection);
-itemsObserver.observe(benefitsItems);
-</script>

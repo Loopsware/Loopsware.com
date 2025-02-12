@@ -5,7 +5,7 @@ let lang: string = Astro.props.lang || 'en';
 
 <nav class="navbar flex items-center justify-between w-full md:bg-opacity-1 px-6 py-5 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
   <a href=`${lang === 'en' ? '/' : '/es'}`>
-    <img class="h-5 md:h-6 md:w-56 xl:h-8 xl:w-80" src="/images/loopsware_logo.png" alt="loopsware logo" />
+    <img class="h-5 md:h-6 md:w-56 xl:h-10 xl:w-72" src="/images/loopsware_logo.png" alt="loopsware logo" />
   </a>
   <div class="md:hidden z-50 right-6">
     <button id="menu-button" class="relative z-60">
@@ -13,53 +13,12 @@ let lang: string = Astro.props.lang || 'en';
       <span id="line2" class="block w-8 h-1 bg-black transition-transform duration-200 rounded"></span>
     </button>
   </div>
-  <div id="menu" class="flex flex-col md:flex-row md:w-full h-screen md:h-auto md:flex md:justify-end md:items-center md:relative md:p-0 hidden fixed top-0 left-0 w-full bg-white md:bg-transparent p-6 pt-20 md:mt-0 transition-transform duration-200 z-40 md:z-0">
-    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/#services' : '/es/#services'}`>{translations[lang].navbar.services}</a>
-    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/pricing' : '/es/pricing'}`>{translations[lang].navbar.pricing}</a>
-    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/about' : '/es/about'}`>{translations[lang].navbar.about}</a>
-    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="text-white font-bold" href="https://cal.com/oliverloops/30min" target="_blank">
-      <button class="w-2/5 md:w-auto h-12 md:h-10 xl:h-12 bg-stone-900 rounded-full md:px-6 xl:px-8 md:ml-5 my-4 md:my-0 hover:opacity-90 hover:shadow-lg transition-all">
-        <p style={{ "font-family": "Telegraf", "font-style": "bold" }}>{translations[lang].navbar.button}</p>
-      </button>
-    </a>
+  <div id="menu" class="flex flex-col md:flex-row md:w-full h-screen md:h-auto md:flex md:justify-end md:items-center md:relative md:p-0 fixed top-0 left-0 w-full bg-transparent p-6 pt-20 md:mt-0 md:z-0">
+    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-white text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/#services' : '/es/#services'}`>{translations[lang].navbar.services}</a>
+    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-white text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/pricing' : '/es/pricing'}`>{translations[lang].navbar.pricing}</a>
+    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-white text-xl md:text-md lg:text-lg xl:text-xl mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/about' : '/es/about'}`>{translations[lang].navbar.about}</a>
   </div>
 </nav>
-
-<style>
-  .slide-in {
-    transform: translateX(0);
-    transition: transform 0.3s ease-out;
-  }
-
-  .slide-out {
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
-
-  .nav-item {
-    position: relative;
-    overflow: hidden;
-  }
-
-  @media (min-width: 1024px) {
-    .nav-item::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 70%;
-      background-color: rgb(217 249 157);
-      transition: left 0.3s ease;
-      z-index: -1;
-      transform: translate(-10px, -5px);
-    }
-
-    .nav-item:hover::before {
-      left: 0;
-    }
-  }
-</style>
 
 <script is:inline type="module">
   import anime from 'https://cdn.skypack.dev/animejs';

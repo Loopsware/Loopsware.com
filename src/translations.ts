@@ -2,10 +2,9 @@
 export const translations = {
   en: {
     navbar: {
-      services: "Services",
-      pricing: "Pricing",
-      about: "About",
-      button: "Book a call",
+      services: "Apps",
+      pricing: "About",
+      about: "Terms & Conditions",
     },
     services: {
       serviceOne: {
