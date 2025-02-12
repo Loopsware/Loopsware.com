@@ -14,9 +14,9 @@ let lang: string = Astro.props.lang || 'en';
     </button>
   </div>
   <div id="menu" class="flex flex-col md:flex-row md:w-full h-screen md:h-auto md:flex md:justify-end md:items-center md:relative md:p-0 fixed top-0 left-0 w-full bg-transparent p-6 pt-20 md:mt-0 md:z-0">
-    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-white hover:text-lime-200 text-xl md:text-md lg:text-lg  mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/#services' : '/es/#services'}`>{translations[lang].navbar.services}</a>
-    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-white hover:text-lime-200 text-xl md:text-md lg:text-lg mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/pricing' : '/es/pricing'}`>{translations[lang].navbar.pricing}</a>
-    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-white hover:text-lime-200 text-xl md:text-md lg:text-lg mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/about' : '/es/about'}`>{translations[lang].navbar.about}</a>
+    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-white hover:text-lime-200 text-xl md:text-md lg:text-lg  mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/' : '/'}`>{translations[lang].navbar.services}</a>
+    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-white hover:text-lime-200 text-xl md:text-md lg:text-lg mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/' : '/'}`>{translations[lang].navbar.pricing}</a>
+    <a style={{ "font-family": "Telegraf", "font-style": "medium" }} class="nav-item text-white hover:text-lime-200 text-xl md:text-md lg:text-lg mx-2 md:mx-5 my-3" href=`${lang === 'en' ? '/' : '/'}`>{translations[lang].navbar.about}</a>
   </div>
 </nav>
 
