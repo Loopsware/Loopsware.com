@@ -14,7 +14,7 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), react({ include: ["**/react/*"] })],
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "es"],
+    locales: ["en"],
     routing: {
       prefixDefaultLocale: false,
     },
