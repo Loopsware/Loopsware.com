@@ -3,7 +3,7 @@ import { translations } from '../translations';
 let lang: string = Astro.props.lang || 'en';
 ---
 
-<nav class="navbar flex items-center justify-between w-full md:bg-opacity-1 px-16 pt-14 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
+<nav class="navbar flex items-center justify-between w-full md:bg-opacity-1 px-16 pt-12 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
   <a href=`${lang === 'en' ? '/' : '/'}`>
     <img class="h-5 md:h-6 md:w-56 xl:h-8 xl:w-60" src="/images/loopsware_logo.png" alt="loopsware logo" />
   </a>
