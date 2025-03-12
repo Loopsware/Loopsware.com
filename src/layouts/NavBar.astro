@@ -3,21 +3,21 @@ import { translations } from '../translations';
 let lang: string = Astro.props.lang || 'en';
 ---
 
-<nav class="navbar flex items-center justify-between w-full md:bg-opacity-1 px-16 pt-12 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
+<nav class="navbar flex items-center justify-center w-full md:bg-opacity-1 px-16 pt-10 lg:px-16 fixed z-40 md:z-0 top-0 md:relative backdrop-filter backdrop-blur-md">
   <a href=`${lang === 'en' ? '/' : '/'}`>
-    <img class="h-5 md:h-6 md:w-56 xl:h-8 xl:w-60" src="/images/loopsware_logo.png" alt="loopsware logo" />
+    <img class="h-5 md:h-6 md:w-auto xl:h-8 xl:w-auto" src="/images/loopsware_logo.png" alt="loopsware logo" />
   </a>
-  <div class="md:hidden z-50 right-6">
+  <!-- <div class="md:hidden z-50 right-6">
     <button id="menu-button" class="relative z-60">
       <span id="line1" class="block w-8 h-1 bg-black mb-2 transition-transform duration-200 rounded"></span>
       <span id="line2" class="block w-8 h-1 bg-black transition-transform duration-200 rounded"></span>
     </button>
-  </div>
-  <div id="menu" class="flex flex-col md:flex-row md:w-full h-screen md:h-auto md:flex md:justify-end md:items-center md:relative md:p-0 fixed top-0 left-0 w-full bg-transparent p-6 pt-20 md:mt-0 md:z-0">
+  </div> -->
+  <!-- <div id="menu" class="flex flex-col md:flex-row md:w-full h-screen md:h-auto md:flex md:justify-end md:items-center md:relative md:p-0 fixed top-0 left-0 w-full bg-transparent p-6 pt-20 md:mt-0 md:z-0">
     <a style={{ "font-family": "Aeonik", "font-style": "normal" }} class="nav-item text-white hover:text-lime-300 text-md mx-2 md:mx-3 my-3" href=`${lang === 'en' ? '/' : '/'}`>{translations[lang].navbar.services}</a>
     <a style={{ "font-family": "Aeonik", "font-style": "normal" }} class="nav-item text-white hover:text-lime-300 text-md mx-2 md:mx-3 my-3" href=`${lang === 'en' ? '/' : '/'}`>{translations[lang].navbar.pricing}</a>
     <a style={{ "font-family": "Aeonik", "font-style": "normal" }} class="nav-item text-white hover:text-lime-300 text-md mx-2 md:mx-3 my-3" href=`${lang === 'en' ? '/' : '/'}`>{translations[lang].navbar.about}</a>
-  </div>
+  </div> -->
 </nav>
 
 <script is:inline type="module">
