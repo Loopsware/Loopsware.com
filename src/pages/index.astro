@@ -31,7 +31,7 @@ import Footer from '../layouts/Footer.astro';
 				alt="apps stack" 
 				/>
 				<img 
-				  class="h-48 w-48 md:h-64 md:w-64 my-12 animate-levitate transition-all duration-300 absolute" 
+				  class="h-48 w-48 md:h-64 md:w-64 my-16 animate-levitate animate-flip-down transition-all duration-300 absolute" 
 				  style={{
     				'shape-rendering': 'geometricPrecision',
     				'image-rendering': 'optimizeQuality'
@@ -73,5 +73,22 @@ animation: slideDownFadeIn 0.3s ease-out forwards;
     opacity: 1;
     transform: translateY(0);
 }
+}
+
+@keyframes flipDown {
+    0% {
+        opacity: 0;
+        transform: translateY(45px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.animate-flip-down {
+    animation: flipDown 1s ease-out forwards;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 </style>
