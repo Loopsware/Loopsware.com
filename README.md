@@ -1,5 +1,5 @@
-# Loopsware Website
+# Loopsware Website ✨
 
-## WIP...
+## Work In Progress...
 
 **Loopsware ©2025**
