@@ -14,15 +14,15 @@ import Footer from '../layouts/Footer.astro';
 		<!-- Main section -->
 		<div class="flex flex-col justify-center items-center h-[80vh] md:h-[87vh] w-full md:my-12 xl:-my-12">
 			<div class="flex flex-col justify-center items-center px-4 md:px-8 lg:px-16">
-				<h1 style={{"font-family": "Grotesque"}}  class="text-element text-center text-white text-2xl md:text-3xl xl:text-4xl font-black opacity-0 animate-fade-in-up [animation-delay:400ms] p-2">Building Smarter Apps.</h1>
-				<p style={{"font-family": "PierSans"}} class="text-element text-white text-center font-normal text-md xl:text-xl px-2 py-2 md:py-5 opacity-0 animate-fade-in-up [animation-delay:600ms]">
+				<h1 style={{"font-family": "PierSans"}}  class="text-element text-center text-white text-3xl md:text-3xl xl:text-5xl font-black opacity-0 animate-fade-in-up [animation-delay:400ms] p-2">Building <span style={{"font-family": "EditorialNew"}}>Smarter</span> Apps.</h1>
+				<p style={{"font-family": "PierSans"}} class="text-element text-white text-center font-normal text-xl xl:text-2xl px-2 py-2 md:py-5 opacity-0 animate-fade-in-up [animation-delay:600ms]">
 					<span class="text-lime-300 font-bold">AI</span>-driven <span class="text-lime-300 font-bold">Creative Laboratory</span> <br /> Solving real-life challenges
 				</p>
 			</div>
 			<span class="my-20"></span>
 			<div class="flex flex-row justify-center items-center"> 
 				<img 
-				class="h-48 w-48 md:h-64 md:w-64 my-8 animate-levitate transition-all duration-300 absolute z-10" 
+				class="h-56 w-56 md:h-72 md:w-72 my-8 animate-levitate transition-all duration-300 absolute z-10" 
 				  style={{
     				'shape-rendering': 'geometricPrecision',
     				'image-rendering': 'optimizeQuality'
@@ -31,7 +31,7 @@ import Footer from '../layouts/Footer.astro';
 				alt="apps stack" 
 				/>
 				<img 
-				  class="h-48 w-48 md:h-64 md:w-64 my-16 animate-levitate animate-flip-down transition-all duration-300 absolute" 
+				  class="h-56 w-56 md:h-72 md:w-72 my-16 animate-levitate animate-flip-down transition-all duration-300 absolute" 
 				  style={{
     				'shape-rendering': 'geometricPrecision',
     				'image-rendering': 'optimizeQuality'
@@ -61,7 +61,7 @@ html {
 }
 
 .show-text {
-animation: slideDownFadeIn 0.3s ease-out forwards;
+animation: slideDownFadeIn 0.4s ease-out forwards;
 }
 
 @keyframes slideDownFadeIn {
