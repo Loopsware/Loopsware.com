@@ -31,7 +31,7 @@ import Footer from '../layouts/Footer.astro';
 				alt="apps stack" 
 				/>
 				<img 
-				  class="h-56 w-56 md:h-72 md:w-72 my-16 animate-levitate animate-glow-pulse animate-flip-down transition-all duration-300 absolute" 
+				  class="h-56 w-56 md:h-72 md:w-72 my-16 animate-flip-down transition-all duration-300 absolute" 
 				  style={{
     				'shape-rendering': 'geometricPrecision',
     				'image-rendering': 'optimizeQuality'
@@ -113,6 +113,5 @@ animation: slideDownFadeIn 0.4s ease-out forwards;
 .animate-glow-pulse {
     animation: glowPulse 2s ease-in-out infinite;
     animation-delay: 2.666s;
-    will-change: filter;
 }
 </style>
