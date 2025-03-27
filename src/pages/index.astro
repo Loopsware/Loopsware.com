@@ -22,7 +22,7 @@ import Footer from '../layouts/Footer.astro';
 			<span class="my-20"></span>
 			<div class="flex flex-row justify-center items-center"> 
 				<img 
-				class="h-56 w-56 md:h-72 md:w-72 my-8 animate-levitate transition-all duration-300 absolute z-10" 
+				class="h-56 w-56 md:h-72 md:w-72 my-8 animate-drop transition-all duration-300 absolute z-10" 
 				  style={{
     				'shape-rendering': 'geometricPrecision',
     				'image-rendering': 'optimizeQuality'
@@ -64,15 +64,15 @@ html {
 animation: slideDownFadeIn 0.4s ease-out forwards;
 }
 
-@keyframes slideDownFadeIn {
-0% {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-100% {
-    opacity: 1;
-    transform: translateY(0);
-}
+@keyframes dropDown {
+    0% {
+        transform: translateY(-40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes flipDown {
@@ -84,6 +84,12 @@ animation: slideDownFadeIn 0.4s ease-out forwards;
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+.animate-drop {
+    opacity: 0;
+    animation: dropDown 1.6s ease-out forwards;
+    animation-delay: 1s;
 }
 
 .animate-flip-down {
