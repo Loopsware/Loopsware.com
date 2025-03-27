@@ -31,7 +31,7 @@ import Footer from '../layouts/Footer.astro';
 				alt="apps stack" 
 				/>
 				<img 
-				  class="h-56 w-56 md:h-72 md:w-72 my-16 animate-levitate animate-flip-down transition-all duration-300 absolute" 
+				  class="h-56 w-56 md:h-72 md:w-72 my-16 animate-levitate animate-glow-pulse animate-flip-down transition-all duration-300 absolute" 
 				  style={{
     				'shape-rendering': 'geometricPrecision',
     				'image-rendering': 'optimizeQuality'
@@ -86,6 +86,18 @@ animation: slideDownFadeIn 0.4s ease-out forwards;
     }
 }
 
+@keyframes glowPulse {
+    0% {
+        filter: brightness(0.5) radial-gradient(circle, rgba(132, 204, 22, 0.25) 0%, transparent 70%);
+    }
+    50% {
+        filter: brightness(0.9) radial-gradient(circle, rgba(132, 204, 22, 0.6) 30%, transparent 80%);
+    }
+    100% {
+        filter: brightness(0.5) radial-gradient(circle, rgba(132, 204, 22, 0.25) 0%, transparent 70%);
+    }
+}
+
 .animate-drop {
     opacity: 0;
     animation: dropDown 1.6s ease-out forwards;
@@ -96,5 +108,11 @@ animation: slideDownFadeIn 0.4s ease-out forwards;
     animation: flipDown 1s ease-out forwards;
     transform-style: preserve-3d;
     backface-visibility: hidden;
+}
+
+.animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+    animation-delay: 2.666s;
+    will-change: filter;
 }
 </style>
