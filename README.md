@@ -2,4 +2,4 @@
 
 ## Just Looping Around.
 
-**Loopsware ©2025**
+**Crafted by Loopsware ©2025**
