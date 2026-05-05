@@ -1,117 +1,330 @@
 ---
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import SpeedInsights from "@vercel/speed-insights/astro";
 //* Layout
 import Layout from '../layouts/Layout.astro';
 import NavBar from '../layouts/NavBar.astro';
 import Footer from '../layouts/Footer.astro';
-//* UI comps.
+
+// Brands publicly listed on reactnative.dev's showcase. Glyphs from Simple Icons (CC0).
+const apps = [
+  { name: "Discord",   slug: "discord",          color: "#5865F2" },
+  { name: "Shopify",   slug: "shopify",          color: "#7AB55C" },
+  { name: "Coinbase",  slug: "coinbase",         color: "#0052FF" },
+  { name: "Pinterest", slug: "pinterest",        color: "#E60023" },
+  { name: "Walmart",   slug: "walmart",          color: "#0071CE" },
+  { name: "Tesla",     slug: "tesla",            color: "#CC0000" },
+  { name: "Teams",     slug: "microsoftteams",   color: "#6264A7" },
+  { name: "Outlook",   slug: "microsoftoutlook", color: "#0078D4" },
+  { name: "Skype",     slug: "skype",            color: "#00AFF0" },
+  { name: "Bloomberg", slug: "bloomberg",        color: "#000000" },
+  { name: "Wix",       slug: "wix",              color: "#0C6EFC" },
+  { name: "Uber Eats", slug: "ubereats",         color: "#06C167" },
+  { name: "Amazon",    slug: "amazon",           color: "#FF9900" },
+  { name: "Xbox",      slug: "xbox",             color: "#107C10" },
+];
 ---
 
-<Layout title="Loopsware - Just Looping Around.">
+<Layout title="Loopsware — Expo & React Native Studio">
 	<SpeedInsights />
 	<NavBar />
-	<main>
-		<!-- Main section -->
-		<div class="flex flex-col justify-center items-center h-[80vh] md:h-[87vh] w-full md:my-12 xl:-my-12">
-			<div class="flex flex-col justify-center items-center px-4 md:px-8 lg:px-16">
-				<h1 style={{"font-family": "EditorialNew"}}  class="text-element text-center text-white text-3xl md:text-3xl xl:text-4xl font-black opacity-0 animate-fade-in-up [animation-delay:400ms] p-2">Just Looping Around.</h1>
-				<p style={{"font-family": "PierSans"}} class="text-element text-white text-center font-normal text-xl px-2 py-2 md:py-5 opacity-0 animate-fade-in-up [animation-delay:600ms]">
-				    <span class="text-lime-300 font-bold">AI</span>-driven <span class="text-lime-300 font-bold">Creative Laboratory</span><br /> Crafting next-gen apps
-				</p>
-			</div>
-			<span class="my-20"></span>
-			<div class="flex flex-row justify-center items-center"> 
-				<img 
-				class="h-56 w-56 md:h-72 md:w-72 my-8 animate-drop transition-all duration-300 absolute z-10" 
-				  style={{
-    				'shape-rendering': 'geometricPrecision',
-    				'image-rendering': 'optimizeQuality'
-  				}}
-				src="/images/layer_two.svg" 
-				alt="apps stack" 
+	<main class="px-4 md:px-6">
+
+		<!-- ========== HERO ========== -->
+		<section class="flex flex-col items-center justify-center text-center pt-10 md:pt-16 pb-16 md:pb-24">
+			<div class="relative h-28 w-28 md:h-32 md:w-32 mb-10 opacity-0 animate-fade-in-up [animation-delay:200ms]">
+				<img
+					src="/images/layer_two.svg"
+					alt="loopsware mark"
+					class="absolute inset-0 h-full w-full"
+					style={{ 'shape-rendering': 'geometricPrecision' }}
 				/>
-				<img 
-				  class="h-56 w-56 md:h-72 md:w-72 my-16 animate-flip-down transition-all duration-300 absolute" 
-				  style={{
-    				'shape-rendering': 'geometricPrecision',
-    				'image-rendering': 'optimizeQuality'
-  				}}
-				src="/images/layer_one.svg" 
-				alt="apps stack" 
-			/>
+				<img
+					src="/images/layer_one.svg"
+					alt=""
+					class="absolute inset-0 h-full w-full animate-levitate"
+					style={{ 'shape-rendering': 'geometricPrecision' }}
+				/>
 			</div>
-		</div>
+
+			<h1
+				style={{ "font-family": "Telegraf" }}
+				class="text-white text-4xl md:text-6xl xl:text-7xl font-bold leading-[1.0] tracking-tight max-w-5xl opacity-0 animate-fade-in-up [animation-delay:400ms] text-left md:text-center"
+			>
+				Ship your Expo app <br /> <span class="bg-lime-300 text-black px-2 md:px-3 box-decoration-clone">in weeks</span>, not months.
+			</h1>
+
+			<p
+				style={{ "font-family": "PierSans" }}
+				class="text-gray-400 text-base md:text-lg max-w-xl mt-8 md:mt-10 px-2 leading-relaxed opacity-0 animate-fade-in-up [animation-delay:600ms]"
+			>
+				Loopsware is an <span class="text-lime-300 font-bold">AI-driven</span> agency for shipping
+				<span class="text-lime-300 font-bold">fast MVPs</span> on Expo. We're a team of agents and humans that validate product ideas — fast.
+			</p>
+
+			<a
+				href="mailto:sales@loopsware.com?subject=Discovery%20call"
+				class="mt-10 inline-flex items-center gap-2 bg-lime-300 hover:bg-lime-400 text-black rounded-full px-7 py-4 transition-all shadow-[0_0_40px_rgba(132,255,22,0.25)] hover:shadow-[0_0_60px_rgba(132,255,22,0.45)] opacity-0 animate-fade-in-up [animation-delay:800ms]"
+			>
+				<span style={{ "font-family": "Telegraf" }} class="font-bold text-base">Book a discovery call</span>
+			</a>
+
+			<a
+				href="mailto:sales@loopsware.com"
+				class="text-gray-500 hover:text-lime-300 mt-5 text-sm tracking-wide transition-colors opacity-0 animate-fade-in-up [animation-delay:900ms]"
+				style={{ "font-family": "Inter" }}
+			>
+				team@loopsware.com
+			</a>
+
+			<!-- Previous experience row -->
+			<div class="flex flex-col items-center mt-20 md:mt-24 opacity-0 animate-fade-in-up [animation-delay:1100ms]">
+				<p style={{ "font-family": "Telegraf" }} class="text-gray-500 text-[11px] tracking-[0.3em] mb-8">PREVIOUS EXPERIENCE</p>
+				<div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:gap-x-14 opacity-60">
+					<img src="/images/logos/amazon.svg" alt="Amazon" class="h-7 md:h-8 w-auto brightness-0 invert" />
+					<img src="/images/logos/microsoft.svg" alt="Microsoft" class="h-6 md:h-7 w-auto brightness-0 invert" />
+					<img src="/images/logos/globallogic.png" alt="GlobalLogic" class="h-5 md:h-6 w-auto brightness-0 invert" />
+					<img src="/images/logos/bound.svg" alt="Bound Interactive" class="h-4 md:h-5 w-auto brightness-0 invert" />
+					<span style={{ "font-family": "Telegraf" }} class="text-white text-xl md:text-2xl font-bold tracking-tight">App&nbsp;Club.</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== SERVICES ========== -->
+		<section id="services" class="px-2 md:px-6 pt-16 md:pt-24 pb-8">
+			<p style={{ "font-family": "Telegraf" }} class="text-gray-500 text-[11px] tracking-[0.25em] mb-5">SERVICES</p>
+			<h2 style={{ "font-family": "Telegraf" }} class="text-white text-3xl md:text-5xl font-bold leading-[1.1]">
+				Greenfield or vibe-coded.
+			</h2>
+			<p style={{ "font-family": "PierSans" }} class="text-gray-400 mt-4 max-w-2xl text-base md:text-lg leading-relaxed">
+				Whether you're starting fresh or leveling up something you built with Rork, Bolt.new, Lovable or Vibecode — we plug in and ship.
+			</p>
+
+			<div class="mt-12 md:mt-16 border-t border-stone-800">
+
+				<!-- Row 1: Product -->
+				<div class="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-10 py-10 md:py-14 border-b border-stone-800">
+					<div class="md:col-span-2">
+						<p style={{ "font-family": "Telegraf" }} class="text-lime-300 text-[11px] tracking-[0.25em]">FULL PRODUCT</p>
+					</div>
+
+					<div class="md:col-span-8">
+						<h3 style={{ "font-family": "Telegraf" }} class="text-white text-2xl md:text-3xl font-bold leading-[1.15]">
+							Build the best app, from scratch
+						</h3>
+						<p style={{ "font-family": "PierSans" }} class="text-gray-400 mt-4 max-w-2xl text-sm md:text-base leading-relaxed">
+							Founder MVPs and AI-native experiences shipped end-to-end. Production quality from the very first commit, validated with real users in weeks.
+						</p>
+						<div style={{ "font-family": "Inter" }} class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mt-6 text-gray-300 text-sm">
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>Design-engineering oriented</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>Expo experts since day one</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>Fast MVPs to validate ideas</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>AI-native workflow</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>Foundation for going mobile</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>Production quality from day one</span></div>
+						</div>
+					</div>
+
+					<div class="md:col-span-2 md:text-right md:self-end">
+						<a
+							href="mailto:sales@loopsware.com?subject=Product%20engagement"
+							style={{ "font-family": "Telegraf" }}
+							class="inline-flex items-center gap-1 text-lime-300 hover:text-white text-sm font-bold border-b border-lime-300/40 hover:border-white pb-0.5 transition-colors"
+						>
+							Get started <span aria-hidden="true">→</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Row 2: Vibe-Coded -->
+				<div class="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-10 py-10 md:py-14 border-b border-stone-800">
+					<div class="md:col-span-2">
+						<p style={{ "font-family": "Telegraf" }} class="text-lime-300 text-[11px] tracking-[0.25em]">VIBE-CODED</p>
+						<p style={{ "font-family": "PierSans" }} class="text-lime-300/80 text-xs italic mt-2">Most chosen.</p>
+					</div>
+
+					<div class="md:col-span-8">
+						<h3 style={{ "font-family": "Telegraf" }} class="text-white text-2xl md:text-3xl font-bold leading-[1.15]">
+							Level up your vibe-coded MVP
+						</h3>
+						<p style={{ "font-family": "PierSans" }} class="text-gray-400 mt-4 max-w-2xl text-sm md:text-base leading-relaxed">
+							Take projects from Rork, Bolt.new, Lovable or Vibecode and ship them as real apps. Built for non-technical founders — we speak both prompts and production code.
+						</p>
+						<div style={{ "font-family": "Inter" }} class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mt-6 text-gray-300 text-sm">
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>Audit AI-generated codebases</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>App Store / Play Store submissions</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>Refactor and harden core flows</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>EAS build pipelines</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>Built for non-technical founders</span></div>
+							<div class="flex gap-2"><span class="text-lime-300 mt-0.5">✓</span><span>From "kinda works" to ships at scale</span></div>
+						</div>
+					</div>
+
+					<div class="md:col-span-2 md:text-right md:self-end">
+						<a
+							href="mailto:sales@loopsware.com?subject=Vibe-coded%20MVP%20upgrade"
+							style={{ "font-family": "Telegraf" }}
+							class="inline-flex items-center gap-1 text-lime-300 hover:text-white text-sm font-bold border-b border-lime-300/40 hover:border-white pb-0.5 transition-colors"
+						>
+							Get started <span aria-hidden="true">→</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== PRICING ========== -->
+		<section id="pricing" class="mt-8 bg-stone-950 border border-stone-800/80 rounded-3xl px-6 md:px-12 py-12 md:py-16">
+			<p style={{ "font-family": "Telegraf" }} class="text-gray-500 text-[11px] tracking-[0.25em] mb-5">PRICING</p>
+			<h2 style={{ "font-family": "Telegraf" }} class="text-white text-3xl md:text-5xl font-bold leading-[1.1]">
+				From <span class="text-lime-300">prompt</span> to <span class="text-lime-300">production</span>.
+			</h2>
+			<p style={{ "font-family": "PierSans" }} class="text-gray-400 mt-4 max-w-2xl text-base md:text-lg leading-relaxed">
+				Two ways to work with us — upgrade something you've already vibe-coded, or build a new MVP from scratch. Fixed scope, fixed timelines.
+			</p>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 md:mt-14">
+
+				<!-- Tier 1: Vibe-Coded -->
+				<article class="bg-black/60 border border-stone-800 rounded-2xl p-6 md:p-8 flex flex-col">
+					<span style={{ "font-family": "Telegraf" }} class="self-start text-gray-400 text-[11px] tracking-[0.25em] mb-3">TIER 01 · VIBE-CODED</span>
+					<h3 style={{ "font-family": "Telegraf" }} class="text-white text-2xl md:text-3xl font-bold">Ship your vibe-coded MVP</h3>
+					<p style={{ "font-family": "PierSans" }} class="text-gray-400 text-sm mt-2 mb-6">For founders with a Rork, Bolt.new, Lovable or Vibecode project that needs to actually ship.</p>
+					<div class="flex items-baseline gap-2">
+						<span style={{ "font-family": "Telegraf" }} class="text-white text-4xl font-bold">$3.5k</span>
+						<span style={{ "font-family": "Inter" }} class="text-gray-500 text-sm">flat · 1 week</span>
+					</div>
+					<hr class="border-stone-800 my-6" />
+					<ul style={{ "font-family": "Inter" }} class="text-gray-300 space-y-3 text-sm leading-relaxed">
+						<li class="flex gap-2"><span class="text-lime-300">→</span>Codebase audit & risk report.</li>
+						<li class="flex gap-2"><span class="text-lime-300">→</span>Bug fixes for critical paths.</li>
+						<li class="flex gap-2"><span class="text-lime-300">→</span>App Store / Play Store submission.</li>
+						<li class="flex gap-2"><span class="text-lime-300">→</span>EAS build pipeline setup.</li>
+					</ul>
+				</article>
+
+				<!-- Tier 2: From Scratch (highlight) -->
+				<article class="bg-lime-300/[0.04] border border-lime-300/40 rounded-2xl p-6 md:p-8 flex flex-col relative">
+					<span style={{ "font-family": "Telegraf" }} class="absolute -top-3 right-6 bg-lime-300 text-black text-[10px] font-bold tracking-widest px-3 py-1 rounded-full">MOST POPULAR</span>
+					<span style={{ "font-family": "Telegraf" }} class="self-start text-lime-300 text-[11px] tracking-[0.25em] mb-3">TIER 02 · FROM SCRATCH</span>
+					<h3 style={{ "font-family": "Telegraf" }} class="text-white text-2xl md:text-3xl font-bold">Build a new MVP, end-to-end</h3>
+					<p style={{ "font-family": "PierSans" }} class="text-gray-400 text-sm mt-2 mb-6">For founders starting from zero. From idea to a production-quality Expo app, validated with real users.</p>
+					<div class="flex items-baseline gap-2">
+						<span style={{ "font-family": "Telegraf" }} class="text-white text-4xl font-bold">$10k</span>
+						<span style={{ "font-family": "Inter" }} class="text-gray-500 text-sm">flat · 3–4 weeks</span>
+					</div>
+					<hr class="border-stone-800 my-6" />
+					<ul style={{ "font-family": "Inter" }} class="text-gray-300 space-y-3 text-sm leading-relaxed">
+						<li class="flex gap-2"><span class="text-lime-300">→</span>Product scoping & architecture on Expo Router.</li>
+						<li class="flex gap-2"><span class="text-lime-300">→</span>Auth, payments, and subscriptions.</li>
+						<li class="flex gap-2"><span class="text-lime-300">→</span>AI-native features wired in (LLMs, agents).</li>
+						<li class="flex gap-2"><span class="text-lime-300">→</span>Analytics, crash reporting, OTA updates.</li>
+						<li class="flex gap-2"><span class="text-lime-300">→</span>App Store / Play Store launch.</li>
+					</ul>
+				</article>
+			</div>
+
+			<div class="flex justify-center mt-10">
+				<a
+					href="mailto:sales@loopsware.com?subject=Vibe-coded%20MVP%20upgrade"
+					class="inline-flex items-center gap-2 border border-lime-300 text-lime-300 hover:bg-lime-300 hover:text-black rounded-full px-7 py-4 transition-all"
+				>
+					<span style={{ "font-family": "Telegraf" }} class="font-bold text-sm">Get a quote</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- ========== EXPERTISE ========== -->
+		<section class="py-24 md:py-32">
+			<p style={{ "font-family": "Telegraf" }} class="text-gray-500 text-[11px] tracking-[0.25em] text-center mb-4">EXPERTISE</p>
+			<h2 style={{ "font-family": "Telegraf" }} class="text-white text-4xl md:text-5xl font-bold text-center">Build like the best</h2>
+
+			<!-- App icons marquee -->
+			<div
+				class="relative mt-14 md:mt-16 overflow-hidden -mx-4 md:-mx-6"
+				style={{
+					'-webkit-mask-image': 'linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)',
+					'mask-image': 'linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)'
+				}}
+			>
+				<div class="marquee-track flex w-max gap-4 md:gap-6">
+					{[...apps, ...apps].map((app) => (
+						<div
+							class="shrink-0 h-24 w-24 md:h-28 md:w-28 rounded-[22px] flex items-center justify-center shadow-[0_10px_28px_rgba(0,0,0,0.5)] ring-1 ring-white/10"
+							style={`background-color:${app.color}`}
+							aria-label={app.name}
+						>
+							<img
+								src={`https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/${app.slug}.svg`}
+								alt=""
+								loading="lazy"
+								class="h-14 w-14 md:h-16 md:w-16 brightness-0 invert"
+							/>
+						</div>
+					))}
+				</div>
+			</div>
+
+			<p style={{ "font-family": "PierSans" }} class="text-gray-400 text-center max-w-2xl mx-auto mt-14 md:mt-16 text-base md:text-lg leading-relaxed px-4">
+				The world's top brands — including Discord, Shopify, Tesla and Microsoft — ship mobile apps with Expo & React Native, and so do we. We've built on this stack since day one, and bring that depth to every engagement — from a weekend MVP to enterprise rollouts.
+			</p>
+		</section>
+
+		<!-- ========== ABOUT ========== -->
+		<section id="about" class="mt-8 bg-stone-950 border border-stone-800/80 rounded-3xl px-6 md:px-12 py-12 md:py-16 mb-8">
+			<div class="flex justify-between items-start gap-6">
+				<h2 style={{ "font-family": "Telegraf" }} class="text-white text-5xl md:text-7xl font-bold leading-none">About</h2>
+				<div style={{ "font-family": "Telegraf" }} class="text-right text-[11px] tracking-[0.25em] text-gray-500 pt-3">
+					<p>BUILDING</p>
+					<p>WORLDWIDE</p>
+				</div>
+			</div>
+
+			<div class="mt-12 max-w-3xl flex gap-4">
+				<div class="w-3 h-3 mt-2 rounded-full bg-lime-300 flex-shrink-0 shadow-[0_0_20px_rgba(132,255,22,0.6)]"></div>
+				<div style={{ "font-family": "PierSans" }} class="space-y-5 text-gray-300 text-base md:text-lg leading-relaxed">
+					<p>
+						We're a top agency for Expo MVPs — partnering with founders, non-technical entrepreneurs, and teams to validate ideas, ship to the App Store, and scale into real businesses.
+					</p>
+					<p>
+						We also work with the new generation of vibe coders. If you built something on Rork, Bolt.new, Lovable, or Vibecode and need an engineering team to take it the last mile — that's our specialty.
+					</p>
+					<p>
+						Our philosophy hasn't changed: build the best, over-communicate, take ownership, aim high.
+					</p>
+				</div>
+			</div>
+
+			<div id="contact" class="grid md:grid-cols-2 gap-4 mt-16">
+				<a href="mailto:hello@loopsware.com" class="bg-black/60 border border-stone-800 hover:border-lime-300/40 transition-colors rounded-2xl p-6">
+					<p style={{ "font-family": "PierSans" }} class="text-gray-500 text-sm mb-1">Contact</p>
+					<p style={{ "font-family": "Inter" }} class="text-white text-lg md:text-xl font-medium">hello@loopsware.com</p>
+				</a>
+			</div>
+		</section>
 	</main>
 	<Footer />
 </Layout>
 
 <style>
-html {
-    scroll-behavior: smooth;
-}
+	html {
+		scroll-behavior: smooth;
+	}
 
-#scene,
-.services-section,
-.benefits-section,
-#work,
-.testimonials-section,
-.contact-section,
-.faq-section {
-  opacity: 0;
-}
+	@keyframes marquee-x {
+		from { transform: translate3d(0, 0, 0); }
+		to   { transform: translate3d(-50%, 0, 0); }
+	}
 
-.show-text {
-animation: slideDownFadeIn 0.4s ease-out forwards;
-}
+	.marquee-track {
+		animation: marquee-x 40s linear infinite;
+		will-change: transform;
+	}
 
-@keyframes dropDown {
-    0% {
-        transform: translateY(-40%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+	.marquee-track:hover {
+		animation-play-state: paused;
+	}
 
-@keyframes flipDown {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-@keyframes glowPulse {
-    0% {
-        filter: brightness(0.5) radial-gradient(circle, rgba(132, 204, 22, 0.25) 0%, transparent 70%);
-    }
-    50% {
-        filter: brightness(0.9) radial-gradient(circle, rgba(132, 204, 22, 0.6) 30%, transparent 80%);
-    }
-    100% {
-        filter: brightness(0.5) radial-gradient(circle, rgba(132, 204, 22, 0.25) 0%, transparent 70%);
-    }
-}
-
-.animate-drop {
-    opacity: 0;
-    animation: dropDown 1.6s ease-out forwards;
-    animation-delay: 1s;
-}
-
-.animate-flip-down {
-    animation: flipDown 1s ease-out forwards;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-}
-
-.animate-glow-pulse {
-    animation: glowPulse 2s ease-in-out infinite;
-    animation-delay: 2.666s;
-}
+	@media (prefers-reduced-motion: reduce) {
+		.marquee-track { animation: none; }
+	}
 </style>

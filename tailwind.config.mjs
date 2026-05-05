@@ -8,8 +8,13 @@ export default {
         "fade-in-left": "fadeInLeft 0.6s ease-out forwards",
         "fade-in-right": "fadeInRight 0.6s ease-out forwards",
         levitate: "levitate 5s ease-in-out infinite",
+        marquee: "marquee 40s linear infinite",
       },
       keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
         levitate: {
           "0%, 100%": {
             transform: "translateY(0)",
