@@ -6,39 +6,72 @@ const t = translations[lang].navbar;
 
 <nav class="navbar flex items-center justify-between w-full px-6 md:px-12 lg:px-16 pt-8 md:pt-10 pb-4 z-40 relative">
   <a class="opacity-0 animate-fade-in-up [animation-delay:200ms]" href="/">
-    <img class="h-6 md:h-7 w-auto" src="/images/loopsware_logo.png" alt="loopsware" />
+    <img class="h-6 md:h-6 w-auto" src="/images/loopsware_logo.png" alt="loopsware" />
   </a>
 
-  <div class="hidden md:flex items-center gap-8 opacity-0 animate-fade-in-up [animation-delay:300ms]">
-    <a style={{ "font-family": "Telegraf" }} class="text-gray-300 hover:text-lime-300 text-sm transition-colors" href="/#services">{t.services}</a>
-    <a style={{ "font-family": "Telegraf" }} class="text-gray-300 hover:text-lime-300 text-sm transition-colors" href="/#pricing">{t.pricing}</a>
-    <a style={{ "font-family": "Telegraf" }} class="text-gray-300 hover:text-lime-300 text-sm transition-colors" href="/#about">{t.about}</a>
+  <div class="hidden md:flex items-center gap-7 opacity-0 animate-fade-in-up [animation-delay:300ms]">
+    <a style={{ "font-family": "Telegraf" }} class="text-stone-700 hover:text-lime-300 text-sm transition-colors" href="/about">{t.about}</a>
+    <a style={{ "font-family": "Telegraf" }} class="text-stone-700 hover:text-lime-300 text-sm transition-colors" href="/#pricing">{t.pricing}</a>
+
+    <div class="relative group">
+      <button
+        style={{ "font-family": "Telegraf" }}
+        class="flex items-center gap-1.5 text-stone-700 group-hover:text-lime-300 text-sm transition-colors"
+        aria-haspopup="true"
+      >
+        {t.services}
+        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+        <div class="w-64 bg-white border border-stone-200 rounded-2xl p-2 shadow-2xl shadow-black/10">
+          <a href="/#services" class="block rounded-xl px-4 py-3 hover:bg-stone-100 transition-colors">
+            <p style={{ "font-family": "Telegraf" }} class="text-lime-300 text-[10px] tracking-[0.25em]">FULL PRODUCT</p>
+            <p style={{ "font-family": "Telegraf" }} class="text-stone-900 text-sm font-bold mt-1">Build from scratch</p>
+          </a>
+          <a href="/#services" class="block rounded-xl px-4 py-3 hover:bg-stone-100 transition-colors">
+            <p style={{ "font-family": "Telegraf" }} class="text-lime-300 text-[10px] tracking-[0.25em]">VIBE-CODED</p>
+            <p style={{ "font-family": "Telegraf" }} class="text-stone-900 text-sm font-bold mt-1">Level up your MVP</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a style={{ "font-family": "Telegraf" }} class="text-stone-700 hover:text-lime-300 text-sm transition-colors" href="/work">{t.work}</a>
+
+    <a
+      href="mailto:sales@loopsware.com?subject=Discovery%20call"
+      class="ml-2 inline-flex items-center gap-2 bg-stone-900 hover:bg-black text-white rounded-lg px-5 py-3 transition-all"
+    >
+      <span style={{ "font-family": "Telegraf" }} class="font-bold text-sm">{t.contact}</span>
+      <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M5 11L11 5M11 5H5.5M11 5V10.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
   </div>
 
-  <a
-    href="mailto:sales@loopsware.com?subject=Discovery%20call"
-    class="hidden md:inline-flex items-center bg-lime-300 hover:bg-lime-400 text-black rounded-full px-5 py-2.5 transition-all opacity-0 animate-fade-in-up [animation-delay:400ms]"
-  >
-    <span style={{ "font-family": "Telegraf" }} class="font-bold text-sm">{t.contact}</span>
-  </a>
-
-  <button id="menu-button" class="md:hidden text-white opacity-0 animate-fade-in-up [animation-delay:300ms]" aria-label="Toggle menu">
-    <span id="line1" class="block w-7 h-[2px] bg-white mb-2 transition-transform duration-200 rounded"></span>
-    <span id="line2" class="block w-7 h-[2px] bg-white transition-transform duration-200 rounded"></span>
+  <button id="menu-button" class="md:hidden text-stone-900 opacity-0 animate-fade-in-up [animation-delay:300ms]" aria-label="Toggle menu">
+    <span id="line1" class="block w-7 h-[2px] bg-stone-900 mb-2 transition-transform duration-200 rounded"></span>
+    <span id="line2" class="block w-7 h-[2px] bg-stone-900 transition-transform duration-200 rounded"></span>
   </button>
 </nav>
 
-<div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex-col items-center justify-center gap-8 px-8">
-  <a style={{ "font-family": "Telegraf" }} class="text-white text-2xl" href="/#services">{t.services}</a>
-  <a style={{ "font-family": "Telegraf" }} class="text-white text-2xl" href="/#pricing">{t.pricing}</a>
-  <a style={{ "font-family": "Telegraf" }} class="text-white text-2xl" href="/#about">{t.about}</a>
+<div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-50 bg-white/95 backdrop-blur-md flex-col items-center justify-center gap-8 px-8">
+  <a style={{ "font-family": "Telegraf" }} class="text-stone-900 text-2xl" href="/about">{t.about}</a>
+  <a style={{ "font-family": "Telegraf" }} class="text-stone-900 text-2xl" href="/#pricing">{t.pricing}</a>
+  <a style={{ "font-family": "Telegraf" }} class="text-stone-900 text-2xl" href="/#services">{t.services}</a>
+  <a style={{ "font-family": "Telegraf" }} class="text-stone-900 text-2xl" href="/work">{t.work}</a>
   <a
     href="mailto:sales@loopsware.com?subject=Discovery%20call"
-    class="mt-4 inline-flex items-center bg-lime-300 text-black rounded-full px-7 py-3"
+    class="mt-4 inline-flex items-center bg-stone-900 text-white rounded-lg px-7 py-3"
   >
     <span style={{ "font-family": "Telegraf" }} class="font-bold text-base">{t.contact}</span>
+    <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M5 11L11 5M11 5H5.5M11 5V10.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
   </a>
-  <button id="menu-close" class="absolute top-8 right-8 text-white text-3xl" aria-label="Close menu">×</button>
+  <button id="menu-close" class="absolute top-8 right-8 text-stone-900 text-3xl" aria-label="Close menu">×</button>
 </div>
 
 <script is:inline>
