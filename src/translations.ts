@@ -1,11 +1,8 @@
 export const translations = {
   en: {
     navbar: {
+      products: "Products",
       about: "About",
-      pricing: "Pricing",
-      services: "Services",
-      work: "Work",
-      contact: "Let's Talk",
     },
   },
 };

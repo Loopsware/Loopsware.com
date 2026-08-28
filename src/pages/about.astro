@@ -1,4 +1,99 @@
 ---
-export const prerender = false;
-return Astro.redirect('/#about');
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../layouts/NavBar.astro";
+import Footer from "../layouts/Footer.astro";
+import { products } from "../data/products";
 ---
+
+<Layout title="About — Loopsware">
+	<div class="grain" aria-hidden="true"></div>
+	<NavBar />
+
+	<main class="relative z-10 px-5 md:px-8 lg:px-12 pt-28 md:pt-36 pb-8 min-h-[100svh]">
+		<p
+			style={{ "font-family": "Telegraf" }}
+			class="text-[var(--lime)] text-[11px] tracking-[0.32em] mb-6 opacity-0 animate-fade-in-up [animation-delay:150ms]"
+		>
+			ABOUT
+		</p>
+		<h1
+			style={{ "font-family": "Telegraf" }}
+			class="text-[var(--text)] text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight max-w-4xl opacity-0 animate-fade-in-up [animation-delay:280ms]"
+		>
+			A small studio with live products.
+		</h1>
+		<div
+			style={{ "font-family": "PierSans" }}
+			class="mt-10 max-w-2xl space-y-5 text-[var(--muted)] text-base md:text-lg leading-relaxed opacity-0 animate-fade-in-up [animation-delay:420ms]"
+		>
+			<p>
+				Loopsware designs and ships consumer software from Guanajuato, Mexico. We keep the studio small, the stack modern, and the products in the world.
+			</p>
+			<p>
+				Right now that means travel and food — the two apps we use ourselves.
+			</p>
+		</div>
+
+		<div class="mt-24 md:mt-32 border-t border-[var(--line)]">
+			{products.map((product) => (
+				<a
+					href={product.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="group grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-8 py-8 md:py-10 border-b border-[var(--line)]"
+				>
+					<p
+						style={{ "font-family": "Telegraf" }}
+						class="md:col-span-2 text-[var(--lime)] text-[11px] tracking-[0.22em] pt-2"
+					>
+						{product.index}
+					</p>
+					<div class="md:col-span-7">
+						<h2
+							style={{ "font-family": "Telegraf" }}
+							class="text-[var(--text)] text-3xl md:text-4xl font-bold group-hover:text-[var(--lime)] transition-colors"
+						>
+							{product.name}
+						</h2>
+						<p
+							style={{ "font-family": "PierSans" }}
+							class="text-[var(--muted)] mt-2"
+						>
+							{product.tagline}
+						</p>
+					</div>
+					<p
+						style={{ "font-family": "Telegraf" }}
+						class="md:col-span-3 md:text-right text-[11px] tracking-[0.18em] text-[var(--muted)] pt-2 group-hover:text-[var(--lime)] transition-colors"
+					>
+						{product.category.toUpperCase()}  ↗
+					</p>
+				</a>
+			))}
+		</div>
+
+		<div class="mt-20 md:mt-28 max-w-xl">
+			<p
+				style={{ "font-family": "Telegraf" }}
+				class="text-[var(--lime)] text-[11px] tracking-[0.28em] mb-4"
+			>
+				CONTACT
+			</p>
+			<a
+				href="mailto:oliver@loopsware.com"
+				style={{ "font-family": "Telegraf" }}
+				class="text-[var(--text)] text-2xl md:text-3xl hover:text-[var(--lime)] transition-colors"
+			>
+				oliver@loopsware.com
+			</a>
+			<p
+				style={{ "font-family": "Telegraf" }}
+				class="text-[11px] tracking-[0.22em] text-[var(--muted)] mt-6"
+			>
+				GUANAJUATO, MX
+			</p>
+		</div>
+	</main>
+
+	<Footer />
+</Layout>

@@ -1,41 +1,48 @@
-<footer class="px-6 md:px-12 lg:px-16 pt-20 md:pt-28 pb-6 opacity-0 animate-fade-in-up [animation-delay:800ms]">
+<footer class="relative z-10 bg-[var(--void)] px-5 md:px-8 lg:px-12 pt-20 md:pt-28 pb-8">
+    <div class="h-px w-full bg-[var(--line)]"></div>
 
-    <div class="border-t border-stone-200"></div>
-
-    <div class="py-10 md:py-16">
-        <h2
+    <div class="py-10 md:py-14">
+        <p
             style={{ "font-family": "Telegraf" }}
-            class="text-stone-900 font-bold leading-none tracking-tight text-[18vw] md:text-[15vw] lg:text-[13vw]"
+            class="text-[var(--text)] font-bold leading-none tracking-tight text-[12vw] md:text-[9vw]"
         >
-            Loopsware<span class="text-lime-300">.</span>
-        </h2>
+            Loopsware<span class="text-[var(--lime)]">.</span>
+        </p>
     </div>
 
-    <div class="border-t border-stone-200"></div>
+    <div class="h-px w-full bg-[var(--line)]"></div>
 
-    <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-6 pt-6">
-        <small
-            style={{ "font-family": "Telegraf" }}
-            class="text-[11px] md:text-xs tracking-[0.2em] text-stone-500 uppercase"
-        >
-            ©2026 Loopsware, SA.
-        </small>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pt-6">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+            <small
+                style={{ "font-family": "Telegraf" }}
+                class="text-[10px] md:text-[11px] tracking-[0.22em] text-[var(--muted)] uppercase"
+            >
+                © 2026 Loopsware, S.A.
+            </small>
+            <span class="hidden sm:inline text-[var(--lime)]/40" aria-hidden="true">•</span>
+            <small
+                style={{ "font-family": "Telegraf" }}
+                class="text-[10px] md:text-[11px] tracking-[0.22em] text-[var(--muted)] uppercase"
+            >
+                Guanajuato, MX
+            </small>
+        </div>
 
-        <div class="flex items-center gap-3 md:gap-5">
+        <div class="flex items-center gap-4">
             <a
                 href="mailto:oliver@loopsware.com"
                 style={{ "font-family": "Inter" }}
-                class="text-sm text-stone-700 hover:text-lime-300 transition-colors"
+                class="text-sm text-[var(--text)] hover:text-[var(--lime)] transition-colors"
             >
                 oliver@loopsware.com
             </a>
-            <span class="text-stone-300">·</span>
             <a
-                href="tel:+524731287603"
-                style={{ "font-family": "Inter" }}
-                class="text-sm text-stone-700 hover:text-lime-300 transition-colors"
+                href="/about"
+                style={{ "font-family": "Telegraf" }}
+                class="text-[11px] tracking-[0.18em] text-[var(--muted)] hover:text-[var(--lime)] transition-colors"
             >
-                (+52) 473 128 7603
+                About
             </a>
         </div>
     </div>

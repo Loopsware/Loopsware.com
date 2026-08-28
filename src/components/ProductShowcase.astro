@@ -1,0 +1,80 @@
+---
+import type { Product } from "../data/products";
+import DeviceVisual from "./DeviceVisual.astro";
+
+interface Props {
+  product: Product;
+  reversed?: boolean;
+}
+
+const { product, reversed = false } = Astro.props;
+---
+
+<article
+  id={product.slug}
+  class:list={[
+    "product-row grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center py-20 md:py-28 border-t border-[var(--line)]",
+  ]}
+>
+  <div class:list={["lg:col-span-6", reversed && "lg:order-2"]}>
+    <p
+      style={{ "font-family": "Telegraf" }}
+      class="text-[var(--lime)] text-[11px] tracking-[0.28em] mb-5"
+    >
+      {product.index}  ·  {product.category.toUpperCase()}
+    </p>
+    <h2
+      style={{ "font-family": "Telegraf" }}
+      class="text-[var(--text)] text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight"
+    >
+      {product.name}
+    </h2>
+    <p
+      style={{ "font-family": "Telegraf" }}
+      class="text-[var(--text)] text-xl md:text-2xl mt-6 leading-snug"
+    >
+      {product.tagline}
+    </p>
+    <p
+      style={{ "font-family": "PierSans" }}
+      class="text-[var(--muted)] text-base md:text-lg mt-5 max-w-xl leading-relaxed"
+    >
+      {product.description}
+    </p>
+
+    <ul
+      style={{ "font-family": "Inter" }}
+      class="mt-8 space-y-3 text-sm md:text-[15px] text-[var(--text)]/90"
+    >
+      {product.highlights.map((item) => (
+        <li class="flex gap-3">
+          <span class="text-[var(--lime)] mt-0.5" aria-hidden="true">→</span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3">
+      <a
+        href={product.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ "font-family": "Telegraf" }}
+        class="inline-flex items-center gap-2 text-[var(--lime)] text-sm tracking-wide border-b border-[var(--lime)]/40 hover:border-[var(--lime)] pb-0.5 transition-colors"
+      >
+        Open {product.url.replace("https://", "").replace(/\/$/, "")}
+        <span aria-hidden="true">↗</span>
+      </a>
+      <p
+        style={{ "font-family": "Telegraf" }}
+        class="text-[10px] tracking-[0.22em] text-[var(--muted)] uppercase"
+      >
+        {product.platforms.join("  ·  ")}
+      </p>
+    </div>
+  </div>
+
+  <div class:list={["lg:col-span-6", reversed && "lg:order-1"]}>
+    <DeviceVisual slug={product.slug} />
+  </div>
+</article>

@@ -1,50 +1,31 @@
 ---
-//* Layout
 import Layout from '../layouts/Layout.astro';
 import NavBar from '../layouts/NavBar.astro';
 import Footer from '../layouts/Footer.astro';
-//* UI comps.
 ---
 
 <Layout title="Loopsware | Terms & Conditions">
     <NavBar />
-    <main>
-       <!-- Main content -->
+    <main class="relative z-10 px-5 md:px-8 lg:px-12 pt-28 md:pt-36 pb-24 min-h-[60vh]">
+        <p
+            style={{ "font-family": "Telegraf" }}
+            class="text-[var(--lime)] text-[11px] tracking-[0.32em] mb-6"
+        >
+            LEGAL
+        </p>
+        <h1
+            style={{ "font-family": "Telegraf" }}
+            class="text-[var(--text)] text-4xl md:text-6xl font-bold tracking-tight"
+        >
+            Terms &amp; Conditions
+        </h1>
+        <p
+            style={{ "font-family": "PierSans" }}
+            class="text-[var(--muted)] mt-8 max-w-xl leading-relaxed"
+        >
+            Product-specific terms live on each app. For studio inquiries, write to
+            <a class="text-[var(--lime)] hover:text-[var(--text)]" href="mailto:oliver@loopsware.com">oliver@loopsware.com</a>.
+        </p>
     </main>
     <Footer />
 </Layout>
-
-<style>
-.custom-list-item::before {
-    content: '•';  
-    display: inline-block;
-    width: 0.5em;
-    margin-left: -1em; 
-}    
-</style>
-
-<script is:inline type="module">
-    import anime from 'https://cdn.skypack.dev/animejs';
-
-    const pricingSection = document.querySelector('.prices-section');
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                anime({
-                    targets: entry.target,
-                    opacity: [0, 1], // Fade the section in
-                    translateY: [250, 0], // Move the section up
-                    duration: 2000,
-				    delay: entry.target === pricingSection ? 0 : 500,
-                    easing: 'easeOutExpo' // Use an exponential easing function
-                });
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        rootMargin: '-5% 0px', // Trigger when the top of the screen is halfway to the section
-    });
-
-    observer.observe(pricingSection);
-</script>

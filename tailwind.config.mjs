@@ -3,6 +3,17 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      colors: {
+        xbox: {
+          void: "#030503",
+          panel: "#070b07",
+          green: "#107c10",
+          lime: "#9bf00b",
+          phosphor: "#7eb900",
+          muted: "#8a938a",
+          text: "#eef2ee",
+        },
+      },
       animation: {
         "fade-in-up": "fadeInUp 0.6s ease-out forwards",
         "fade-in-left": "fadeInLeft 0.6s ease-out forwards",
